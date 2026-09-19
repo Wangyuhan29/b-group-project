@@ -7,5 +7,5 @@
     "repair-response-local",
     "md-report"
   ],
-  "scope": "LOCAL evidence mapped to contracts; environment.image NOT BUILT; API not executed; requires A-group acceptance"
+  "scope": "Current C2 requests use the published GHCR digest (linux/amd64). response-local files remain historical local evidence, not Docker/API execution. A-group Checker acceptance remains pending."
 }

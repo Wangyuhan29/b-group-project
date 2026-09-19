@@ -1,3 +1,5 @@
+> 2026-09-17 更新：C2 镜像已构建、验证并发布到私有 GHCR；真实 digest 与获取方式见 [IMAGE_HANDOFF.md](IMAGE_HANDOFF.md)，共享锁核对见 [SHARED_SYNC.md](SHARED_SYNC.md)。以下本地验证记录保留原执行时的环境状态，A 组真实 Checker 验收仍待完成。
+
 # minicalc 对接状态
 
 ## 版本

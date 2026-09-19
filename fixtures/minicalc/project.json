@@ -45,8 +45,12 @@
   },
   "image": {
     "proposed_tag": "minicalc-devops:c2",
-    "status": "NOT_BUILT",
-    "reference_for_execution": null
+    "status": "BUILT_TESTED_AND_PUSHED",
+    "reference_for_execution": "ghcr.io/wangyuhan29/minicalc-devops@sha256:c4e23321b6f51c9382d2c3b12eef8c9594d8aa9aab01daf8d52928b41f27dc6d",
+    "digest": "sha256:c4e23321b6f51c9382d2c3b12eef8c9594d8aa9aab01daf8d52928b41f27dc6d",
+    "platform": "linux/amd64",
+    "tag": "ghcr.io/wangyuhan29/minicalc-devops:c2",
+    "build_run": "https://github.com/Wangyuhan29/b-group-project/actions/runs/35172889272"
   },
   "clone_url": "git@github.com:hardtosleep/Minicalc-DevOps-Test.git",
   "remote_commit_verified": true,

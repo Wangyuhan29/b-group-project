@@ -1,6 +1,7 @@
 .PHONY: validate test demo legacy-demo history check
 PYTHON ?= python3
 validate:
+	$(PYTHON) scripts/check_shared_lock.py
 	$(PYTHON) validate.py
 	$(PYTHON) scripts/minicalc.py --validate
 test:

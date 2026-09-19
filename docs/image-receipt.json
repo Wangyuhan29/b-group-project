@@ -1,0 +1,15 @@
+{
+  "status": "BUILT_TESTED_AND_PUSHED",
+  "image": "ghcr.io/wangyuhan29/minicalc-devops@sha256:c4e23321b6f51c9382d2c3b12eef8c9594d8aa9aab01daf8d52928b41f27dc6d",
+  "digest": "sha256:c4e23321b6f51c9382d2c3b12eef8c9594d8aa9aab01daf8d52928b41f27dc6d",
+  "tag": "ghcr.io/wangyuhan29/minicalc-devops:c2",
+  "immutable_tag": "ghcr.io/wangyuhan29/minicalc-devops:c2-928d37e0ffe678e67bf50fada15aa1ecf48942ce",
+  "platform": "linux/amd64",
+  "source_commit": "e103bcb3726a3fd7253deb0d791ac74fac77cafe",
+  "b_repository_commit": "928d37e0ffe678e67bf50fada15aa1ecf48942ce",
+  "run_url": "https://github.com/Wangyuhan29/b-group-project/actions/runs/35172889272",
+  "verification": "docker run default command: three arithmetic cases plus version assertion",
+  "access": "GHCR package permissions apply; visibility has not been made public",
+  "pull_command": "docker pull --platform linux/amd64 ghcr.io/wangyuhan29/minicalc-devops@sha256:c4e23321b6f51c9382d2c3b12eef8c9594d8aa9aab01daf8d52928b41f27dc6d",
+  "run_command": "docker run --rm --platform linux/amd64 ghcr.io/wangyuhan29/minicalc-devops@sha256:c4e23321b6f51c9382d2c3b12eef8c9594d8aa9aab01daf8d52928b41f27dc6d"
+}

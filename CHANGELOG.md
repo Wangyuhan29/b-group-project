@@ -1,3 +1,7 @@
+# 共享锁与真实镜像交接 · 2026-09-17
+
+共享锁新增 graph.schema.json 和 finding-id-v1.json，共 33 个文件并逐项核对 A 组版本。C2 镜像通过 GitHub Actions 构建和容器断言，发布至私有 GHCR；记录真实 digest 并替换当前 C2 请求占位值。新增锁文件校验并纳入 make check。A 组实际拉取与 Checker 验收尚待完成。
+
 # SSH 历史核验更新 · 2026-09-16
 
 成功获取并核验 C0/C1/C2。新增离线 Git bundle、三个版本真实本地扫描/日志及跨版本契约样例。C2 压缩包与 Git 源码完全一致。Docker、真实 A 组执行与共同确认仍待完成。

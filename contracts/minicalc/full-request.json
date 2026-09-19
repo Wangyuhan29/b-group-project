@@ -12,7 +12,7 @@
       "commit": "e103bcb3726a3fd7253deb0d791ac74fac77cafe"
     },
     "environment": {
-      "image": "minicalc-devops:c2-NOT-BUILT",
+      "image": "ghcr.io/wangyuhan29/minicalc-devops@sha256:c4e23321b6f51c9382d2c3b12eef8c9594d8aa9aab01daf8d52928b41f27dc6d",
       "configuration_id": "cc-default",
       "project_root": "/workspace/minicalc"
     },
