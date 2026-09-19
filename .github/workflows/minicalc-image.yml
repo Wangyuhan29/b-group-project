@@ -1,0 +1,70 @@
+name: Build and publish minicalc C2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      IMAGE: ghcr.io/wangyuhan29/minicalc-devops
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify shared contracts and pinned source
+        run: |
+          python3 scripts/check_shared_lock.py
+          python3 -c 'from scripts.minicalc import source_check; source_check()'
+      - name: Build Linux amd64 image
+        run: docker build --platform linux/amd64 -f draft/minicalc.Dockerfile -t "$IMAGE:c2-$GITHUB_SHA" .
+      - name: Assert results inside the image
+        run: docker run --rm --platform linux/amd64 "$IMAGE:c2-$GITHUB_SHA"
+      - name: Login to GHCR
+        env:
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: printf '%s' "$GHCR_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+      - name: Publish verified image and receipt
+        run: |
+          docker push "$IMAGE:c2-$GITHUB_SHA"
+          docker tag "$IMAGE:c2-$GITHUB_SHA" "$IMAGE:c2"
+          docker push "$IMAGE:c2"
+          mkdir -p work/image-handoff
+          python3 - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          image = os.environ['IMAGE']
+          info = json.loads(subprocess.check_output(['docker', 'image', 'inspect', image + ':c2'], text=True))[0]
+          reference = next(r for r in info['RepoDigests'] if r.startswith(image + '@sha256:'))
+          project = json.loads(Path('fixtures/minicalc/project.json').read_text())
+          result = {
+              'status': 'BUILT_TESTED_AND_PUSHED',
+              'image': reference,
+              'digest': reference.split('@', 1)[1],
+              'tag': image + ':c2',
+              'immutable_tag': image + ':c2-' + os.environ['GITHUB_SHA'],
+              'platform': info['Os'] + '/' + info['Architecture'],
+              'source_commit': project['commits']['C2'],
+              'b_repository_commit': os.environ['GITHUB_SHA'],
+              'run_url': os.environ['GITHUB_SERVER_URL'] + '/' + os.environ['GITHUB_REPOSITORY'] + '/actions/runs/' + os.environ['GITHUB_RUN_ID'],
+              'verification': 'docker run default command: three arithmetic cases plus version assertion',
+              'access': 'GHCR package permissions apply; visibility has not been made public',
+              'pull_command': 'docker pull --platform linux/amd64 ' + reference,
+              'run_command': 'docker run --rm --platform linux/amd64 ' + reference,
+          }
+          Path('work/image-handoff/image.json').write_text(json.dumps(result, indent=2) + '\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+              f.write('## Verified minicalc C2 image\n\n```json\n' + json.dumps(result, indent=2) + '\n```\n')
+          print(json.dumps(result, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: minicalc-c2-image-handoff
+          path: work/image-handoff/image.json
+          if-no-files-found: error
+      - name: Logout
+        if: always()
+        run: docker logout ghcr.io
