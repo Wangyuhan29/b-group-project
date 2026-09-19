@@ -1,0 +1,11 @@
+{
+  "examples": [
+    "draft-request",
+    "full-request",
+    "full-response-local",
+    "repair-request",
+    "repair-response-local",
+    "md-report"
+  ],
+  "scope": "LOCAL evidence mapped to contracts; environment.image NOT BUILT; API not executed; requires A-group acceptance"
+}

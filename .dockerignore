@@ -1,0 +1,9 @@
+*
+!draft/
+!draft/minicalc.Dockerfile
+!fixtures/
+!fixtures/minicalc/
+!fixtures/minicalc/source/
+!fixtures/minicalc/source/**
+!scripts/
+!scripts/verify_minicalc.py

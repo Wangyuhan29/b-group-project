@@ -1,0 +1,4 @@
+PASS '1+2*3': 7
+PASS '10-4/2': 8
+PASS '3*(4+5)': 27
+PASS '--version': minicalc 1.0.0

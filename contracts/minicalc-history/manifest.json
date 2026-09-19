@@ -1,0 +1,11 @@
+{
+  "examples": [
+    "c0-request.json",
+    "c0-response-local.json",
+    "c1-request.json",
+    "c1-response-local.json",
+    "c2-request.json",
+    "c2-response-local.json"
+  ],
+  "mode": "LOCAL_FULL_RESCAN_COMPARISON; NOT_BUILT image; not actual EChecker execution"
+}

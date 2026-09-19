@@ -1,0 +1,82 @@
+{
+  "compiler_version": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "method": "local compiler scan; full rescan at each commit",
+  "records": [
+    {
+      "target": "main.o",
+      "command": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-g",
+        "-MM",
+        "src/main.c"
+      ],
+      "compiler_output": "main.o: \\\n  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/SDKSettings.json \\\n  src/main.c include/config.h include/parser.h include/token.h \\\n  include/util.h\n",
+      "excluded_external_paths": [
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/SDKSettings.json"
+      ],
+      "makefile_rule": "main.o: src/main.c include/config.h include/parser.h",
+      "line": 30
+    },
+    {
+      "target": "parser.o",
+      "command": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-g",
+        "-MM",
+        "src/parser.c"
+      ],
+      "compiler_output": "parser.o: \\\n  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/SDKSettings.json \\\n  src/parser.c include/parser.h include/token.h\n",
+      "excluded_external_paths": [
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/SDKSettings.json"
+      ],
+      "makefile_rule": "parser.o: src/parser.c include/parser.h",
+      "line": 34
+    },
+    {
+      "target": "token.o",
+      "command": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-g",
+        "-MM",
+        "src/token.c"
+      ],
+      "compiler_output": "token.o: \\\n  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/SDKSettings.json \\\n  src/token.c include/token.h\n",
+      "excluded_external_paths": [
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/SDKSettings.json"
+      ],
+      "makefile_rule": "token.o: src/token.c include/token.h",
+      "line": 37
+    },
+    {
+      "target": "util.o",
+      "command": [
+        "gcc",
+        "-std=c11",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "-g",
+        "-MM",
+        "src/util.c"
+      ],
+      "compiler_output": "util.o: \\\n  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/SDKSettings.json \\\n  src/util.c include/util.h\n",
+      "excluded_external_paths": [
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/SDKSettings.json"
+      ],
+      "makefile_rule": "util.o: src/util.c include/util.h include/legacy.h",
+      "line": 41
+    }
+  ]
+}

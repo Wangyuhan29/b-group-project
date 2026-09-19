@@ -1,0 +1,6 @@
+{
+  "url": "fixture://draft-project",
+  "commit": "ce757e4434393acf8ff55c089c54cdd6c70e70cc",
+  "bundle": "fixtures/source.bundle",
+  "synthetic": true
+}

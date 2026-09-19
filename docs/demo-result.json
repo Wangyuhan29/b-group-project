@@ -1,0 +1,12 @@
+{
+  "fixture_commit": "ce757e4434393acf8ff55c089c54cdd6c70e70cc",
+  "before_repair_output": "1",
+  "after_repair_output": "2",
+  "patch_sha256": "d4fda152781518a4adf315c4fd3fc99c4b8cf7a1dd12be7b0cc2aefd6c216f60",
+  "patch_apply_check": true,
+  "clean_build_and_test": true,
+  "local_oracle_recheck": true,
+  "a_group_recheck": "NOT_RUN",
+  "docker_build": "NOT_RUN",
+  "scope": "Synthetic explicit-rule fixture only; not a production REPAIR job result."
+}

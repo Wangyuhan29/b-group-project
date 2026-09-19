@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "trace_id": "trace-minicalc-c2",
+  "execution": {
+    "timeout_seconds": 600
+  },
+  "job_type": "DRAFT",
+  "idempotency_key": "minicalc-c2-draft",
+  "input": {
+    "repository": {
+      "url": "https://github.com/hardtosleep/Minicalc-DevOps-Test.git",
+      "commit": "e103bcb3726a3fd7253deb0d791ac74fac77cafe"
+    },
+    "build": {
+      "command": "make -j2",
+      "clean_command": "make clean && make -j2",
+      "verify_command": "python3 /opt/b-group/verify_minicalc.py .",
+      "working_directory": "/workspace/minicalc"
+    },
+    "max_iterations": 5
+  }
+}

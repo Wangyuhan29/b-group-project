@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "trace_id": "trace-minicalc-c2",
+  "execution": {
+    "timeout_seconds": 600
+  },
+  "job_type": "REPAIR",
+  "input": {
+    "repository": {
+      "url": "https://github.com/hardtosleep/Minicalc-DevOps-Test.git",
+      "commit": "e103bcb3726a3fd7253deb0d791ac74fac77cafe"
+    },
+    "environment": {
+      "image": "minicalc-devops:c2-NOT-BUILT",
+      "configuration_id": "cc-default",
+      "project_root": "/workspace/minicalc"
+    },
+    "build": {
+      "command": "make -j2",
+      "clean_command": "make clean && make -j2",
+      "verify_command": "python3 /opt/b-group/verify_minicalc.py .",
+      "working_directory": "/workspace/minicalc"
+    },
+    "md_report_uri": "artifact://minicalc/c2/md-report.json",
+    "makefiles": [
+      "Makefile"
+    ],
+    "finding_types": [
+      "MISSING"
+    ],
+    "recheck": {
+      "job_type": "FULL_CHECK",
+      "required": true
+    }
+  },
+  "job_id": "job-minicalc-c2-local-repair",
+  "status": "SUCCEEDED",
+  "error": null,
+  "output": {
+    "patch_uri": "artifact://minicalc/c2/fix.patch",
+    "declaration_style": "EXPLICIT",
+    "accepted": true,
+    "rejection_reason": null,
+    "build_result": {
+      "passed": true,
+      "exit_code": 0,
+      "log_uri": "artifact://minicalc/c2/build-after.log"
+    },
+    "test_result": {
+      "passed": true,
+      "exit_code": 0,
+      "log_uri": "artifact://minicalc/c2/test-after.log"
+    },
+    "recheck_result": {
+      "passed": true,
+      "error_report_uri": "artifact://minicalc/c2/recheck-report.json",
+      "remaining_missing_count": 0
+    }
+  }
+}

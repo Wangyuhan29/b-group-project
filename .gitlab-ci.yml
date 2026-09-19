@@ -1,0 +1,10 @@
+stages: [test]
+contracts:
+  stage: test
+  image: python:3.12-bookworm
+  script:
+    - python3 validate.py
+    - python3 -m unittest discover -s tests -v
+    - python3 scripts/minicalc.py --validate
+    - python3 scripts/minicalc.py
+    - python3 scripts/verify_history.py

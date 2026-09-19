@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "trace_id": "trace-minicalc-c2",
+  "execution": {
+    "timeout_seconds": 600
+  },
+  "job_type": "INCREMENTAL_CHECK",
+  "input": {
+    "repository": {
+      "url": "https://github.com/hardtosleep/Minicalc-DevOps-Test.git",
+      "commit": "f863c2deff1bd95e56f1578b872ae6aa26e3bfc8"
+    },
+    "environment": {
+      "image": "minicalc-devops:c2-NOT-BUILT",
+      "configuration_id": "cc-default",
+      "project_root": "/workspace/minicalc"
+    },
+    "build": {
+      "command": "make -j2",
+      "clean_command": "make clean && make -j2",
+      "verify_command": "python3 /opt/b-group/verify_minicalc.py .",
+      "working_directory": "/workspace/minicalc"
+    },
+    "base_commit": "e3a1eda0965e545d96467d275bccaf78c890fcac",
+    "baseline": {
+      "actual_graph_uri": "artifact://minicalc-history/c0/actual.json",
+      "declared_graph_uri": "artifact://minicalc-history/c0/declared.json",
+      "commit": "e3a1eda0965e545d96467d275bccaf78c890fcac",
+      "configuration_id": "cc-default"
+    }
+  },
+  "job_id": "job-minicalc-c1-history-local",
+  "status": "SUCCEEDED",
+  "output": {
+    "actual_graph_uri": "artifact://minicalc-history/c1/actual.json",
+    "declared_graph_uri": "artifact://minicalc-history/c1/declared.json",
+    "error_report_uri": "artifact://minicalc-history/c1/error-report.json",
+    "evidence_uri": "artifact://minicalc-history/c1/evidence.json",
+    "added_finding_ids": [
+      "finding-bff19567c141197ce1e6b0518ec2f963c7c81a6de245777c1e45b491c53ef465"
+    ],
+    "resolved_finding_ids": []
+  },
+  "error": null
+}

@@ -1,0 +1,39 @@
+{
+  "C0": {
+    "commit": "e3a1eda0965e545d96467d275bccaf78c890fcac",
+    "counts": {
+      "MISSING": 3,
+      "REDUNDANT": 1
+    },
+    "build_and_assertions_passed": true,
+    "delta": null
+  },
+  "C1": {
+    "commit": "f863c2deff1bd95e56f1578b872ae6aa26e3bfc8",
+    "counts": {
+      "MISSING": 4,
+      "REDUNDANT": 1
+    },
+    "build_and_assertions_passed": true,
+    "delta": {
+      "added_finding_ids": [
+        "finding-bff19567c141197ce1e6b0518ec2f963c7c81a6de245777c1e45b491c53ef465"
+      ],
+      "resolved_finding_ids": []
+    }
+  },
+  "C2": {
+    "commit": "e103bcb3726a3fd7253deb0d791ac74fac77cafe",
+    "counts": {
+      "MISSING": 4,
+      "REDUNDANT": 0
+    },
+    "build_and_assertions_passed": true,
+    "delta": {
+      "added_finding_ids": [],
+      "resolved_finding_ids": [
+        "finding-857266aa1b70266c19c5c15e72901f560da02a0e60965c34e9bdc9de845807e0"
+      ]
+    }
+  }
+}

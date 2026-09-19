@@ -1,0 +1,56 @@
+{
+  "repository_url": "https://github.com/hardtosleep/Minicalc-DevOps-Test.git",
+  "commits": {
+    "C0": "e3a1eda0965e545d96467d275bccaf78c890fcac",
+    "C1": "f863c2deff1bd95e56f1578b872ae6aa26e3bfc8",
+    "C2": "e103bcb3726a3fd7253deb0d791ac74fac77cafe"
+  },
+  "active_version": "C2",
+  "configuration_id": "cc-default",
+  "configuration_status": "PROPOSED; local results are not a Docker configuration guarantee",
+  "archive_sha256": "85d485fc6aa4b2425b09175b7d1e612136903d53a034c3c3ed223ba67dec5e5f",
+  "source_files_sha256": {
+    ".gitignore": "c7d55468c3645d0d1afad30cb3f606c7abc7f869642e5526b73d053546706b20",
+    "Makefile": "d5b33606708b140b918053ccccfa56719628619a4208be9a88b9ff19c6ce697c",
+    "README.md": "4d78d17d5d17f59d8c333b2694200ce0b5fdb5c6201dd516910993d2037baf91",
+    "include/config.h": "5b5183019759b2077df00bdafd0c687e29cecfec8b0b1d62069a1d537d79ce1a",
+    "include/legacy.h": "5cd396b369babdc0afee317b9a9548322c74785e9e615dfa852e2b0cb8d91406",
+    "include/parser.h": "eeeb7d0f2bf196b14d43f9ed3965f5db1a24fe1935e0b240d50a88d9e89886a5",
+    "include/token.h": "49be729b6f384a6002b80213f21f3d333a99d50be646b22267b592a3361e1132",
+    "include/util.h": "bb1a4a58e2eaf7adf38f95644ed3a624df7ccf9d94532e84c7626be437b68df7",
+    "src/main.c": "1e7f2dc9aadbf0fa6429b964ba3fcc2b365e6ab5fd8574ba14b0c8edd0ac3915",
+    "src/parser.c": "5fea25c42580caa2d8da97d450913f98e2a80c18f8ac25207c6a29c3f154d81b",
+    "src/token.c": "2ab5e875190fe6ee930ff6c07e3b5b224c0c52ce2de51c83bdb9d07cd17ba61e",
+    "src/util.c": "a834e4cf528b0ce7786057ec91840fe62013d1efec75e71cfa6aab334f1b4e0b"
+  },
+  "source_verification": {
+    "C0": "VERIFIED_GIT_TAG_VIA_SSH",
+    "C1": "VERIFIED_GIT_TAG_VIA_SSH",
+    "C2": "VERIFIED_GIT_TAG_VIA_SSH"
+  },
+  "remote_access": "SSH clone succeeded; c0/c1/c2 independently verified",
+  "expected": {
+    "C0": {
+      "MISSING": 3,
+      "REDUNDANT": 1
+    },
+    "C1": {
+      "MISSING": 4,
+      "REDUNDANT": 1
+    },
+    "C2": {
+      "MISSING": 4,
+      "REDUNDANT": 0
+    }
+  },
+  "image": {
+    "proposed_tag": "minicalc-devops:c2",
+    "status": "NOT_BUILT",
+    "reference_for_execution": null
+  },
+  "clone_url": "git@github.com:hardtosleep/Minicalc-DevOps-Test.git",
+  "remote_commit_verified": true,
+  "c2_archive_matches_git": true,
+  "history_bundle": "fixtures/minicalc/history.bundle",
+  "history_bundle_sha256": "ebc21afc0ccb59f48cd1872685bbc268027e3dbcc4f6099e5ba16341a06b108e"
+}

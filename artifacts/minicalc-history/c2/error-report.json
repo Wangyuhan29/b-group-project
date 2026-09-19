@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "repository": {
+    "url": "https://github.com/hardtosleep/Minicalc-DevOps-Test.git",
+    "commit": "e103bcb3726a3fd7253deb0d791ac74fac77cafe"
+  },
+  "configuration_id": "cc-default",
+  "producer_job_id": "job-minicalc-c2-history-local",
+  "findings": [
+    {
+      "finding_id": "finding-4a7595ca26e9e7666102f337dfd726da30ed2e10b4b6dffd0f0fccf495899d7f",
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "include/token.h",
+      "commit": "e103bcb3726a3fd7253deb0d791ac74fac77cafe",
+      "detector": "COMPILER_MM_LOCAL",
+      "location": {
+        "file": "Makefile",
+        "line": 30
+      },
+      "evidence": {
+        "actual_dependency": true,
+        "declared_dependency": false,
+        "description": "本机 gcc -MM 的项目内传递依赖与 minicalc 显式规则比较，非 A 组 Checker 执行结果。",
+        "uri": "artifact://minicalc-history/c2/evidence.json"
+      }
+    },
+    {
+      "finding_id": "finding-a89d222f93429b1521e84c74ef163317b6e59d2f4a83a8117a92718b08b59977",
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "include/util.h",
+      "commit": "e103bcb3726a3fd7253deb0d791ac74fac77cafe",
+      "detector": "COMPILER_MM_LOCAL",
+      "location": {
+        "file": "Makefile",
+        "line": 30
+      },
+      "evidence": {
+        "actual_dependency": true,
+        "declared_dependency": false,
+        "description": "本机 gcc -MM 的项目内传递依赖与 minicalc 显式规则比较，非 A 组 Checker 执行结果。",
+        "uri": "artifact://minicalc-history/c2/evidence.json"
+      }
+    },
+    {
+      "finding_id": "finding-bff19567c141197ce1e6b0518ec2f963c7c81a6de245777c1e45b491c53ef465",
+      "type": "MISSING",
+      "target": "parser.o",
+      "dependency": "include/config.h",
+      "commit": "e103bcb3726a3fd7253deb0d791ac74fac77cafe",
+      "detector": "COMPILER_MM_LOCAL",
+      "location": {
+        "file": "Makefile",
+        "line": 34
+      },
+      "evidence": {
+        "actual_dependency": true,
+        "declared_dependency": false,
+        "description": "本机 gcc -MM 的项目内传递依赖与 minicalc 显式规则比较，非 A 组 Checker 执行结果。",
+        "uri": "artifact://minicalc-history/c2/evidence.json"
+      }
+    },
+    {
+      "finding_id": "finding-bdc00aaa466bec53fd6f484656bdabd7dff6e1833ed6390c7b44b22b633faa36",
+      "type": "MISSING",
+      "target": "parser.o",
+      "dependency": "include/token.h",
+      "commit": "e103bcb3726a3fd7253deb0d791ac74fac77cafe",
+      "detector": "COMPILER_MM_LOCAL",
+      "location": {
+        "file": "Makefile",
+        "line": 34
+      },
+      "evidence": {
+        "actual_dependency": true,
+        "declared_dependency": false,
+        "description": "本机 gcc -MM 的项目内传递依赖与 minicalc 显式规则比较，非 A 组 Checker 执行结果。",
+        "uri": "artifact://minicalc-history/c2/evidence.json"
+      }
+    }
+  ]
+}

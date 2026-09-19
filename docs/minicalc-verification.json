@@ -1,0 +1,18 @@
+{
+  "source_commit_from_zip": "e103bcb3726a3fd7253deb0d791ac74fac77cafe",
+  "remote_commit_verified": true,
+  "before": {
+    "MISSING": 4,
+    "REDUNDANT": 0
+  },
+  "after": {
+    "MISSING": 0,
+    "REDUNDANT": 0
+  },
+  "patch_sha256": "2255dd7b1932ad08eca79164beef3db8789a9b253c42690ef4f817d51facd1fc",
+  "four_cases_asserted_before_and_after": true,
+  "four_missing_edges_incremental_rebuild_checked": true,
+  "docker": "NOT_RUN",
+  "a_group_checker": "NOT_RUN",
+  "mode": "LOCAL_EXPLICIT_REPAIR_DEMO"
+}

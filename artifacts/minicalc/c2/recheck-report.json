@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "repository": {
+    "url": "https://github.com/hardtosleep/Minicalc-DevOps-Test.git",
+    "commit": "e103bcb3726a3fd7253deb0d791ac74fac77cafe"
+  },
+  "configuration_id": "cc-default",
+  "producer_job_id": "job-minicalc-c2-local-recheck",
+  "findings": []
+}
