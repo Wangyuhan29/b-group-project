@@ -31,6 +31,6 @@
 | 组员作者与提交说明 | 三人分工见 `docs/CONTRIBUTIONS.md`；Git 提交由 Wangyuhan29 统一推送 |
 | Issue/PR | 待填写 |
 | 本地验证结果 | `make check` 通过；33 个共享文件锁校验、26 项测试和 C2 历史验证通过 |
-| 未完成项/原因/下一步 | A 组需使用其 Checker 拉取私有 C2 镜像并完成 FULL_CHECK/REPAIR 重检；补录 pair_id、A 组联系人和联调证据 |
+| 未完成项/原因/下一步 | A 组需使用其 Checker 拉取私有 C2 镜像并完成 FULL_CHECK/REPAIR 重检；补录联调证据 |
 
 当前仓库可用于 E2 协商与校验，只有完成上述真实记录后才适合作为小组正式提交。

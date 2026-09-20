@@ -1,6 +1,6 @@
 # 本轮 minicalc 进展
 
-当前主测试目标为 A 组 minicalc C2。新样例见 contracts/minicalc，实测结果与未完成项见 MINICALC_HANDOFF.md 和 VERIFICATION.md；图/ID 提案见 ADR-005，尚待 A 组确认。C0/C1/C2 SSH 历史及本地扫描已验证，Docker 镜像与 A 组重检未完成。下面保留 E2 初版说明，涉及 fixture://draft-project、artifacts/demo 和旧样本的内容仅供兼容回归。
+当前主测试目标为 A 组 minicalc C2。新样例见 contracts/minicalc，实测结果与剩余联调项见 MINICALC_HANDOFF.md 和 VERIFICATION.md；图/ID 已加入 shared-lock 并与 A 组文件核对。C2 Docker 镜像已构建发布，A 组 Checker 重检仍待完成。下面保留 E2 初版说明，涉及 fixture://draft-project、artifacts/demo 和旧样本的内容仅供兼容回归。
 
 # Backlog
 

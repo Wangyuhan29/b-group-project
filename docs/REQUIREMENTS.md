@@ -1,6 +1,6 @@
 # 本轮目标项目适配
 
-当前主测试目标为 A 组 minicalc C2。新样例见 contracts/minicalc，实测结果与未完成项见 MINICALC_HANDOFF.md 和 VERIFICATION.md；图/ID 提案见 ADR-005，尚待 A 组确认。C0/C1/C2 SSH 历史及本地扫描已验证，Docker 镜像与 A 组重检未完成。下面保留 E2 初版说明，涉及 fixture://draft-project、artifacts/demo 和旧样本的内容仅供兼容回归。
+当前主测试目标为 A 组 minicalc C2。新样例见 contracts/minicalc，实测结果与剩余联调项见 MINICALC_HANDOFF.md 和 VERIFICATION.md；图/ID 已加入 shared-lock 并与 A 组文件核对。C2 Docker 镜像已构建发布，A 组 Checker 重检仍待完成。下面保留 E2 初版说明，涉及 fixture://draft-project、artifacts/demo 和旧样本的内容仅供兼容回归。
 
 # E2 要求对照
 
@@ -15,7 +15,7 @@
 | 10、23 | MD 报告有版本、位置、证据；只修 MD | 固定报告、REPAIR 语义校验 | 已校验 |
 | 12 | 负责人、产物、验收条件 | BACKLOG | 负责人角色已拟，姓名待认领 |
 | 13、14 | ADR、AI 建议与人工判断 | ADR-001~004、AI_USAGE | AI 工作已记，人工判断待补 |
-| 15、17 | Git、作者、Issue/PR、完成及未完成 | CONTRIBUTIONS、SUBMISSION、VERIFICATION | 本地 AI 提交可追溯，人工与远端待补 |
+| 15、17 | Git、作者、Issue/PR、完成及未完成 | CONTRIBUTIONS、SUBMISSION、VERIFICATION | Git 作者、仓库地址、提交 SHA、本地验证和当前未完成项已记录；本轮无 Issue/PR，A 组联调证据待补 |
 | 20 | DRAFT 仓库、命令、迭代/时限、每轮日志/修改/理由及结果 | draft 请求/响应 | 已定义，Docker 尚未执行 |
 | 21 | 完整提交、配置、全量图、MD/RD/证据 | full 请求/响应及两类报告 | 契约已定义 |
 | 22 | 历史图、base commit、配置匹配、发现变化 | incremental 请求/响应、语义校验 | 已校验 |
