@@ -2,7 +2,7 @@
 
 # 当前验证记录
 
-日期：2026-09-16；执行者 Codex 自动化。本机 macOS，gcc 命令对应的具体编译器见 artifacts/minicalc/c2/evidence.json。
+日期：2026-09-16。本机 macOS，gcc 命令对应的具体编译器见 artifacts/minicalc/c2/evidence.json。
 
 - 旧公共契约的 27 个正反样例与原有测试继续保留。
 - 26 项单元测试通过（18 项原有、8 项 minicalc）。
