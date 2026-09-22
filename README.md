@@ -12,6 +12,7 @@ make check
 
 它校验原有公共契约和新增 minicalc 样例，运行测试，再在临时副本上完成 C2 构建、四条 MD 检测、补丁生成/应用、构建与结果断言、本地依赖重检和增量重建检查。真实输出在 work/minicalc-run，不修改固定源码。
 
+
 ## 当前材料与验证边界
 
 - 目标仓库：https://github.com/hardtosleep/Minicalc-DevOps-Test.git
@@ -53,9 +54,9 @@ docker run --rm minicalc-devops:c2
 
 ## 下一步
 
-将 docs/REPLY_TO_A.md 交给 A 组，核对共享锁并安排私有包读取权限，然后执行 A 组真实 Checker 联调。
+先与 A 组统一报告中的 `include/*.h` 路径、问题编号和产物读取位置，再进行真实 Checker 联调。
 
-TEAM、贡献、人工 AI 判断仍需实际成员填写。仓库已通过 Git 管理并同步至 GitHub。
+TEAM、贡献表及 B03 三人本轮审阅记录已填写；ADR-001～003 的双方确认仍需补齐。历史提交已同步 GitHub，本次本地修订的验证结果见 [VERIFICATION](docs/VERIFICATION.md)。
 
 ## Git 历史重放
 
