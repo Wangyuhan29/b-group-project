@@ -15,10 +15,10 @@
 
 ## 提交前由小组补齐
 
-- [ ] TEAM：补录实际组号、配对组和 A 组联系人；姓名和学号已填写。
-- [ ] PAIR_REVIEW：同号 A 组解释同一份样例并实际确认。
-- [ ] 将 Proposed ADR 更新为实际决策，未决项进入 Backlog。
-- [ ] AI_USAGE：人工采纳、修改、拒绝和理由。
+- [x] TEAM：已补录 B03、A03、鼓楼校区、双方联系人和成员学号。
+- [x] PAIR_REVIEW：A03 已提供三轮评审记录和验证结果，已同步到 `docs/PAIR_REVIEW.md`。
+- [x] ADR-004/005 已按 A03/B03 评审更新为 Accepted；ADR-001/002/003 仍保留 Proposed 状态，待双方逐项确认。
+- [x] AI_USAGE：已记录人工采纳、修改、拒绝和理由。
 - [x] CONTRIBUTIONS：已按三人分工填写；个人讨论/审阅证据仍需成员核对补充。
 - [ ] 按课程材料核对是否有要求沿用的模板或仓库。
 - [ ] 填写以下版本信息，并记录最终版本的校验结果。
@@ -27,10 +27,10 @@
 |---|---|
 | 实际远端仓库 URL | https://github.com/Wangyuhan29/b-group-project |
 | 提交分支 | main |
-| 提交完整 SHA（git rev-parse HEAD） | `a5cd08d`（完整 SHA 以最终提交前 `git rev-parse HEAD` 输出为准） |
+| 提交完整 SHA（git rev-parse HEAD） | 以本次同步完成后的 `git rev-parse HEAD` 输出为准 |
 | 组员作者与提交说明 | 三人分工见 `docs/CONTRIBUTIONS.md`；Git 提交由 Wangyuhan29 统一推送 |
-| Issue/PR | 待填写 |
+| Issue/PR | 无；本轮未使用 Issue/PR 流程 |
 | 本地验证结果 | `make check` 通过；33 个共享文件锁校验、26 项测试和 C2 历史验证通过 |
-| 未完成项/原因/下一步 | A 组需使用其 Checker 拉取私有 C2 镜像并完成 FULL_CHECK/REPAIR 重检；补录联调证据 |
+| 未完成项/原因/下一步 | 真实 BuildChecker/EChecker、C0/C1 环境和跨机器产物读取属于 E3/E12；A03 已完成 C2 镜像冒烟验证 |
 
 当前仓库可用于 E2 协商与校验，只有完成上述真实记录后才适合作为小组正式提交。

@@ -1,6 +1,6 @@
 # ADR-004 严格 Schema 与版本变更
 
-状态：Proposed，待 A/B 确认。
+状态：Accepted（A03/B03，2026-09-22）。
 
 ## Context
 PPT 26 提醒严格 Schema 可能拒绝新增字段。
