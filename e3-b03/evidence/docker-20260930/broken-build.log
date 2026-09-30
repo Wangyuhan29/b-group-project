@@ -1,0 +1,71 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.broken
+#1 transferring dockerfile: 129B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.13-slim
+#2 DONE 3.6s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 264B done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.13-slim@sha256:7c61056e61ac89e852de05f3dc6fa51a6dd2181797bceed46aa725dd7cb2cd3b
+#5 resolve docker.io/library/python:3.13-slim@sha256:7c61056e61ac89e852de05f3dc6fa51a6dd2181797bceed46aa725dd7cb2cd3b done
+#5 sha256:0fb3db4aef9a2b829578ae91e7581b1a69b5a6426b228fed51743b89268c1f33 0B / 249B 0.2s
+#5 sha256:123abebbace7b00617ae9e3b7716ad69400ff74e6cddda434d70254d9772a826 0B / 1.28MB 0.2s
+#5 sha256:4b83fbae47ddba3c3f918e9d9dc484673954455ccfec337afd1691df0faa9d62 0B / 11.83MB 0.2s
+#5 sha256:bd36565c0fdebaf0f3af5c3b4ce610ca085ced32e9e9da850d95912f5f18f47b 0B / 30.19MB 0.2s
+#5 sha256:0fb3db4aef9a2b829578ae91e7581b1a69b5a6426b228fed51743b89268c1f33 249B / 249B 0.4s done
+#5 sha256:4b83fbae47ddba3c3f918e9d9dc484673954455ccfec337afd1691df0faa9d62 1.05MB / 11.83MB 1.2s
+#5 sha256:4b83fbae47ddba3c3f918e9d9dc484673954455ccfec337afd1691df0faa9d62 3.15MB / 11.83MB 1.4s
+#5 sha256:4b83fbae47ddba3c3f918e9d9dc484673954455ccfec337afd1691df0faa9d62 8.39MB / 11.83MB 1.5s
+#5 sha256:4b83fbae47ddba3c3f918e9d9dc484673954455ccfec337afd1691df0faa9d62 11.83MB / 11.83MB 1.6s done
+#5 sha256:123abebbace7b00617ae9e3b7716ad69400ff74e6cddda434d70254d9772a826 1.05MB / 1.28MB 2.1s
+#5 sha256:123abebbace7b00617ae9e3b7716ad69400ff74e6cddda434d70254d9772a826 1.28MB / 1.28MB 2.1s done
+#5 sha256:bd36565c0fdebaf0f3af5c3b4ce610ca085ced32e9e9da850d95912f5f18f47b 3.15MB / 30.19MB 2.3s
+#5 sha256:bd36565c0fdebaf0f3af5c3b4ce610ca085ced32e9e9da850d95912f5f18f47b 10.49MB / 30.19MB 2.4s
+#5 sha256:bd36565c0fdebaf0f3af5c3b4ce610ca085ced32e9e9da850d95912f5f18f47b 17.83MB / 30.19MB 2.6s
+#5 sha256:bd36565c0fdebaf0f3af5c3b4ce610ca085ced32e9e9da850d95912f5f18f47b 26.21MB / 30.19MB 2.7s
+#5 sha256:bd36565c0fdebaf0f3af5c3b4ce610ca085ced32e9e9da850d95912f5f18f47b 30.19MB / 30.19MB 2.8s done
+#5 extracting sha256:bd36565c0fdebaf0f3af5c3b4ce610ca085ced32e9e9da850d95912f5f18f47b
+#5 extracting sha256:bd36565c0fdebaf0f3af5c3b4ce610ca085ced32e9e9da850d95912f5f18f47b 0.3s done
+#5 DONE 3.2s
+
+#5 [1/4] FROM docker.io/library/python:3.13-slim@sha256:7c61056e61ac89e852de05f3dc6fa51a6dd2181797bceed46aa725dd7cb2cd3b
+#5 extracting sha256:123abebbace7b00617ae9e3b7716ad69400ff74e6cddda434d70254d9772a826 0.0s done
+#5 extracting sha256:4b83fbae47ddba3c3f918e9d9dc484673954455ccfec337afd1691df0faa9d62
+#5 extracting sha256:4b83fbae47ddba3c3f918e9d9dc484673954455ccfec337afd1691df0faa9d62 0.2s done
+#5 DONE 3.4s
+
+#5 [1/4] FROM docker.io/library/python:3.13-slim@sha256:7c61056e61ac89e852de05f3dc6fa51a6dd2181797bceed46aa725dd7cb2cd3b
+#5 extracting sha256:0fb3db4aef9a2b829578ae91e7581b1a69b5a6426b228fed51743b89268c1f33 done
+#5 DONE 3.4s
+
+#6 [2/4] WORKDIR /work
+#6 DONE 0.2s
+
+#7 [3/4] COPY main.c Makefile ./
+#7 DONE 0.0s
+
+#8 [4/4] RUN make
+#8 0.057 /bin/sh: 1: make: not found
+#8 ERROR: process "/bin/sh -c make" did not complete successfully: exit code: 127
+------
+ > [4/4] RUN make:
+0.057 /bin/sh: 1: make: not found
+------
+Dockerfile.broken:4
+--------------------
+   2 |     WORKDIR /work
+   3 |     COPY main.c Makefile ./
+   4 | >>> RUN make
+   5 |     CMD ["./hello"]
+   6 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c make" did not complete successfully: exit code: 127

@@ -1,5 +1,9 @@
 # B 组项目：minicalc 对接版
 
+## E3 并行测试基线（2026-09-30）
+
+B03 的 DRAFT 失败与参考成功样本、固定 MD 报告、四种 Makefile 风格补丁、重跑命令和实际日志见 [e3-b03/README.md](e3-b03/README.md)。E3 本地基线执行命令：`python3 e3-b03/verify_baselines.py`。Tiny Greeting 的两次 Docker 构建及容器验证已在本机完成，证据见 `e3-b03/evidence/docker-20260930/`；原有 C2 镜像证据另见 `docs/IMAGE_HANDOFF.md`。
+
 本仓库负责 DRAFT 环境生成和 MDFixer 缺失依赖修复；A 组负责 BuildChecker / EChecker。共同测试目标已切换为 A 组提供的 minicalc。这里仍是 B 组工具仓库，目标源码放在 fixtures/minicalc/source。
 
 ## 现在运行什么

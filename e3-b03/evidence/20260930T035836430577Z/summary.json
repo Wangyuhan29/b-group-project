@@ -1,0 +1,47 @@
+{
+  "provenance": "LOCAL_EXECUTION",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.14",
+  "draft": "PASS",
+  "styles": [
+    {
+      "style": "target",
+      "before_incremental": "1",
+      "after_clean": "2",
+      "after_incremental": "3",
+      "result": "PASS"
+    },
+    {
+      "style": "macro",
+      "before_incremental": "1",
+      "after_clean": "2",
+      "after_incremental": "3",
+      "result": "PASS"
+    },
+    {
+      "style": "hybrid",
+      "before_incremental": "1",
+      "after_clean": "2",
+      "after_incremental": "3",
+      "result": "PASS"
+    },
+    {
+      "style": "implicit",
+      "before_incremental": "1",
+      "after_clean": "2",
+      "after_incremental": "3",
+      "result": "PASS"
+    }
+  ],
+  "invalid_candidate": {
+    "invalid_candidate_exit_code": 2,
+    "restored_output": "1",
+    "result": "PASS"
+  },
+  "draft_failure": {
+    "mode": "LOCAL_MISSING_TOOL_SIMULATION",
+    "exit_code": 127
+  },
+  "docker": "NOT_RUN_BY_THIS_SCRIPT",
+  "evidence_directory": "/Users/wyh/学习资料/其他/大三资料/大三上/devops/b-group-project/e3-b03/evidence/20260930T035836430577Z"
+}

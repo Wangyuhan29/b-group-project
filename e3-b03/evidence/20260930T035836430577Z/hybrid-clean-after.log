@@ -1,0 +1,8 @@
+cwd=/var/folders/l6/7kn3v34j1pv48bjh38l3w0d40000gn/T/b03-e3-zmcpw2uz/hybrid
+command=['make', 'clean']
+exit_code=0
+stdout:
+rm -f app main.o main.d
+
+stderr:
+

@@ -1,0 +1,10 @@
+--- a/Makefile
++++ b/Makefile
+@@ -1,6 +1,6 @@
+ CC = cc
+ CFLAGS = -std=c11 -Wall -Wextra -Werror
+-DEPS = main.c
++DEPS = main.c config.h
+ app: main.o
+ 	$(CC) main.o -o app
+ main.o: $(DEPS)

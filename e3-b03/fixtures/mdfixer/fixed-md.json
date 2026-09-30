@@ -1,0 +1,13 @@
+{
+  "provenance": "INSTRUCTOR_ORACLE_ADAPTED_BY_B03",
+  "scope": "local project header dependencies for main.o under cc-default",
+  "configuration_id": "cc-default",
+  "findings": [
+    {
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "config.h",
+      "evidence": "main.c includes config.h, while the unrepaired Makefile does not declare it for main.o"
+    }
+  ]
+}

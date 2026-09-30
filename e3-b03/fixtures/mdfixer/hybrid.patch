@@ -1,0 +1,10 @@
+--- a/Makefile
++++ b/Makefile
+@@ -1,6 +1,6 @@
+ CC = cc
+ CFLAGS = -std=c11 -Wall -Wextra -Werror
+-HEADERS =
++HEADERS = config.h
+ app: main.o
+ 	$(CC) main.o -o app
+ main.o: main.c $(HEADERS)

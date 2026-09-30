@@ -1,0 +1,8 @@
+provenance=LOCAL_FAILURE_SIMULATION; not a Docker build
+command=/bin/sh -c make (PATH=/nonexistent)
+exit_code=127
+stdout:
+
+stderr:
+/bin/sh: make: command not found
+

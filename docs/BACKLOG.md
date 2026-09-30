@@ -1,6 +1,6 @@
 # 本轮 minicalc 进展
 
-当前主测试目标为 A 组 minicalc C2。E2 契约、配对评审、共享锁和 C2 镜像交接已经完成；真实 BuildChecker/EChecker、C0/C1 环境和跨机器产物读取保留为 E3/E12 待办。
+当前主测试目标为 A 组 minicalc C2。E2 契约、配对评审、共享锁和 C2 镜像交接已经完成。E3 独立测试基线新增在 `e3-b03/`：Tiny Greeting DRAFT 样本、固定 MD 报告、四种 Makefile 风格的参考补丁及本地运行日志。真实运行器与跨组联调仍按后续实验推进。
 
 # Backlog
 
@@ -16,10 +16,10 @@
 | E2-06 | B-QA | 负例和 validate.py | manifest 预期结果全部一致 | 已完成；B03/A03 均记录通过结果 |
 | E2-07 | 全体 | ADR、AI_USAGE、贡献记录 | 真实人工判断、SHA、Issue/PR 可追溯 | 已完成；成员、贡献和 SHA 已记录 |
 | E2-08 | A/B 全体 | PAIR_REVIEW 签认 | 三轮讨论记录和未决项明确 | 已完成；A03/B03 记录已同步 |
-| E3-01 | B-DRAFT | 真实 DRAFT 目标项目 | URL/许可/完整 SHA/构建说明确定，Docker 基线可构建 | C2 已完成；C0/C1 环境待 E3 补齐 |
-| E3-02 | B-REPAIR | 固定 MD + 修复演示 | 漏依赖可复现，patch 可应用，修复后测试通过 | C2 演示已完成；真实 Checker 重检待 E3 |
-| E3-03 | B-DRAFT | DRAFT 运行器 | 初始候选、构建日志、错误/上下文反馈、迭代上限和验证闭环 | 未实现 |
-| E3-04 | B-REPAIR | MDFixer 运行器 | 显式规则后逐步支持宏/模式规则，风格说明及失败拒绝 | 未实现；仅样本演示 |
+| E3-01 | B-DRAFT | 真实 DRAFT 目标项目与独立样本 | 记录版本、构建命令、功能断言、失败和参考输入 | Minicalc C2 镜像已验证；Tiny Greeting 的 Docker 失败/参考镜像在本机 linux/arm64 实跑并留存日志 |
+| E3-02 | B-REPAIR | 固定 MD + 四类修复样本 | 漏依赖可复现，patch 可应用，改头文件后自动重建；无效候选被拒绝并恢复 | Target/Macro/Hybrid/Implicit 四种本地行为验证及拒绝恢复已通过，日志见 `e3-b03/evidence/` |
+| E3-03 | B-DRAFT | DRAFT 运行器 | 初始候选、构建日志、错误/上下文反馈、迭代上限和验证闭环 | 后续 E5 实现；本次提供人工参考基线 |
+| E3-04 | B-REPAIR | MDFixer 运行器 | 显式规则后逐步支持宏/模式规则，风格说明及失败拒绝 | 后续 E8 实现；本次提供人工参考补丁和验证脚本 |
 | E3-05 | A/B-CONTRACT | 图/稳定 finding_id Schema | 真实图节点边、跨提交 finding ID 可复用 | Schema/算法已对齐；真实 Checker 复用验证待 E3 |
 | E3-06 | A/B-CONTRACT | 修复 overlay 身份协议 | A 组重检同 base+patch SHA 或修复提交，避免只检旧源码 | 待共同设计 |
 | E3-07 | A/B-QA | 真实四服务联调 | 环境可运行、产物可下载、构建/测试/重检均有日志 | 未开始 |

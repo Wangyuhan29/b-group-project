@@ -1,0 +1,11 @@
+--- a/Makefile
++++ b/Makefile
+@@ -3,6 +3,7 @@
+ app: main.o
+ 	$(CC) main.o -o app
+ %.o: %.c
+-	$(CC) $(CFLAGS) -c $< -o $@
++	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
++-include main.d
+ clean:
+ 	rm -f app main.o main.d
