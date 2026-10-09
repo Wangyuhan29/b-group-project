@@ -1,0 +1,82 @@
+==================== c0 ====================
+commit full SHA = e3a1eda0965e545d96467d275bccaf78c890fcac
+--- make clean ---
+rm -f main.o parser.o token.o util.o minicalc
+make clean exit=0
+--- make (full build) ---
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/main.c -o main.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/parser.c -o parser.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/token.c -o token.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/util.c -o util.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g main.o parser.o token.o util.o -o minicalc
+make exit=0
+--- functional test: make test ---
+== 1+2*3   => expect 7
+./minicalc "1+2*3"
+7
+== 10-4/2  => expect 8
+./minicalc "10-4/2"
+8
+== 3*(4+5) => expect 27
+./minicalc "3*(4+5)"
+27
+make test exit=0
+
+==================== c1 ====================
+commit full SHA = f863c2deff1bd95e56f1578b872ae6aa26e3bfc8
+--- make clean ---
+rm -f main.o parser.o token.o util.o minicalc
+make clean exit=0
+--- make (full build) ---
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/main.c -o main.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/parser.c -o parser.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/token.c -o token.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/util.c -o util.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g main.o parser.o token.o util.o -o minicalc
+make exit=0
+--- functional test: make test ---
+== 1+2*3   => expect 7
+./minicalc "1+2*3"
+7
+== 10-4/2  => expect 8
+./minicalc "10-4/2"
+8
+== 3*(4+5) => expect 27
+./minicalc "3*(4+5)"
+27
+make test exit=0
+
+==================== c2 ====================
+commit full SHA = e103bcb3726a3fd7253deb0d791ac74fac77cafe
+--- make clean ---
+rm -f main.o parser.o token.o util.o minicalc
+make clean exit=0
+--- make (full build) ---
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/main.c -o main.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/parser.c -o parser.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/token.c -o token.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/util.c -o util.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g main.o parser.o token.o util.o -o minicalc
+make exit=0
+--- functional test: make test ---
+== 1+2*3   => expect 7
+./minicalc "1+2*3"
+7
+== 10-4/2  => expect 8
+./minicalc "10-4/2"
+8
+== 3*(4+5) => expect 27
+./minicalc "3*(4+5)"
+27
+make test exit=0
+
+==================== MD/RD 行为观察（基于 c0） ====================
+c0 clean build done, app output check:
+7
+--- MD: 改 include/util.h 后 make（预期 main.o 不重建） ---
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/util.c -o util.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g main.o parser.o token.o util.o -o minicalc
+--- RD: 改 include/legacy.h 后 make（预期 util.o 被多余重建） ---
+gcc -std=c11 -Wall -Wextra -Iinclude -g -c src/util.c -o util.o
+gcc -std=c11 -Wall -Wextra -Iinclude -g main.o parser.o token.o util.o -o minicalc
+done

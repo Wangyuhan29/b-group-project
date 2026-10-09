@@ -67,3 +67,7 @@ TEAM、贡献表及 B03 三人本轮审阅记录已填写；ADR-001～003 的双
 已配置的 SSH 地址为 `git@github.com:hardtosleep/Minicalc-DevOps-Test.git`。接口 repository.url 仍保留原 HTTPS 标识以稳定 finding ID，clone_url 单独记录 SSH 传输地址。
 
 `make history` 在临时目录离线 clone history.bundle，逐版本构建并比较发现，输出 work/minicalc-history。保存的真实扫描产物在 artifacts/minicalc-history，6 份任务样例在 contracts/minicalc-history。这里仍为逐版本全量扫描后比较，不声称实现 EChecker 增量算法；历史样例保留原占位值；本次发布仅覆盖 C2，不能直接用于 C0/C1 源码检测。
+
+## E3 进展（2026-10-09）
+
+已完成 A03 基线的构建与行为互查，并在原生 Ubuntu x86_64 完成 B03 DRAFT Docker 失败/参考成功验证。详见 [E3 文档](e3-b03/README.md)。Ubuntu 成功构建使用 Debian 镜像源变体，原始日志仍在虚拟机待归档；A03 strace 动态关系尚未独立验证，四服务联调未完成。

@@ -1,0 +1,11 @@
+=== 环境 ===
+x86_64
+gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+GNU Make 4.3
+strace -- version 5.16
+=== make clean 后 strace 跟踪 make ===
+strace exit=0
+=== make -pn 抓声明依赖 ===
+make -pn exit=0
+已写入 /tmp/a03/e3-a03/evidence/linux-verified/strace-evidence.md
+trace 文件数: 16

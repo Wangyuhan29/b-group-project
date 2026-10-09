@@ -22,3 +22,9 @@
 - A03 `validate.py`：27 个共享样例（19 个有效、8 个预期拒绝）及 7 个 Minicalc 样例全部通过。
 - A03 与 B03 核对后确认 33 个共享文件 SHA-256 一致。
 - 以上是 E2 契约和镜像交接证据；真实 BuildChecker/EChecker 算法和跨机器 Checker 联调仍属于 E3/E12。
+
+## E3 互查与 Ubuntu 复验（2026-10-09）
+
+- A03 固定提交的人工 MD/RD、三版本行为和 Minicalc 三提交测试通过，原始本地互查日志见 `e3-b03/evidence/a03-cross-review-20261009/`；strace 解码异常未作为通过证据。
+- Ubuntu 原生 amd64 的 DRAFT Docker 失败候选退出码 127；镜像源参考候选构建/运行退出码 0，输出 hello E3。
+- Ubuntu 结果已按远程终端观察记录；原始日志仍在虚拟机，待取回。详见 `e3-b03/evidence/ubuntu-amd64-20261009/README.md`。

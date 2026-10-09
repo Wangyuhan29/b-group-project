@@ -1,0 +1,24 @@
+=== STEP4: first full build ===
+cc -c main.c -o main.o
+cc main.o -o app
+make exit=0
+--- run app ---
+1
+app exit=0
+=== STEP5: edit config.h to VALUE 2, incremental build (expect stale 1) ===
+make: 'app' is up to date.
+make exit=0
+--- run app (expect 1, stale) ---
+1
+app exit=0
+=== STEP6: clean build (expect 2) ===
+rm -f main.o app
+cc -c main.c -o main.o
+cc main.o -o app
+--- run app (expect 2) ---
+2
+app exit=0
+=== STEP7: edit unused.h comment only, make (expect recompile) ===
+cc -c main.c -o main.o
+cc main.o -o app
+make exit=0
