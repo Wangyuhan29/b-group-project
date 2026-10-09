@@ -41,7 +41,7 @@ mdfixer/target.before.mk e99d68627e6a99dfa90469063633cb06fff1dc024425a88b2c33521
 
 ## 未完成与下一步
 
-- 2026-10-09 已在原生 Ubuntu x86_64 完成 DRAFT 的 `linux/amd64` Docker 失败/成功验证；原始日志仍在虚拟机，待取回并归档。Mac arm64 的历史日志继续保留原平台标注。
+- 2026-10-09 已在原生 Ubuntu x86_64 完成 DRAFT 的 `linux/amd64` Docker 失败/成功验证；原始日志已取回并完成哈希校验归档。Mac arm64 的历史日志继续保留原平台标注。
 - 后续 E5/E8 实现 DRAFT 与 MDFixer 运行器时，用本目录人工答案判定其输出；不能将参考补丁直接当作自动工具结果。
 - 与 A03 的真实 Checker、跨机器产物读取和修复后重检安排在后续实验联调。
 
@@ -53,4 +53,8 @@ mdfixer/target.before.mk e99d68627e6a99dfa90469063633cb06fff1dc024425a88b2c33521
 
 Windows VMware 内 Ubuntu 20.04.6、Docker 20.10.21 实测：失败候选缺少 make，Docker 构建退出码 127；参考候选构建及运行退出码均为 0，输出 `hello E3`，镜像平台为 `linux/amd64`。原始参考文件下载依赖遇到网络停滞，成功构建采用仅替换 Debian 下载源的 `Dockerfile.mirror`。未修改 Windows 代理。
 
-结果、版本边界和原始日志位置见 [Ubuntu 复验记录](evidence/ubuntu-amd64-20261009/README.md)。该目录目前保存观察记录，未包含从虚拟机取回的原始日志；不能视为完整证据归档。此次复验不覆盖 A03 strace 动态读取异常或四服务联调。
+结果、版本边界和原始日志位置见 [Ubuntu 复验记录](evidence/ubuntu-amd64-20261009/README.md)。该目录已保存从虚拟机取回的全部原始文件、文件哈希、Dockerfile 差异和重跑命令。此次复验不覆盖 A03 strace 动态读取异常或四服务联调。
+
+## E3 提交核对
+
+B03 本阶段要求已完成，逐项材料、预期与实际结果、版本及贡献入口见 [提交核对表](../docs/E3_SUBMISSION.md)。A03 strace 独立复验及后续运行器/联调待办继续保留，不计为 B03 E3 必交项。

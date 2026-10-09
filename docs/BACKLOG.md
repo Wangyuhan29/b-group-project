@@ -4,7 +4,7 @@
 
 # Backlog
 
-“草案完成”指 AI 已生成并校验，不代表组员验收或 A 组同意。负责人姓名需在 TEAM 中认领。
+“草案完成”指 AI 已生成并校验，不代表组员验收或 A 组同意。负责人角色与姓名已在 TEAM 中对应。
 
 | ID / 阶段 | 负责人角色 | 任务与产物 | 验收标准 | 状态 |
 |---|---|---|---|---|
@@ -16,7 +16,7 @@
 | E2-06 | B-QA | 负例和 validate.py | manifest 预期结果全部一致 | 已完成；B03/A03 均记录通过结果 |
 | E2-07 | 全体 | ADR、AI_USAGE、贡献记录 | 真实人工判断、SHA、Issue/PR 可追溯 | 已完成；成员、贡献和 SHA 已记录 |
 | E2-08 | A/B 全体 | PAIR_REVIEW 签认 | 三轮讨论记录和未决项明确 | 已完成；A03/B03 记录已同步 |
-| E3-01 | B-DRAFT | 真实 DRAFT 目标项目与独立样本 | 记录版本、构建命令、功能断言、失败和参考输入 | Minicalc C2 镜像已验证；Tiny Greeting 在 Mac arm64 和 Ubuntu 原生 amd64 均完成 Docker 失败/成功实跑；Ubuntu 原始日志待取回 |
+| E3-01 | B-DRAFT | 真实 DRAFT 目标项目与独立样本 | 记录版本、构建命令、功能断言、失败和参考输入 | Minicalc C2 镜像已验证；Tiny Greeting 在 Mac arm64 和 Ubuntu 原生 amd64 均完成 Docker 失败/成功实跑；Ubuntu 原始日志已取回并校验归档 |
 | E3-02 | B-REPAIR | 固定 MD + 四类修复样本 | 漏依赖可复现，patch 可应用，改头文件后自动重建；无效候选被拒绝并恢复 | Target/Macro/Hybrid/Implicit 四种本地行为验证及拒绝恢复已通过，日志见 `e3-b03/evidence/` |
 | E3-03 | B-DRAFT | DRAFT 运行器 | 初始候选、构建日志、错误/上下文反馈、迭代上限和验证闭环 | 后续 E5 实现；本次提供人工参考基线 |
 | E3-04 | B-REPAIR | MDFixer 运行器 | 显式规则后逐步支持宏/模式规则，风格说明及失败拒绝 | 后续 E8 实现；本次提供人工参考补丁和验证脚本 |
@@ -30,5 +30,5 @@
 | ID | 工作 | 完成情况与下一步 |
 |---|---|---|
 | E3-09 | B03 复核 A03 e3 基线 | MD/RD、三版本演示及 Minicalc 三提交行为通过；跨架构 strace 解码异常已留档，动态读取仍待原生环境复验 |
-| E3-10 | B03 原生 linux/amd64 DRAFT Docker 基线 | Ubuntu 实测符合失败/成功预期；镜像源变体和结果已记录，原始日志待从虚拟机取回 |
-| E3-11 | Ubuntu 原始证据归档 | 待完成；远程剪贴板和窗口切换阻碍传输，文件保留在 /home/hp/b03-e3-validation/ |
+| E3-10 | B03 原生 linux/amd64 DRAFT Docker 基线 | Ubuntu 实测符合失败/成功预期；镜像源变体和结果已记录，原始日志已取回并校验归档 |
+| E3-11 | Ubuntu 原始证据归档 | 已完成；21 个原始文件已取回，传输包及逐文件 SHA-256 校验通过，见 e3-b03/evidence/ubuntu-amd64-20261009/ |

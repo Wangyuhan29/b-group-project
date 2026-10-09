@@ -1,0 +1,10 @@
+--- Dockerfile.broken
++++ Dockerfile.mirror
+@@ -1,5 +1,6 @@
+ FROM python:3.13-slim
++RUN sed -i 's@deb.debian.org@mirrors.tuna.tsinghua.edu.cn@g' /etc/apt/sources.list.d/debian.sources && apt-get update && apt-get install -y --no-install-recommends gcc make libc6-dev && rm -rf /var/lib/apt/lists/*
+ WORKDIR /work
+ COPY main.c Makefile ./
+-RUN make
++RUN make && test -x hello && test "$(./hello)" = "hello E3"
+ CMD ["./hello"]

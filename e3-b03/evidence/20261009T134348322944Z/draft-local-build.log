@@ -1,0 +1,8 @@
+cwd=/var/folders/l6/7kn3v34j1pv48bjh38l3w0d40000gn/T/b03-e3-rszxhsyz/draft
+command=['make']
+exit_code=0
+stdout:
+cc -std=c11 -Wall -Wextra -Werror main.c -o hello
+
+stderr:
+

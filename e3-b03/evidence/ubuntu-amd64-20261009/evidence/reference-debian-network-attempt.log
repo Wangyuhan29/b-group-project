@@ -1,0 +1,9 @@
+Sending build context to Docker daemon   5.12kB
+Step 1/6 : FROM python:3.13-slim
+ ---> ce3ff9524414
+Step 2/6 : RUN apt-get update && apt-get install -y --no-install-recommends gcc make libc6-dev && rm -rf /var/lib/apt/lists/*
+ ---> Running in 0d4428f2c205
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]

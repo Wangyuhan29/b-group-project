@@ -1,0 +1,13 @@
+Sending build context to Docker daemon   5.12kB
+Step 1/5 : FROM python:3.13-slim
+ ---> ce3ff9524414
+Step 2/5 : WORKDIR /work
+ ---> Running in 786c1486afd7
+Removing intermediate container 786c1486afd7
+ ---> 695f8ebf0c06
+Step 3/5 : COPY main.c Makefile ./
+ ---> d1084fc00907
+Step 4/5 : RUN make
+ ---> Running in eb21f7fa7001
+[91m/bin/sh: 1: make: not found
+[0mThe command '/bin/sh -c make' returned a non-zero code: 127

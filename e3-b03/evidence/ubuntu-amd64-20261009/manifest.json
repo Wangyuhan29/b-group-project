@@ -1,0 +1,30 @@
+{
+  "provenance": "ACTUAL_VM_EXECUTION",
+  "date": "2026-10-09",
+  "source_commit": "9f39cc899b9e8136b89ebe32c90f74c00d912ec7",
+  "transfer_bundle_sha256": "ed0b850d13edc7f99bc7adaec23214a5e9c20f63a9f416c02bea93c6fa571b1a",
+  "files": {
+    "dockerfile.diff": "922ec52ebc7024e942c6d5505beb0825cd14395b54ed58112f8d425eb49c22bb",
+    "draft/Dockerfile.broken": "5c24884b5c48b5476fe19f2596487bb9105093113b3df5428710c841adb9502d",
+    "draft/Dockerfile.mirror": "e57650ea146ecfe9992146cec69c0270e0db91a30ec4cf3d0b16f515caf9cc45",
+    "draft/Dockerfile.reference": "124d478953846d77ffd89664c9c3d1384ea87c9543c1b0945de4de3a99de1cf9",
+    "draft/Makefile": "e42fe3b6054e1a8b93b1dfc428a4637a9e08eaca2fef3c25b3a1f1d1444ff2a7",
+    "draft/main.c": "b1e9d3ae4d2089e5e3f4ed35e37f81efcca44c023752a7f7e6a7745d21ff4220",
+    "evidence/1ms-pull.log": "6b8337b7f2479e1153b1ec55a12ad09a9683befec3dfc127829b256020ce5d95",
+    "evidence/base-image.json": "2b96b592cd55aaa1a8730f2d1eec44a24d78d0e9e9afeb6cd4eea5e1ab4495a1",
+    "evidence/broken-build.exit": "743c7850cccfba5e53a9002663ec1ddd1079315a98bdbfdde10e6044f56abefe",
+    "evidence/broken-build.log": "f6774e63e79ea0427e20c51d9b844792d3b706dabe703bf4d8fd96844fe7e274",
+    "evidence/environment.txt": "093aaf2bcd5bfad3a060b8bbc8e1b07e0c0044d1b15f6fb8a5680c7bbddafef1",
+    "evidence/initial-network-attempt.log": "18931eea2e3ed05fb8665813704f0b24efbaf5888622320ac22ef37c9f79177e",
+    "evidence/mirror-pull.log": "0252d1ca2f454495f14d9397853d45134ab70ec3de007083d6080fdf32b29eac",
+    "evidence/reference-build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "evidence/reference-build.log": "ec6250c3041e3fc4ea4812b2bd325fc013103becb6284c20ee2fe371963f5b78",
+    "evidence/reference-debian-network-attempt.log": "07ce9f8d192cc2f80189b9ed29fceee16f06f94d49dc47152931ba120843f915",
+    "evidence/reference-image.json": "bac49940515e838e516e5e53f4f5ef2e10a03c60cb1dac0fad509cdcfb22e559",
+    "evidence/reference-run.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "evidence/reference-run.log": "8e4e09b0c3458c9c59e691c847d4d7484995403e663549d919fac7c2a5823548",
+    "evidence/source-sha256.txt": "30c19ca013fbb630175411323969bd789ad6d9f860e10d1cf81f9e7bae466629",
+    "run-mirror.sh": "89bb7debceae8c8d01e69d55f4e179e90a43522935ac15e15f53ffc0ff69a3b0",
+    "run-reference.sh": "714c382adc78c10b04d2226b699cdedb1ab58f4e232d6bd96e74465eebf9a95c"
+  }
+}
