@@ -38,7 +38,7 @@ make check
 | draft/minicalc.Dockerfile | 已在 GitHub Actions 验证的 C2 环境 |
 | contracts/graph.schema.json | 已与 A 组文件核对并加入共享锁 |
 | contracts/finding-id-v1.json | finding_id 算法与测试向量；已加入共享锁 |
-| docs/e2/REPLY_TO_A.md | 可以发给 A 组的具体答复，未自动发送 |
+| docs/e2/REPLY_TO_A.md | 可以发给 A 组的具体答复 |
 | docs/e2/MINICALC_HANDOFF.md | 读取方法、环境边界、三个版本的核验与边界 |
 
 原 contracts/examples、artifacts/demo、fixtures/draft-project 及 scripts/demo.py 保留为旧教学样本与兼容性回归，**不是 minicalc 正式输入**。make demo 已改为 minicalc；make legacy-demo 可重放旧演示。公共 task.schema.json/OpenAPI/validate.py 没有改字段，不要求 A 组立刻升级公共模型。

@@ -2,7 +2,7 @@
 
 日期：2026-09-17。
 
-依据：用户提供的 A 组 REPLY_TO_B.md，及实际读取的 A 组仓库 `tang-yixin/devops_lab_a03` 的 e2 分支，提交 `b75b40f89708bc577e223081631a2c17e68c1fa8`。
+依据：A 组提供的 REPLY_TO_B.md，及实际读取的 A 组仓库 `tang-yixin/devops_lab_a03` 的 e2 分支，提交 `b75b40f89708bc577e223081631a2c17e68c1fa8`。
 
 B 组首次建立 contracts/shared-lock.json，沿用最初共同模型的 31 个文件及哈希，追加 graph.schema.json 和 finding-id-v1.json。锁文件的 b_source_commit 保留初始模型来源，不是当前仓库 HEAD；锁本身不能加入自身哈希。
 
