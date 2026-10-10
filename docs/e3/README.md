@@ -47,11 +47,11 @@ mdfixer/target.before.mk e99d68627e6a99dfa90469063633cb06fff1dc024425a88b2c33521
 
 ## A03 交叉复核（2026-10-09）
 
-已复核 A03 e3 分支提交 `555a262238c9bc2ac883a5ff74d5ae6b389895f1`，用户提供的 ZIP 中 E3 目录与该提交一致。在 Ubuntu 22.04 linux/amd64 容器中，MD/RD 人工样例、三版本演示、Minicalc 三提交构建与功能测试均符合预期。strace 在本机跨架构环境出现解码异常，动态读取关系尚未独立验证。详细判据、原始日志和互查建议见 [交叉复核记录](../../artifacts/e3/a03-cross-review-20261009/REVIEW.md)。
+已复核 A03 e3 分支提交 `555a262238c9bc2ac883a5ff74d5ae6b389895f1`。在 Ubuntu 22.04 linux/amd64 容器中，MD/RD 人工样例、三版本演示、Minicalc 三提交构建与功能测试均符合预期。strace 在本机跨架构环境出现解码异常，动态读取关系尚未独立验证。详细判据、原始日志和互查建议见 [交叉复核记录](../../artifacts/e3/a03-cross-review-20261009/REVIEW.md)。
 
 ## Ubuntu 原生 amd64 Docker 复验（2026-10-09）
 
-Windows VMware 内 Ubuntu 20.04.6、Docker 20.10.21 实测：失败候选缺少 make，Docker 构建退出码 127；参考候选构建及运行退出码均为 0，输出 `hello E3`，镜像平台为 `linux/amd64`。原始参考文件下载依赖遇到网络停滞，成功构建采用仅替换 Debian 下载源的 `Dockerfile.mirror`。未修改 Windows 代理。
+Windows VMware 内 Ubuntu 20.04.6、Docker 20.10.21 实测：失败候选缺少 make，Docker 构建退出码 127；参考候选构建及运行退出码均为 0，输出 `hello E3`，镜像平台为 `linux/amd64`。原始参考文件下载依赖遇到网络停滞，成功构建采用仅替换 Debian 下载源的 `Dockerfile.mirror`。
 
 结果、版本边界和原始日志位置见 [Ubuntu 复验记录](../../artifacts/e3/ubuntu-amd64-20261009/README.md)。该目录已保存从虚拟机取回的全部原始文件、文件哈希、Dockerfile 差异和重跑命令。此次复验不覆盖 A03 strace 动态读取异常或四服务联调。
 
