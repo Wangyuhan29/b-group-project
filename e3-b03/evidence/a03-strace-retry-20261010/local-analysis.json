@@ -1,0 +1,12 @@
+{
+  "trace_count": 16,
+  "syscall_0x_count": 8650,
+  "successful_execve_count": 0,
+  "headers": {
+    "config.h": 0,
+    "parser.h": 0,
+    "token.h": 0,
+    "util.h": 0,
+    "legacy.h": 0
+  }
+}

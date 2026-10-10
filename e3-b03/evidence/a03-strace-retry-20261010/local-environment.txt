@@ -1,0 +1,1 @@
+Linux 27b62699d59d 7.0.14-linuxkit #1 SMP PREEMPT Fri Sep 18 10:19:32 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux

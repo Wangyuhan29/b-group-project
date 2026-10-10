@@ -1,0 +1,46 @@
+{
+  "trace_count": 16,
+  "syscall_0x_count": 0,
+  "compiler_reads": [
+    {
+      "trace": "trace.log.444",
+      "source": [
+        "src/main.c"
+      ],
+      "headers": [
+        "include/config.h",
+        "include/parser.h",
+        "include/token.h",
+        "include/util.h"
+      ]
+    },
+    {
+      "trace": "trace.log.447",
+      "source": [
+        "src/parser.c"
+      ],
+      "headers": [
+        "include/parser.h",
+        "include/token.h"
+      ]
+    },
+    {
+      "trace": "trace.log.450",
+      "source": [
+        "src/token.c"
+      ],
+      "headers": [
+        "include/token.h"
+      ]
+    },
+    {
+      "trace": "trace.log.453",
+      "source": [
+        "src/util.c"
+      ],
+      "headers": [
+        "include/util.h"
+      ]
+    }
+  ]
+}

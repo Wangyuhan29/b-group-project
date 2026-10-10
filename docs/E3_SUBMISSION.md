@@ -32,3 +32,5 @@
 2026-10-09 重跑 verify_baselines.py：DRAFT 本地行为、Target/Macro/Hybrid/Implicit 四类修复和无效候选拒绝恢复均 PASS，证据见 `e3-b03/evidence/20261009T134348322944Z/`。同目录 project-check.log 保存 make check 的通过记录（33 文件锁、契约、26 项测试及 C2/历史检查）。Ubuntu 21 个原始文件哈希再次逐一校验通过。
 
 E3 材料与最终验证对应提交：`497ff2e05757010c3097fb4d3f2ec0d89a1f0c5a`；之后的贡献记录提交仅补充此 SHA。仓库最终 HEAD 同时包含材料与贡献记录。
+
+2026-10-10 互查收尾：A03 新增原生 trace 已独立读取复核，符合 C0 预期；B03 跨架构重跑异常已留档，暂不继续排查。详见 `e3-b03/evidence/a03-strace-retry-20261010/REVIEW.md`。这是 A03 产物复核通过，不冒充 B03 原生 strace 重跑通过。
