@@ -16,7 +16,7 @@
 ## 提交前由小组补齐
 
 - [x] TEAM：已补录 B03、A03、鼓楼校区、双方联系人和成员学号。
-- [x] PAIR_REVIEW：A03 已提供三轮评审记录和验证结果，已同步到 `docs/PAIR_REVIEW.md`。
+- [x] PAIR_REVIEW：A03 已提供三轮评审记录和验证结果，已同步到 `docs/e2/PAIR_REVIEW.md`。
 - [x] ADR-004/005 已按 A03/B03 评审更新为 Accepted；ADR-001/002/003 仍保留 Proposed 状态，待双方逐项确认。
 - [x] AI_USAGE：已记录人工采纳、修改、拒绝和理由。
 - [x] CONTRIBUTIONS：已按三人分工填写；个人讨论/审阅证据仍需成员核对补充。
@@ -37,4 +37,4 @@
 
 ## E3 提交增量（2026-10-09）
 
-B03 E3 必交基线已完成，逐项核对见 [E3_SUBMISSION](E3_SUBMISSION.md)。Ubuntu 原生 amd64 的原始构建/运行证据已取回并校验归档。请提交 main 最终 SHA；E2 初版和后续 E5/E8/E12 待办保留原阶段，不混作 E3 未完成必交项。
+B03 E3 必交基线已完成，逐项核对见 [E3_SUBMISSION](../e3/SUBMISSION.md)。Ubuntu 原生 amd64 的原始构建/运行证据已取回并校验归档。请提交 main 最终 SHA；E2 初版和后续 E5/E8/E12 待办保留原阶段，不混作 E3 未完成必交项。

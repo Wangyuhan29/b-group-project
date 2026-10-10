@@ -2,7 +2,7 @@
 
 日期：2026-09-30；主机：macOS arm64；Docker Desktop 29.8.1；Docker Engine 29.8.1。
 
-工作目录：`e3-b03/fixtures/draft/`。
+工作目录：`fixtures/e3/draft/`。
 
 | 操作 | 命令 | 实际结果 | 日志 |
 |---|---|---|---|

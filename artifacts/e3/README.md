@@ -1,0 +1,3 @@
+# 运行证据
+
+执行 `python3 scripts/verify_e3_baselines.py` 会在此处创建按 UTC 时间命名的新目录，包含 `summary.json` 和逐命令日志。每次运行保留旧目录。正式提交时由组员选定一次完整运行并将其日志归档；脚本不会覆盖既有记录。

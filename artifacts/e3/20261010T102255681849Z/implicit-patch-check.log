@@ -1,0 +1,7 @@
+cwd=/var/folders/l6/7kn3v34j1pv48bjh38l3w0d40000gn/T/b03-e3-spw4pvlb/implicit
+command=['git', 'apply', '--check', '/Users/wyh/学习资料/其他/大三资料/大三上/devops/b-group-project/fixtures/e3/mdfixer/implicit.patch']
+exit_code=0
+stdout:
+
+stderr:
+

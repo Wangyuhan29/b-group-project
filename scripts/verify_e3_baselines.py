@@ -13,8 +13,8 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "evidence" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "artifacts" / "e3" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
 OUT.mkdir(parents=True, exist_ok=False)
 
 
@@ -36,7 +36,7 @@ def update_header(path: Path, value: int) -> None:
 
 
 def verify_style(style: str, tmp: Path) -> dict[str, object]:
-    src = ROOT / "fixtures" / "mdfixer"
+    src = ROOT / "fixtures" / "e3" / "mdfixer"
     work = tmp / style
     work.mkdir()
     for filename in ("main.c", "config.h"):
@@ -71,7 +71,7 @@ def verify_style(style: str, tmp: Path) -> dict[str, object]:
 
 
 def verify_rejection(tmp: Path) -> dict[str, object]:
-    src = ROOT / "fixtures" / "mdfixer"
+    src = ROOT / "fixtures" / "e3" / "mdfixer"
     work = tmp / "rejected"
     work.mkdir()
     for filename in ("main.c", "config.h"):
@@ -95,7 +95,7 @@ def main() -> None:
     with tempfile.TemporaryDirectory(prefix="b03-e3-") as dirname:
         tmp = Path(dirname)
         draft = tmp / "draft"
-        shutil.copytree(ROOT / "fixtures" / "draft", draft)
+        shutil.copytree(ROOT / "fixtures" / "e3" / "draft", draft)
         unavailable = subprocess.run(["/bin/sh", "-c", "make"], cwd=draft, text=True,
                                      capture_output=True, env={"PATH": "/nonexistent"}, check=False)
         (OUT / "draft-missing-toolchain-local.log").write_text(

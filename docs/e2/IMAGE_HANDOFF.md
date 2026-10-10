@@ -1,6 +1,6 @@
 # C2 镜像交接
 
-2026-09-17 已完成构建、容器运行断言并发布。成功记录：https://github.com/Wangyuhan29/b-group-project/actions/runs/35172889272 。机器可读信息见 image-receipt.json。
+2026-09-17 已完成构建、容器运行断言并发布。成功记录：https://github.com/Wangyuhan29/b-group-project/actions/runs/35172889272 。机器可读信息见 docs/e2/records/image-receipt.json。
 
 实际注册表 digest：`sha256:c4e23321b6f51c9382d2c3b12eef8c9594d8aa9aab01daf8d52928b41f27dc6d`。
 
