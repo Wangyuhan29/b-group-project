@@ -60,3 +60,5 @@ Docker socket 相当于控制宿主机 Docker。只构建课程样例，不开�
 按用户提供的教师配置图，B03 使用 2 vCPU、2 GiB 内存、80 GiB 系统盘；无需为满足原模板阈值升级。用户实际服务器为 Ubuntu 24.04.4 x86_64，可见内存约 1.7 GiB，磁盘可用约 72 GiB；教师示例图使用 Ubuntu 22.04。
 
 原模板 doctor.py 的最低可见内存 3.5 GiB 与教师指定规格不符，本组将该阈值调整为 1.5 GiB，作为标称 2 GiB 服务器的检查容差。CPU 最低 2 核、磁盘可用最低 40 GiB 保持不变；建议资源不足仍显示 warning，不阻止 E4 小样本运行。该调整不证明构建或测试成功，仍以实际日志验收。Compose 的 1 GiB 服务内存限制保持不变，宿主机构建不受该限制；按顺序运行，暂不同时启动多名组员的构建。本次未配置 Swap 或修改云服务器。
+
+服务器首次构建停在 deb.debian.org 的 trixie Packages 下载，保留原日志后取消该次构建。已验证华为云 Debian 与 Debian Security 镜像 HTTPS 可达，服务 Dockerfile 通过 DEBIAN_MIRROR 改用该源，保留原 Debian 签名验证和固定镜像 digest；新增 apt 索引超时/重试参数。私有 GitHub 仓库在服务器无凭据，使用 SSH 传入 Git bundle 并核验完整 SHA，origin 仍记录真实 GitHub 地址；未传送 GitHub Token。

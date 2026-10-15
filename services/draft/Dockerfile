@@ -20,7 +20,9 @@ ENV LC_ALL=C.UTF-8 \
 COPY --from=docker-cli /usr/local/bin/docker /usr/local/bin/docker
 COPY --from=docker-cli /usr/local/libexec/docker/cli-plugins/docker-buildx /usr/local/libexec/docker/cli-plugins/docker-buildx
 
-RUN apt-get update \
+ARG DEBIAN_MIRROR=https://mirrors.huaweicloud.com
+RUN sed -i "s@http://deb.debian.org@${DEBIAN_MIRROR}@g;s@https://deb.debian.org@${DEBIAN_MIRROR}@g" /etc/apt/sources.list.d/debian.sources \
+ && apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=60 -o Acquire::https::Timeout=60 update \
  && apt-get install -y --no-install-recommends git \
  && rm -rf /var/lib/apt/lists/* \
  && dpkg-query -W -f='${Package}=${Version}\n' git > /opt/toolchain.lock \
