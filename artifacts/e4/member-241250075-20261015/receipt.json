@@ -1,0 +1,28 @@
+{
+  "student_id": "241250075",
+  "executor": "ZCode agent (GLM), explicitly authorized by user; not an attestation of manual operation",
+  "tested_commit": "8701f70d4a3f76592832eedde62b02bb59711ef4",
+  "run": "/root/241250075/draft/work/20261015T121458530171Z",
+  "make_all_exit": 0,
+  "negative_scan_exit": 2,
+  "clean_scan_exit": 0,
+  "image": {
+    "image": "e4-draft:241250075",
+    "id": "sha256:c76a8fda5875de952807d4cd573b16d3a1602ccc010510f724a82526cb95dcf0",
+    "arch": "amd64",
+    "created": "2026-10-15T19:37:44.769105024+08:00"
+  },
+  "transfer": {
+    "method": "private repo not directly clonable from server; cloned from /root/e4-group-setup/b-group-project local mirror, origin reset to group GitHub URL, rev-parse verified equal to tested commit with clean worktree; evidence files fetched by SFTP unmodified"
+  },
+  "comparison": {
+    "same_commit": true,
+    "both_clean": true,
+    "same_host": true,
+    "same_host_tools": true,
+    "toolchain_bytes_equal": true,
+    "test_log_bytes_equal": true,
+    "same_smoke_conclusion": true,
+    "both_doctor_pass": true
+  }
+}
