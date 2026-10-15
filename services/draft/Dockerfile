@@ -31,7 +31,8 @@ RUN sed -i "s@http://deb.debian.org@${DEBIAN_MIRROR}@g;s@https://deb.debian.org@
  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
 
 COPY requirements-dev.lock /tmp/requirements-dev.lock
-RUN pip install --no-cache-dir --require-hashes -r /tmp/requirements-dev.lock \
+ARG PYPI_INDEX=https://mirrors.huaweicloud.com/repository/pypi/simple
+RUN pip install --no-cache-dir --index-url "${PYPI_INDEX}" --require-hashes -r /tmp/requirements-dev.lock \
  && pip freeze | sed 's/^/pip:/' >> /opt/toolchain.lock
 
 RUN useradd --create-home --uid 10001 app && install -d -o app -g app /app
