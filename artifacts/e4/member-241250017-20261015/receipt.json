@@ -1,0 +1,26 @@
+{
+  "student_id": "241250017",
+  "executor": "Codex, explicitly authorized by user; not an attestation of manual operation",
+  "tested_commit": "8701f70d4a3f76592832eedde62b02bb59711ef4",
+  "run": "/root/241250017/draft/work/20261015T115106982116Z",
+  "make_all_exit": 0,
+  "negative_scan_exit": 2,
+  "clean_scan_exit": 0,
+  "image": {
+    "image": "e4-draft:241250017",
+    "id": "sha256:222160fa16adbfcf507a778b4385a224fb76aedcb702bdaa8a8ad7139bc2611d",
+    "arch": "amd64",
+    "created": "2026-10-15T19:37:44.769105024+08:00"
+  },
+  "comparison": {
+    "same_commit": true,
+    "both_clean": true,
+    "same_host": true,
+    "same_host_tools": true,
+    "toolchain_bytes_equal": true,
+    "test_log_bytes_equal": true,
+    "same_smoke_conclusion": true,
+    "both_doctor_pass": true
+  },
+  "original_archive_sha256": "07a2e730239150a1838fcc4af55b7143a6a6743311c95205226d250c6b45340b"
+}

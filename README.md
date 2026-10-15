@@ -2,7 +2,7 @@
 
 ## E4 可重复工程环境
 
-已接入课程 B-draft 模板，正式 Linux 服务器运行 `make all`。服务位于 `services/draft/`，运行参数在根目录 `compose.yaml`，依赖锁和 `.env.example` 均按课件放在根目录。王宇晗已在服务器完成全流程，另一名组员重跑对照待完成。完整步骤与当前验收状态见 [E4 文档](docs/e4/README.md)。原 E2/E3 验证继续使用 `make check`，原根目录单测改名为 `make regression-test`。
+已接入课程 B-draft 模板，正式 Linux 服务器运行 `make all`。服务位于 `services/draft/`，运行参数在根目录 `compose.yaml`，依赖锁和 `.env.example` 均按课件放在根目录。王宇晗已在服务器完成全流程，241250017 目录也已按用户授权完成实际复跑，对比结论一致，执行方式和边界见 [复跑对比](docs/e4/MEMBER_COMPARISON_241250017.md)。完整步骤与当前验收状态见 [E4 文档](docs/e4/README.md)。原 E2/E3 验证继续使用 `make check`，原根目录单测改名为 `make regression-test`。
 
 
 ## E3 并行测试基线（2026-09-30）
