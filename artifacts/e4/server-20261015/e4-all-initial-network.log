@@ -1,0 +1,266 @@
+make[1]: Entering directory '/root/241250086/b-group-project'
+python3 scripts/doctor.py --out work/20261015T112318260414Z/env.json
+{
+  "time": "2026-10-15T11:23:18.332338+00:00",
+  "hostname": "ecs-833a",
+  "os": "Ubuntu 24.04.4 LTS",
+  "kernel": "6.8.0-136-generic",
+  "arch": "x86_64",
+  "spec": {
+    "cpus": 2,
+    "mem_gib": 1.7,
+    "disk_gib": 71.1
+  },
+  "tools": {
+    "docker": "29.1.3",
+    "compose": "2.40.3+ds1-0ubuntu1~24.04.1",
+    "buildx": "github.com/docker/buildx 0.30.1 0.30.1-0ubuntu1~24.04.1",
+    "git": "git version 2.43.0",
+    "make": "GNU Make 4.3",
+    "python3": "Python 3.12.3"
+  },
+  "problems": [],
+  "warnings": [
+    "cpus=2 低于建议值 4",
+    "mem_gib=1.7 低于建议值 8",
+    "disk_gib=71.1 低于建议值 100",
+    "Docker 未配置镜像加速，拉取基础镜像可能很慢（见 setup/bootstrap_ubuntu.sh）"
+  ],
+  "docker_sock_gid": 112,
+  "registry_mirrors": [],
+  "git": {
+    "user.name": "241250086",
+    "user.email": "241250086@smail.nju.edu.cn"
+  },
+  "source": {
+    "commit": "119ad88aa6fcd88a2638f020bb9d7ccf80674d46",
+    "dirty": false
+  }
+}
+
+环境自检：通过
+make[1]: Leaving directory '/root/241250086/b-group-project'
+make[1]: Entering directory '/root/241250086/b-group-project'
+cp .env.example .env && chmod 600 .env
+已从 .env.example 生成 .env（权限 600），需要时再填写。
+docker compose -p e4-draft-241250086 build --progress=plain 2>&1 | tee work/20261015T112318260414Z/build.log; test ${PIPESTATUS[0]} -eq 0
+--progress is a global compose flag, better use `docker compose --progress xx build ...
+#1 [internal] load local bake definitions
+#1 reading from stdin 542B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 2.22kB done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#3 ...
+
+#4 [internal] load metadata for m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#4 DONE 4.0s
+
+#3 [internal] load metadata for m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#3 DONE 4.1s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 389B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 10.92kB done
+#6 DONE 0.0s
+
+#7 [stage-1  1/10] FROM m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#7 resolve m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 0.0s done
+#7 DONE 0.1s
+
+#8 [docker-cli 1/1] FROM m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#8 resolve m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad 0.0s done
+#8 sha256:2d7ba3afdf47b5c4691580b6f2e2e6e3e2b3bc9bd6a7c60aeacb0d907f06c339 0B / 116B 0.2s
+#8 sha256:2d7ba3afdf47b5c4691580b6f2e2e6e3e2b3bc9bd6a7c60aeacb0d907f06c339 116B / 116B 0.8s done
+#8 sha256:0a7ca70c232bfd9c484ad87453366b208174bdb0e87e457ce31db9b4511d07e7 0B / 1.01kB 0.2s
+#8 sha256:0a7ca70c232bfd9c484ad87453366b208174bdb0e87e457ce31db9b4511d07e7 1.01kB / 1.01kB 1.0s done
+#8 sha256:4ca5c7282971aeea368a994cfaadb48e02c3fd851ae30db56495310f53c981ee 0B / 540B 0.2s
+#8 sha256:4ca5c7282971aeea368a994cfaadb48e02c3fd851ae30db56495310f53c981ee 540B / 540B 0.8s done
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 0B / 21.74MB 0.2s
+#8 ...
+
+#7 [stage-1  1/10] FROM m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#7 sha256:cf5110b4fa79118f46753653b48979bacfb64a8c795489a129cf6da712e6603e 249B / 249B 0.9s done
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 0B / 11.89MB 6.6s
+#7 sha256:9970f4c20ff16c00981dddbf196b2a36b5b3c1a0e30e106f4f422379bbfed24c 0B / 1.29MB 6.5s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 4.19MB / 29.79MB 6.5s
+#7 sha256:9970f4c20ff16c00981dddbf196b2a36b5b3c1a0e30e106f4f422379bbfed24c 1.05MB / 1.29MB 6.8s
+#7 sha256:9970f4c20ff16c00981dddbf196b2a36b5b3c1a0e30e106f4f422379bbfed24c 1.29MB / 1.29MB 7.3s done
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 1.05MB / 11.89MB 8.3s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 6.29MB / 29.79MB 8.7s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 8.39MB / 29.79MB 10.8s
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 2.10MB / 11.89MB 12.8s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 10.49MB / 29.79MB 14.1s
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 3.15MB / 11.89MB 15.6s
+#7 ...
+
+#8 [docker-cli 1/1] FROM m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 1.05MB / 21.74MB 13.2s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 2.10MB / 22.16MB 9.5s
+#8 ...
+
+#7 [stage-1  1/10] FROM m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 12.58MB / 29.79MB 17.0s
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 4.19MB / 11.89MB 18.8s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 14.68MB / 29.79MB 19.8s
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 5.24MB / 11.89MB 23.3s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 16.78MB / 29.79MB 23.1s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 18.87MB / 29.79MB 26.3s
+#7 ...
+
+#8 [docker-cli 1/1] FROM m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 2.10MB / 21.74MB 23.3s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 5.24MB / 22.16MB 19.5s
+#8 ...
+
+#7 [stage-1  1/10] FROM m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 6.29MB / 11.89MB 28.1s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 20.97MB / 29.79MB 29.7s
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 7.34MB / 11.89MB 32.9s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 23.07MB / 29.79MB 33.2s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 25.17MB / 29.79MB 36.0s
+#7 ...
+
+#8 [docker-cli 1/1] FROM m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 3.15MB / 21.74MB 33.3s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 9.44MB / 22.16MB 29.6s
+#8 ...
+
+#7 [stage-1  1/10] FROM m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 8.39MB / 11.89MB 38.0s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 27.26MB / 29.79MB 39.2s
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 9.44MB / 11.89MB 42.5s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 29.36MB / 29.79MB 42.6s
+#7 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 29.79MB / 29.79MB 43.2s done
+#7 extracting sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97
+#7 extracting sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 0.5s done
+#7 extracting sha256:9970f4c20ff16c00981dddbf196b2a36b5b3c1a0e30e106f4f422379bbfed24c 0.1s done
+#7 ...
+
+#8 [docker-cli 1/1] FROM m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 3.15MB / 21.74MB 42.3s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 12.58MB / 22.16MB 38.6s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 0B / 20.43MB 2.6s
+#8 ...
+
+#7 [stage-1  1/10] FROM m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 10.49MB / 11.89MB 47.0s
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 10.49MB / 11.89MB 52.1s
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 11.53MB / 11.89MB 52.8s
+#7 ...
+
+#8 [docker-cli 1/1] FROM m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 4.19MB / 21.74MB 49.2s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 14.68MB / 22.16MB 45.5s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 6.29MB / 20.43MB 9.5s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 7.34MB / 20.43MB 9.6s
+#8 ...
+
+#7 [stage-1  1/10] FROM m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#7 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 11.89MB / 11.89MB 55.0s done
+#7 extracting sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b
+#7 extracting sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 0.3s done
+#7 extracting sha256:cf5110b4fa79118f46753653b48979bacfb64a8c795489a129cf6da712e6603e 0.0s done
+#7 DONE 55.4s
+
+#8 [docker-cli 1/1] FROM m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 9.44MB / 20.43MB 12.2s
+#8 sha256:37009c416213bafe8d6e7c68aa4bc36688e1d7b2974ecd8118fa29dab8c9b0e0 0B / 457B 0.3s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 10.49MB / 20.43MB 12.9s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 11.53MB / 20.43MB 13.8s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 4.19MB / 21.74MB 54.3s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 15.73MB / 22.16MB 50.6s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 12.58MB / 20.43MB 14.9s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 13.63MB / 20.43MB 15.9s
+#8 sha256:37009c416213bafe8d6e7c68aa4bc36688e1d7b2974ecd8118fa29dab8c9b0e0 457B / 457B 4.2s done
+#8 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0B / 32B 0.2s
+#8 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B 0.4s done
+#8 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 0B / 8.23MB 0.2s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 14.68MB / 20.43MB 17.1s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 15.73MB / 20.43MB 18.0s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 16.78MB / 20.43MB 19.2s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 4.19MB / 21.74MB 59.4s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 16.78MB / 22.16MB 55.7s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 17.83MB / 20.43MB 20.4s
+#8 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 1.05MB / 8.23MB 4.8s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 18.87MB / 20.43MB 22.5s
+#8 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 2.10MB / 8.23MB 6.3s
+#8 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 3.15MB / 8.23MB 7.7s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 19.92MB / 20.43MB 24.2s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 4.19MB / 21.74MB 64.5s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 16.78MB / 22.16MB 60.8s
+#8 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 20.43MB / 20.43MB 25.0s done
+#8 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 4.19MB / 8.23MB 9.0s
+#8 sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 0B / 3.80MB 0.2s
+#8 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 5.24MB / 8.23MB 10.5s
+#8 sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 1.05MB / 3.80MB 2.9s
+#8 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 6.29MB / 8.23MB 12.2s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 4.19MB / 21.74MB 69.6s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 17.83MB / 22.16MB 65.9s
+#8 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 7.34MB / 8.23MB 14.0s
+#8 sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 2.10MB / 3.80MB 5.6s
+#8 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 8.23MB / 8.23MB 15.5s done
+#8 sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 3.15MB / 3.80MB 7.2s
+#8 sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 3.80MB / 3.80MB 8.3s done
+#8 extracting sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 0.1s done
+#8 extracting sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 0.1s done
+#8 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.0s done
+#8 extracting sha256:37009c416213bafe8d6e7c68aa4bc36688e1d7b2974ecd8118fa29dab8c9b0e0 0.0s done
+#8 extracting sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 0.2s done
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 5.24MB / 21.74MB 74.7s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 18.87MB / 22.16MB 71.0s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 5.24MB / 21.74MB 79.8s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 18.87MB / 22.16MB 76.1s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 5.24MB / 21.74MB 84.9s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 19.92MB / 22.16MB 81.2s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 6.29MB / 21.74MB 90.0s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 20.97MB / 22.16MB 86.3s
+#8 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 22.16MB / 22.16MB 87.7s done
+#8 extracting sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8
+#8 extracting sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 0.3s done
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 6.29MB / 21.74MB 95.1s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 7.34MB / 21.74MB 100.2s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 8.39MB / 21.74MB 105.3s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 9.44MB / 21.74MB 110.4s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 10.49MB / 21.74MB 115.5s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 11.53MB / 21.74MB 120.6s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 12.58MB / 21.74MB 125.7s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 13.63MB / 21.74MB 130.8s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 14.68MB / 21.74MB 135.9s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 15.73MB / 21.74MB 141.0s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 17.83MB / 21.74MB 146.1s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 17.83MB / 21.74MB 151.2s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 19.92MB / 21.74MB 155.7s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 20.97MB / 21.74MB 160.8s
+#8 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 21.74MB / 21.74MB 163.4s done
+#8 extracting sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38
+#8 extracting sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 0.3s done
+#8 DONE 167.4s
+
+#8 [docker-cli 1/1] FROM m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#8 extracting sha256:4ca5c7282971aeea368a994cfaadb48e02c3fd851ae30db56495310f53c981ee 0.0s done
+#8 extracting sha256:0a7ca70c232bfd9c484ad87453366b208174bdb0e87e457ce31db9b4511d07e7 0.0s done
+#8 extracting sha256:2d7ba3afdf47b5c4691580b6f2e2e6e3e2b3bc9bd6a7c60aeacb0d907f06c339 0.0s done
+#8 DONE 167.4s
+
+#9 [stage-1  2/10] COPY --from=docker-cli /usr/local/bin/docker /usr/local/bin/docker
+#9 DONE 0.1s
+
+#10 [stage-1  3/10] COPY --from=docker-cli /usr/local/libexec/docker/cli-plugins/docker-buildx /usr/local/libexec/docker/cli-plugins/docker-buildx
+#10 DONE 0.8s
+
+#11 [stage-1  4/10] RUN apt-get update  && apt-get install -y --no-install-recommends git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' git > /opt/toolchain.lock  && echo "docker-cli=$(docker --version)" >> /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+#11 1.711 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+#11 2.677 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#11 3.366 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#11 3.979 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]
+
+make[1]: *** [Makefile:50: build] Error 1
+make[1]: Leaving directory '/root/241250086/b-group-project'
+make: *** [Makefile:33: all] Error 2

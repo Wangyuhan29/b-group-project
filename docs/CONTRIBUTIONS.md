@@ -28,3 +28,7 @@
 | 王宇晗（241250086） | AI 辅助取回 Ubuntu 21 个原始文件、核验哈希/退出码/源码，补齐 E3_SUBMISSION、Backlog、验证及阶段完成记录，重跑基线 | `497ff2e05757010c3097fb4d3f2ec0d89a1f0c5a`（作者与提交者 Wangyuhan29） | docs: archive Ubuntu Docker logs and complete B03 E3 checklist | 无；直接提交 main | Ubuntu 构建/运行证据校验通过；四类修复与拒绝恢复 PASS；make check 通过 |
 
 上述记录更新前一轮“原始日志待取回”的历史状态：现已归档。其他成员保留已有分工和贡献，没有新增未经确认的工作或审阅声明。
+
+## E4 服务器环境与首名组员运行（2026-10-15）
+
+王宇晗（241250086）在 AI 辅助下接入课程模板、按教师 2 核 2G 配置调整自检容差、初始化服务器、处理下载源并完成个人 make all、假 Key 检查及原始证据归档。实际代码提交：`119ad88aa6fcd88a2638f020bb9d7ccf80674d46`（模板接入）、`8701f70d4a3f76592832eedde62b02bb59711ef4`（最终服务器实测版本，含 Debian 和 PyPI 适配），作者为学号 241250086；未使用 Issue/PR。结果见 docs/e4/SERVER_VERIFICATION.md；其他成员待真实重跑，不新增代跑或审阅声明。

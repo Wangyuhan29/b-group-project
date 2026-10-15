@@ -1,6 +1,6 @@
 # B03 E4 可重复工程环境
 
-来源：用户提供的 E4实验包.zip 中 B-draft/ 模板与 E4 B 组全流程命令手册。此处为模板接入及本地准备，服务器验收尚未执行。
+来源：用户提供的 E4实验包.zip 中 B-draft/ 模板与 E4 B 组全流程命令手册。已完成模板接入、本地准备及王宇晗的服务器全流程；另一名真实组员的同版本重跑对照仍待完成，详见 [服务器验证](SERVER_VERIFICATION.md)。
 
 ## 项目结构
 
@@ -46,11 +46,11 @@ Docker socket 相当于控制宿主机 Docker。只构建课程样例，不开�
 
 ## 服务器交付待办
 
-- [ ] Linux 服务器 make doctor：problems 为空，身份为学号。
-- [ ] make build：保存 build.log、image.json、toolchain.lock，核对镜像 digest。
-- [ ] make test：原模板四项及本组补充两项测试通过。
-- [ ] make smoke：默认 app 用户能访问 Docker Server，预期失败错误含 make: not found。
-- [ ] make scan：仓库/历史/镜像通过；假 Key 被拒绝、清理后通过。
+- [x] Linux 服务器 make doctor：problems 为空，身份为学号。
+- [x] make build：保存 build.log、image.json、toolchain.lock，核对镜像 digest。
+- [x] make test：原模板四项及本组补充两项测试通过。
+- [x] make smoke：默认 app 用户能访问 Docker Server，预期失败错误含 make: not found。
+- [x] make scan：仓库/历史/镜像通过；假 Key 被拒绝、清理后通过。
 - [ ] 另一名真实组员在独立学号目录克隆相同 SHA 并重跑，对比结论。
 
 本地检查结果另见 LOCAL_CHECKS.md，不将本地模拟或本机预检计作上述服务器验收。

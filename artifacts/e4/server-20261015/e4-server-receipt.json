@@ -1,0 +1,41 @@
+{
+  "status": "PRIMARY_STUDENT_SERVER_RUN_PASS",
+  "student_id": "241250086",
+  "commit": "8701f70d4a3f76592832eedde62b02bb59711ef4",
+  "run": "/root/241250086/b-group-project/work/20261015T113739788827Z",
+  "image": {
+    "image": "e4-draft:241250086",
+    "id": "sha256:2a708b2e44f4589340ccf8aa961985cae3c9fea1a2f7f1da1f64031b837ef999",
+    "arch": "amd64",
+    "created": "2026-10-15T19:37:44.769105024+08:00"
+  },
+  "image_default_user": "app",
+  "server": {
+    "docker": "29.1.3",
+    "compose": "2.40.3+ds1-0ubuntu1~24.04.1",
+    "buildx": "github.com/docker/buildx 0.30.1 0.30.1-0ubuntu1~24.04.1",
+    "git": "git version 2.43.0",
+    "make": "GNU Make 4.3",
+    "python3": "Python 3.12.3"
+  },
+  "secret_checks": {
+    "full_scan_pass": true,
+    "fake_key_rejected": 2,
+    "fake_key_evidence": [
+      "work/20261015T113900013110Z"
+    ],
+    "clean_scan_exit": 0,
+    "clean_evidence": [
+      "work/20261015T113900688046Z"
+    ],
+    "env_mode": "600",
+    "env_tracked": false
+  },
+  "source_delivery": "Git bundle over authenticated SSH; origin points to actual private GitHub repository",
+  "other_member_rerun": "PENDING_ACTUAL_MEMBER_EXECUTION",
+  "student_directories": [
+    "/root/241250086",
+    "/root/241250017",
+    "/root/241250075"
+  ]
+}

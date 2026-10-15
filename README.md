@@ -2,7 +2,7 @@
 
 ## E4 可重复工程环境
 
-已接入课程 B-draft 模板，正式 Linux 服务器运行 `make all`。服务位于 `services/draft/`，运行参数在根目录 `compose.yaml`，依赖锁和 `.env.example` 均按课件放在根目录。完整步骤与当前验收状态见 [E4 文档](docs/e4/README.md)。原 E2/E3 验证继续使用 `make check`，原根目录单测改名为 `make regression-test`。
+已接入课程 B-draft 模板，正式 Linux 服务器运行 `make all`。服务位于 `services/draft/`，运行参数在根目录 `compose.yaml`，依赖锁和 `.env.example` 均按课件放在根目录。王宇晗已在服务器完成全流程，另一名组员重跑对照待完成。完整步骤与当前验收状态见 [E4 文档](docs/e4/README.md)。原 E2/E3 验证继续使用 `make check`，原根目录单测改名为 `make regression-test`。
 
 
 ## E3 并行测试基线（2026-09-30）
@@ -143,7 +143,9 @@ b-group-project/
 │   ├── index.json                    产物 URI 索引
 │   ├── minicalc/c2/                  C2 图、报告、Patch、构建与重检日志
 │   ├── minicalc-history/             三版本扫描与比较记录
-│   ├── e4/local-20261015/             E4 本地检查证据（非服务器验收）
+│   ├── e4/
+│   │   ├── local-20261015/            E4 本地准备记录
+│   │   └── server-20261015/           服务器成功、失败日志及验收回执
 │   ├── e3/
 │   │   ├── <UTC运行时间>/            E3 基线 summary.json 与逐命令日志
 │   │   ├── docker-20260930/          Mac arm64 Docker 构建与运行证据
