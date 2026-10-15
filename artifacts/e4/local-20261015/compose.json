@@ -1,0 +1,45 @@
+{
+  "name": "b-group-project",
+  "networks": {
+    "default": {
+      "name": "b-group-project_default",
+      "ipam": {}
+    }
+  },
+  "services": {
+    "draft": {
+      "build": {
+        "context": "/Users/wyh/学习资料/学校资料/大三资料/大三上/devops/b-group-project",
+        "dockerfile": "services/draft/Dockerfile"
+      },
+      "cpus": 2,
+      "command": null,
+      "entrypoint": null,
+      "env_file": [
+        {
+          "path": "/Users/wyh/学习资料/学校资料/大三资料/大三上/devops/b-group-project/.env"
+        }
+      ],
+      "group_add": [
+        "0"
+      ],
+      "image": "e4-draft:241250086",
+      "mem_limit": "1073741824",
+      "networks": {
+        "default": null
+      },
+      "pids_limit": 256,
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/var/run/docker.sock",
+          "target": "/var/run/docker.sock",
+          "bind": {}
+        }
+      ]
+    }
+  }
+}

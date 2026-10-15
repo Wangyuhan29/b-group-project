@@ -1,0 +1,16 @@
+{
+  "scope": "LOCAL_PREPARATION_ONLY",
+  "source_commit": "70ccb220a1500dcd70578db93dc3807cdf57bf6a",
+  "source_dirty": true,
+  "template_zip_sha256": "689694f368ac36ed6fcd5d94eec08ea7b89365973e2c4804324c3b2188234f4d",
+  "files": {
+    "compose.json": "465e839ee5cae559ce4f0d6d846267b078833b5226dbe544ad12acfe57c8fefe",
+    "dependency-install.log": "e451b191d7caa8805a24434d55a216f0956407f48bed36a4abb951c97fd1b867",
+    "doctor.log": "4e3737638df41f886d94dd546dcf22eedee83b140e5a88695d1a4c521b5de8f4",
+    "env.json": "5994b9804510415adcd55f7c71144fe4dd850293459e453dfeaf34af271b06f0",
+    "regression.log": "78a9d9c4f33acef140c7a19e2abdd8cf7bcb7fe80d44d8a72c7761749fc55857",
+    "repository-secret-scan.log": "cf96c8a328e2ca5694f3874a9e961579ff8b58981c1f1474dcf8a8a78f5be2ef",
+    "scanner-self-test.log": "c31ef970d759c5eb9d3c29de6ed0929ee219e70132be25950364fe2098939681",
+    "service-tests.log": "3ab69c44c0781c70d7a226d92c2a74efdd9fbb158b6a5cd1669d62cace44568c"
+  }
+}

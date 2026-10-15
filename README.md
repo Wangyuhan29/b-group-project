@@ -1,4 +1,9 @@
-# B 组项目：minicalc 对接版
+# B03 项目：DRAFT / MDFixer
+
+## E4 可重复工程环境
+
+已接入课程 B-draft 模板，正式 Linux 服务器运行 `make all`。服务位于 `services/draft/`，运行参数在根目录 `compose.yaml`，依赖锁和 `.env.example` 均按课件放在根目录。完整步骤与当前验收状态见 [E4 文档](docs/e4/README.md)。原 E2/E3 验证继续使用 `make check`，原根目录单测改名为 `make regression-test`。
+
 
 ## E3 并行测试基线（2026-09-30）
 
@@ -8,7 +13,7 @@ B03 的 DRAFT 失败与参考成功样本、固定 MD 报告、四种 Makefile �
 
 ## 现在运行什么
 
-需要 Python 3.10+、Git、GNU Make 和支持 -MM 的 gcc；不需要第三方 Python 包。
+原 E2/E3 回归需要 Python 3.10+、Git、GNU Make 和支持 -MM 的 gcc，不需要第三方 Python 包。E4 服务测试另使用 requirements-dev.lock，正式环境由 Docker 构建。
 
 ```bash
 make check
@@ -79,7 +84,7 @@ TEAM、贡献表及 B03 三人本轮审阅记录已填写；ADR-001～003 的双
 ```text
 b-group-project/
 ├── README.md                         项目入口、运行方法与当前进展
-├── Makefile                          check、validate、test、demo、history 命令
+├── Makefile                          E4 all/test/smoke/scan；旧 check/regression-test
 ├── validate.py                       公共契约与产物引用校验
 ├── CHANGELOG.md                      契约与项目变更记录
 ├── .gitignore                        本地缓存、密钥和临时输出忽略规则
@@ -88,6 +93,16 @@ b-group-project/
 │   │   ├── check.yml                 项目持续集成检查
 │   │   └── minicalc-image.yml        C2 镜像构建、验证与发布
 │   └── PULL_REQUEST_TEMPLATE.md      PR 说明模板
+├── compose.yaml                      E4 运行限制与 Docker socket 挂载
+├── requirements-dev.in               E4 直接测试依赖
+├── requirements-dev.lock             E4 带哈希依赖锁
+├── .env.example                      空密钥运行配置示例
+├── services/draft/                   E4 及后续 DRAFT 服务
+│   ├── Dockerfile                    固定基础镜像与 Docker CLI digest
+│   ├── draft/                        version 与 smoke CLI
+│   ├── tests/                        服务单元测试
+│   └── pytest.ini
+├── setup/bootstrap_ubuntu.sh         课程服务器初始化脚本（按需）
 ├── draft/
 │   ├── README.md                     DRAFT 说明
 │   └── minicalc.Dockerfile           Minicalc C2 构建环境
@@ -107,6 +122,7 @@ b-group-project/
 │   │   ├── source/                   固定 C2 源码
 │   │   ├── history.bundle            C0/C1/C2 完整 Git 历史
 │   │   └── project.json              版本、配置及源码哈希
+│   ├── draft/                        E4 模板固定 digest 的 Tiny Greeting
 │   ├── e3/
 │   │   ├── draft/                    Tiny Greeting 源码、Makefile、失败/参考 Dockerfile
 │   │   └── mdfixer/                  固定 MD、四种声明风格与参考 Patch
@@ -115,6 +131,8 @@ b-group-project/
 │   ├── source.json                   旧教学源码描述
 │   └── source.bundle                 旧教学源码历史
 ├── scripts/
+│   ├── doctor.py                     E4 环境与提交身份自检
+│   ├── secret_scan.py                工作区、历史和镜像密钥扫描
 │   ├── check_shared_lock.py          校验共享文件锁
 │   ├── minicalc.py                   Minicalc 构建、依赖扫描与修复演示
 │   ├── verify_minicalc.py            功能与版本断言
@@ -125,6 +143,7 @@ b-group-project/
 │   ├── index.json                    产物 URI 索引
 │   ├── minicalc/c2/                  C2 图、报告、Patch、构建与重检日志
 │   ├── minicalc-history/             三版本扫描与比较记录
+│   ├── e4/local-20261015/             E4 本地检查证据（非服务器验收）
 │   ├── e3/
 │   │   ├── <UTC运行时间>/            E3 基线 summary.json 与逐命令日志
 │   │   ├── docker-20260930/          Mac arm64 Docker 构建与运行证据
@@ -150,6 +169,7 @@ b-group-project/
 │   │   ├── REPLY_TO_A.md              历史交接回复
 │   │   ├── adr/                      ADR-001～005 及其确认状态
 │   │   └── records/                  镜像回执与历史验证 JSON
+│   ├── e4/                           E4 步骤、本地验证与服务器待办
 │   └── e3/
 │       ├── README.md                 E3 基线、命令和验证范围
 │       └── SUBMISSION.md             E3 必交材料核对
@@ -161,3 +181,5 @@ b-group-project/
 
 
 E2 文档已集中在 [E2 入口](docs/e2/README.md)，设计决策位于 docs/e2/adr/，历史说明性 JSON 位于 docs/e2/records/。团队、Backlog、AI 使用、贡献与跨阶段验证仍由 docs/ 下的公共文件统一维护。共享 contracts/ 和既有产物位置不变。
+
+旧 draft/minicalc.Dockerfile 保留为 C2 镜像兼容入口；E4 及后续服务实现以 services/draft/ 为准。

@@ -1,0 +1,37 @@
+{
+  "time": "2026-10-15T05:49:00.276443+00:00",
+  "hostname": "MacBook-Air-2.local",
+  "os": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "kernel": "27.0.0",
+  "arch": "arm64",
+  "spec": {
+    "cpus": 10,
+    "mem_gib": null,
+    "disk_gib": 335.1
+  },
+  "tools": {
+    "docker": null,
+    "compose": "5.5.1",
+    "buildx": "github.com/docker/buildx v0.37.1 0b265a9f62db554fa9aba6dd19e1bd5704bc7d8a",
+    "git": "git version 2.54.0 (Apple Git-157)",
+    "make": "GNU Make 3.81",
+    "python3": "Python 3.13.14"
+  },
+  "problems": [
+    "不是 Linux：课程命令需要在分配的 Linux 服务器上执行",
+    "docker 不可用：not found"
+  ],
+  "warnings": [],
+  "docker_sock_gid": null,
+  "registry_mirrors": null,
+  "git": {
+    "user.name": "241250086",
+    "user.email": "241250086@smail.nju.edu.cn"
+  },
+  "source": {
+    "commit": "70ccb220a1500dcd70578db93dc3807cdf57bf6a",
+    "dirty": true
+  }
+}
+
+环境自检：2 个必需项未满足

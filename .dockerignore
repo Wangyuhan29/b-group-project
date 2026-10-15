@@ -7,3 +7,16 @@
 !fixtures/minicalc/source/**
 !scripts/
 !scripts/verify_minicalc.py
+!services/
+!services/draft/
+!services/draft/**
+!requirements-dev.lock
+!fixtures/draft/
+!fixtures/draft/**
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+**/.env
+**/.env.*
+**/*.pem
+**/*.key

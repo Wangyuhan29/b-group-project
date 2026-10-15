@@ -8,3 +8,10 @@ fixtures/draft-project/app
 fixtures/draft-project/*.o
 
 .idea/
+
+# E4 runtime configuration, credentials and local testing
+.env.*
+!.env.example
+*.pem
+*.key
+.pytest_cache/
