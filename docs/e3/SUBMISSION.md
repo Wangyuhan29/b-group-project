@@ -11,8 +11,8 @@
 | 参考 Patch、依据与修复判据 | target/macro/hybrid/implicit.patch、after.mk；main.c 包含 config.h，原规则缺声明；修复后再次改头文件自动重建输出 3 | 完成 |
 | 无效候选拒绝与恢复 | scripts/verify_e3_baselines.py；evidence/20260930T035836430577Z/summary.json 和 rejection 日志，失败退出 2，恢复输出 1 | 完成 |
 | 环境、版本、命令与实际日志 | E3 README、Docker 两个平台历史记录、Ubuntu environment.txt、源码哈希、manifest.json 和重跑步骤 | 完成 |
-| 仓库、SHA 与个人贡献 | https://github.com/Wangyuhan29/b-group-project，main；原样本固定提交 9f39cc899b9e8136b89ebe32c90f74c00d912ec7；贡献见 docs/CONTRIBUTIONS.md；最终提交版本用 git rev-parse HEAD 获取 | 完成 |
-| 小组与设计说明 | docs/TEAM.md：B03/A03、鼓楼校区、三名成员与联系人；docs/BACKLOG.md、docs/AI_USAGE.md 及已有 ADR | 已填写 |
+| 仓库、SHA 与个人贡献 | https://github.com/Wangyuhan29/b-group-project，main；原样本固定提交 9f39cc899b9e8136b89ebe32c90f74c00d912ec7；贡献见 docs/e3/CONTRIBUTIONS.md；最终提交版本用 git rev-parse HEAD 获取 | 完成 |
+| 小组与设计说明 | docs/e3/TEAM.md：B03/A03、鼓楼校区、三名成员与联系人；docs/e3/BACKLOG.md、docs/e3/AI_USAGE.md 及已有 ADR | 已填写 |
 | 相互检查、失败及后续说明 | A03 复核 B03 的结果见 A03 提供的回复；B03 实测互查日志见 artifacts/e3/a03-cross-review-20261009/；strace 异常及下一步明确记录 | 完成记录 |
 
 ## 证据和边界

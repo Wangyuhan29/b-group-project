@@ -28,13 +28,9 @@
 | 实际远端仓库 URL | https://github.com/Wangyuhan29/b-group-project |
 | 提交分支 | main |
 | 提交完整 SHA（git rev-parse HEAD） | 以本次同步完成后的 `git rev-parse HEAD` 输出为准 |
-| 组员作者与提交说明 | 三人分工见 `docs/CONTRIBUTIONS.md`；Git 提交由 Wangyuhan29 统一推送 |
+| 组员作者与提交说明 | 三人分工见 `docs/e2/CONTRIBUTIONS.md`；Git 提交由 Wangyuhan29 统一推送 |
 | Issue/PR | 无；本轮未使用 Issue/PR 流程 |
 | 本地验证结果 | `make check` 通过；33 个共享文件锁校验、26 项测试和 C2 历史验证通过 |
 | 未完成项/原因/下一步 | 真实 BuildChecker/EChecker、C0/C1 环境和跨机器产物读取属于 E3/E12；A03 已完成 C2 镜像冒烟验证 |
 
 当前仓库可用于 E2 协商与校验，只有完成上述真实记录后才适合作为小组正式提交。
-
-## E3 提交增量（2026-10-09）
-
-B03 E3 必交基线已完成，逐项核对见 [E3_SUBMISSION](../e3/SUBMISSION.md)。Ubuntu 原生 amd64 的原始构建/运行证据已取回并校验归档。请提交 main 最终 SHA；E2 初版和后续 E5/E8/E12 待办保留原阶段，不混作 E3 未完成必交项。

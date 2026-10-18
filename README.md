@@ -65,7 +65,7 @@ docker run --rm minicalc-devops:c2
 
 先与 A 组统一报告中的 `include/*.h` 路径、问题编号和产物读取位置，再进行真实 Checker 联调。
 
-TEAM、贡献表及 B03 三人本轮审阅记录已填写；ADR-001～003 的双方确认仍需补齐。历史提交已同步 GitHub，本次本地修订的验证结果见 [VERIFICATION](docs/VERIFICATION.md)。
+TEAM、贡献表及 B03 三人本轮审阅记录已填写；ADR-001～003 的双方确认仍需补齐。历史提交已同步 GitHub，本次本地修订的验证结果见 [VERIFICATION](docs/e2/VERIFICATION.md)。
 
 ## Git 历史重放
 
@@ -145,7 +145,9 @@ b-group-project/
 │   ├── minicalc-history/             三版本扫描与比较记录
 │   ├── e4/
 │   │   ├── local-20261015/            E4 本地准备记录
-│   │   └── server-20261015/           服务器成功、失败日志及验收回执
+│   │   ├── server-20261015/           三人服务器成功、失败日志及验收回执
+│   │   ├── a03-cross-validation-6abc4d8-20261018/  B03 复核 A03 原始证据
+│   │   └── a03-reviewed-b03-8701f70-20261018/      A03 复核 B03 原始证据
 │   ├── e3/
 │   │   ├── <UTC运行时间>/            E3 基线 summary.json 与逐命令日志
 │   │   ├── docker-20260930/          Mac arm64 Docker 构建与运行证据
@@ -153,28 +155,45 @@ b-group-project/
 │   │   ├── a03-cross-review-20261009/ A03 基线互查与跟踪异常记录
 │   │   └── a03-strace-retry-20261010/ A03 新增原始 trace 复核和本地重跑证据
 │   └── demo/                         旧教学演示产物
-├── docs/
-│   ├── TEAM.md                       B03/A03、成员与联系人
-│   ├── BACKLOG.md                    跨阶段任务与完成状态
-│   ├── AI_USAGE.md                   AI 参与和采纳记录
-│   ├── CONTRIBUTIONS.md              成员贡献与真实提交 SHA
-│   ├── VERIFICATION.md               跨阶段验证记录
+├── docs/                             各阶段独立文档，不设公共文档入口
 │   ├── e2/
-│   │   ├── README.md                 E2 文档入口
-│   │   ├── REQUIREMENTS.md           课件要求对照
-│   │   ├── INTERFACE.md              接口与交接约定
-│   │   ├── PAIR_REVIEW.md            A/B 配对评审
-│   │   ├── SHARED_SYNC.md            共享契约核对记录
-│   │   ├── SUBMISSION.md             E2 提交清单
-│   │   ├── MINICALC_HANDOFF.md        目标项目交接
-│   │   ├── IMAGE_HANDOFF.md           私有镜像 digest 与获取方式
-│   │   ├── REPLY_TO_A.md              历史交接回复
-│   │   ├── adr/                      ADR-001～005 及其确认状态
-│   │   └── records/                  镜像回执与历史验证 JSON
-│   ├── e4/                           E4 步骤、本地验证与服务器待办
-│   └── e3/
-│       ├── README.md                 E3 基线、命令和验证范围
-│       └── SUBMISSION.md             E3 必交材料核对
+│   │   ├── README.md
+│   │   ├── AI_USAGE.md
+│   │   ├── BACKLOG.md
+│   │   ├── CONTRIBUTIONS.md
+│   │   ├── IMAGE_HANDOFF.md
+│   │   ├── INTERFACE.md
+│   │   ├── MINICALC_HANDOFF.md
+│   │   ├── PAIR_REVIEW.md
+│   │   ├── REPLY_TO_A.md
+│   │   ├── REQUIREMENTS.md
+│   │   ├── SHARED_SYNC.md
+│   │   ├── SUBMISSION.md
+│   │   ├── TEAM.md
+│   │   ├── VERIFICATION.md
+│   │   ├── adr/
+│   │   └── records/
+│   ├── e3/
+│   │   ├── README.md
+│   │   ├── AI_USAGE.md
+│   │   ├── BACKLOG.md
+│   │   ├── CONTRIBUTIONS.md
+│   │   ├── SUBMISSION.md
+│   │   ├── TEAM.md
+│   │   └── VERIFICATION.md
+│   └── e4/
+│       ├── README.md
+│       ├── A03_CROSS_VALIDATION_20261018.md
+│       ├── AI_USAGE.md
+│       ├── BACKLOG.md
+│       ├── CONTRIBUTIONS.md
+│       ├── LOCAL_CHECKS.md
+│       ├── MEMBER_COMPARISON_241250017.md
+│       ├── MEMBER_COMPARISON_241250075.md
+│       ├── PEER_REVIEW.md
+│       ├── SERVER_VERIFICATION.md
+│       ├── TEAM.md
+│       └── VERIFICATION.md
 ├── tests/
 │   ├── test_contracts.py             公共契约测试
 │   └── test_minicalc.py              Minicalc 验证与修复测试
@@ -182,7 +201,7 @@ b-group-project/
 ```
 
 
-E2 文档已集中在 [E2 入口](docs/e2/README.md)，设计决策位于 docs/e2/adr/，历史说明性 JSON 位于 docs/e2/records/。团队、Backlog、AI 使用、贡献与跨阶段验证仍由 docs/ 下的公共文件统一维护。共享 contracts/ 和既有产物位置不变。
+E2 文档已集中在 [E2 入口](docs/e2/README.md)，设计决策位于 docs/e2/adr/，历史说明性 JSON 位于 docs/e2/records/。小组、Backlog、AI 使用、贡献和验证记录分别保存在对应阶段目录，不保留公共文档入口。后续阶段沿用同样的文件命名；代码、契约和原始证据按实际用途维护，不为文档归档而复制。共享 contracts/ 和既有产物位置不变。
 
 旧 draft/minicalc.Dockerfile 保留为 C2 镜像兼容入口；E4 及后续服务实现以 services/draft/ 为准。
 

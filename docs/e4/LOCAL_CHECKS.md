@@ -1,6 +1,6 @@
 # E4 本地准备验证（2026-10-15）
 
-结论：模板接入和本地检查通过；E4 服务器正式验收尚未完成。本次在 macOS arm64、Python 3.13.14、Make 3.81 下执行，没有初始化服务器或构建/运行 E4 服务镜像。
+历史结论（本地准备时）：模板接入和本地检查通过；当时尚未完成服务器正式验收。后续结果见 [服务器验证](SERVER_VERIFICATION.md) 和 [本阶段验证汇总](VERIFICATION.md)。本次在 macOS arm64、Python 3.13.14、Make 3.81 下执行，没有初始化服务器或构建/运行 E4 服务镜像。
 
 | 检查 | 实际结果 | 证据 |
 |---|---|---|
@@ -29,5 +29,3 @@ STUDENT_ID=241250086 DOCKER_GID=0 docker compose --env-file .env.example config 
 ```
 
 假 Key 测试使用一次性临时 Git 仓库，未向本组真实历史写入假 Key；已在 work/e4-local-checks-20261015/ 中保留测试副本，保持忽略。本机未生成 .env、未填写 API Key；已仅对本仓库设置 user.name=241250086 和提供的学号邮箱，未改变全局 Git 身份。服务器 clone 后仍须设置自己的学号身份并运行 make all，进行镜像扫描及两名真实组员的重跑对比。
-
-附：本次核对发现 E3 历史 a03-strace-retry-20261010/REVIEW.md 的哈希与旧 manifest 不一致，该差异已存在于接入前的 HEAD；文件与当前 HEAD 完全一致。本次不改写 E3 历史报告或锁清单，E4 本地证据使用独立 manifest。

@@ -12,4 +12,4 @@
 
 ## 贡献与 AI
 
-关联 Issue、作者，更新 AI_USAGE 和 CONTRIBUTIONS。
+关联 Issue、作者，更新对应阶段 docs/eN/ 下的 AI_USAGE 和 CONTRIBUTIONS。

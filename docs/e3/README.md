@@ -1,5 +1,13 @@
 # B03 E3 并行测试基线
 
+| 本阶段记录 | 文件 |
+|---|---|
+| 小组与分工 | [TEAM.md](TEAM.md) |
+| 任务与完成状态 | [BACKLOG.md](BACKLOG.md) |
+| AI 使用与采纳 | [AI_USAGE.md](AI_USAGE.md) |
+| 个人贡献与提交 SHA | [CONTRIBUTIONS.md](CONTRIBUTIONS.md) |
+| 验证结果与边界 | [VERIFICATION.md](VERIFICATION.md) |
+
 依据课程课件《E3_并行测试基线_20260930.pptx》准备。这里保存人工预期、可运行样本、实际观察和失败记录。E3 当前目标是独立准备测试基线；真实 DRAFT/MDFixer 运行器在后续实验实现。
 
 ## 环境与版本

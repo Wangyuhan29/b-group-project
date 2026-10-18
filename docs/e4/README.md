@@ -1,5 +1,13 @@
 # B03 E4 可重复工程环境
 
+| 本阶段记录 | 文件 |
+|---|---|
+| 小组与分工 | [TEAM.md](TEAM.md) |
+| 任务与完成状态 | [BACKLOG.md](BACKLOG.md) |
+| AI 使用与采纳 | [AI_USAGE.md](AI_USAGE.md) |
+| 个人贡献与提交 SHA | [CONTRIBUTIONS.md](CONTRIBUTIONS.md) |
+| 验证结果与边界 | [VERIFICATION.md](VERIFICATION.md) |
+
 来源：用户提供的 E4实验包.zip 中 B-draft/ 模板与 E4 B 组全流程命令手册。已完成模板接入、本地准备及王宇晗的服务器全流程；241250017、241250075 目录已按用户授权由自动化代理（Codex、ZCode）分别完成同版本实际复跑，[对比结论一致](MEMBER_COMPARISON_241250017.md)、[对比结论（241250075）](MEMBER_COMPARISON_241250075.md)，本人操作确认仍单独保留，详见 [服务器验证](SERVER_VERIFICATION.md)。
 
 ## 项目结构
@@ -40,7 +48,7 @@ E4 make test 是容器内服务测试，不替代原回归。默认 make 已改�
 
 ## 接入调整
 
-保留模板的镜像 digest、依赖锁及四项测试，增加两项超时行为测试，确保超时不误判为预期构建失败。合并 Makefile 和忽略规则；服务镜像只复制 fixtures/draft，避免携带 Minicalc bundle 和历史产物。doctor 增加源码 SHA/dirty 状态；扫描器同时检查 Git 未忽略的新文件；冒烟镜像标签带学号。镜像的 socket 挂载和资源配置沿用模板，本次尚未运行服务器容器。
+保留模板的镜像 digest、依赖锁及四项测试，增加两项超时行为测试，确保超时不误判为预期构建失败。合并 Makefile 和忽略规则；服务镜像只复制 fixtures/draft，避免携带 Minicalc bundle 和历史产物。doctor 增加源码 SHA/dirty 状态；扫描器同时检查 Git 未忽略的新文件；冒烟镜像标签带学号。镜像的 socket 挂载和资源配置沿用模板，接入时尚未运行服务器容器；后续正式运行结果见 SERVER_VERIFICATION.md。
 
 Docker socket 相当于控制宿主机 Docker。只构建课程样例，不开放远程 Docker API。密钥只在本地 .env，禁止进入源码、镜像或日志。
 
