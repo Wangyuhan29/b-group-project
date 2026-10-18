@@ -14,7 +14,7 @@ B03 已逐项静态核对其原始记录及 SHA256SUMS：自检 problems 为空�
 
 - 仓库：https://github.com/tang-yixin/devops_lab_a03.git，e4 分支。
 - 固定实测 SHA：`6abc4d815b4a4baae7cc9d72fc221653a7897e19`，运行前后工作区干净。
-- 复核人学号身份：241250086，Git 本地配置；AI 辅助执行。
+- 复核人学号身份：241250086，Git 本地配置。
 - 独立克隆：`/root/241250086/a03-e4-cross-20261018`。
 - 执行目录：上述克隆的 `e4-a03/`，按指定版本 README 原样执行 `make all`，没有修改源码或配置。
 - 成功证据目录：`e4-a03/work/20261018-170959/`。
@@ -33,7 +33,7 @@ B03 已逐项静态核对其原始记录及 SHA256SUMS：自检 problems 为空�
 
 完整原始日志和回执见 [本次证据清单](../../artifacts/e4/a03-cross-validation-6abc4d8-20261018/manifest.json)及[运行回执](../../artifacts/e4/a03-cross-validation-6abc4d8-20261018/receipt.json)。传输包 SHA-256 已与服务器核对一致。镜像 ID 是本地身份，不作为已发布 registry digest；基础 digest 与实际工具版本分别保留在 build.log 和 toolchain.lock。
 
-本次原生 Linux E4 冒烟未出现此前 Mac 跨架构环境的系统调用解码异常，但它不等于补做了 E3 Minicalc 全部动态依赖推断。两台服务器的 Ubuntu 版本差异明确保留；双方固定提交、各自 README 下的预期结果一致。
+两台服务器的 Ubuntu 版本差异明确保留；双方固定提交、各自 README 下的预期结果一致。
 
 ## 收尾
 

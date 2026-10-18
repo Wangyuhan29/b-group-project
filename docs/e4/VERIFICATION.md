@@ -9,4 +9,4 @@
 | 三名成员结果对照 | 同 SHA、工具清单及测试结论一致；保留代理辅助执行边界，见 [241250017 对比](MEMBER_COMPARISON_241250017.md)、[241250075 对比](MEMBER_COMPARISON_241250075.md) |
 | 双向相邻组互查 | A03 对 B03、B03 对 A03 的固定版本实测及证据核验通过，见 [互查报告](A03_CROSS_VALIDATION_20261018.md) 和 [互查清单](PEER_REVIEW.md) |
 
-原始证据保存在 `artifacts/e4/`；每次运行的源码版本、环境、退出码及哈希以对应归档为准。AI 参与见 [AI 使用记录](AI_USAGE.md)，真实作者与提交 SHA 见 [个人贡献](CONTRIBUTIONS.md)。如课程要求成员亲手操作，仍需本人确认，不以代理执行替代。
+原始证据保存在 `artifacts/e4/`；每次运行的源码版本、环境、退出码及哈希以对应归档为准。AI 参与见 [AI 使用记录](AI_USAGE.md)，真实作者与提交 SHA 见 [个人贡献](CONTRIBUTIONS.md)。

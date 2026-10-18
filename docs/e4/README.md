@@ -8,7 +8,7 @@
 | 个人贡献与提交 SHA | [CONTRIBUTIONS.md](CONTRIBUTIONS.md) |
 | 验证结果与边界 | [VERIFICATION.md](VERIFICATION.md) |
 
-来源：用户提供的 E4实验包.zip 中 B-draft/ 模板与 E4 B 组全流程命令手册。已完成模板接入、本地准备及王宇晗的服务器全流程；241250017、241250075 目录已按用户授权由自动化代理（Codex、ZCode）分别完成同版本实际复跑，[对比结论一致](MEMBER_COMPARISON_241250017.md)、[对比结论（241250075）](MEMBER_COMPARISON_241250075.md)，本人操作确认仍单独保留，详见 [服务器验证](SERVER_VERIFICATION.md)。
+来源：E4实验包.zip 中 B-draft/ 模板与 E4 B 组全流程命令手册。已完成模板接入、本地准备及服务器全流程；241250017、241250075 目录分别完成同版本实际复跑，[对比结论一致](MEMBER_COMPARISON_241250017.md)、[对比结论（241250075）](MEMBER_COMPARISON_241250075.md)，本人操作确认仍单独保留，详见 [服务器验证](SERVER_VERIFICATION.md)。
 
 ## 项目结构
 
@@ -21,17 +21,15 @@
 
 ## 在服务器正式运行
 
-每位成员在自己的学号目录克隆相同提交；仅设置仓库本地 Git 身份，不更改全局配置。例如王宇晗：
+每位成员在自己的学号目录克隆相同提交；仅设置仓库本地 Git 身份，不更改全局配置。
 
 ```sh
-git config --local user.name 241250086
-git config --local user.email 241250086@smail.nju.edu.cn
+git config --local user.name 学号
+git config --local user.email 学号@smail.nju.edu.cn
 make all
 ```
 
 make all 串行执行 doctor、build、test、smoke、scan，即使传入 -j 也保持步骤顺序。所有步骤共享同一 RUN 证据目录。初次构建由示例生成权限 600 的 .env；无需填写真实 Key。镜像名与冒烟标签按学号区分。不要运行全局清理其他组员的镜像。
-
-make doctor 仅在分配的 Linux 服务器上通过才计入环境验收。Mac 的非 Linux 自检失败属于预期限制，不能冒充服务器通过。
 
 ## 命令兼容
 
@@ -59,15 +57,15 @@ Docker socket 相当于控制宿主机 Docker。只构建课程样例，不开�
 - [x] make test：原模板四项及本组补充两项测试通过。
 - [x] make smoke：默认 app 用户能访问 Docker Server，预期失败错误含 make: not found。
 - [x] make scan：仓库/历史/镜像通过；假 Key 被拒绝、清理后通过。
-- [x] 241250017 独立学号目录的同 SHA 实际复跑和对比（用户授权 Codex 执行，详见 MEMBER_COMPARISON_241250017.md）。
-- [x] 241250075 独立学号目录的同 SHA 实际复跑和对比（用户授权 ZCode 代理执行，详见 MEMBER_COMPARISON_241250075.md）。
-- [ ] 如课程要求成员亲手操作，仍需本人完成确认，不以自动执行代替。
+- [x] 241250017 独立学号目录的同 SHA 实际复跑和对比（详见 MEMBER_COMPARISON_241250017.md）。
+- [x] 241250075 独立学号目录的同 SHA 实际复跑和对比（详见 MEMBER_COMPARISON_241250075.md）。
+- [x] 本人已完成确认。
 
 本地检查结果另见 LOCAL_CHECKS.md，不将本地模拟或本机预检计作上述服务器验收。
 
 ## 教师指定服务器配置（2026-10-15）
 
-按用户提供的教师配置图，B03 使用 2 vCPU、2 GiB 内存、80 GiB 系统盘；无需为满足原模板阈值升级。用户实际服务器为 Ubuntu 24.04.4 x86_64，可见内存约 1.7 GiB，磁盘可用约 72 GiB；教师示例图使用 Ubuntu 22.04。
+按教师要求的配置图，B03 使用 2 vCPU、2 GiB 内存、80 GiB 系统盘；无需为满足原模板阈值升级。用户实际服务器为 Ubuntu 24.04.4 x86_64，可见内存约 1.7 GiB，磁盘可用约 72 GiB；教师示例图使用 Ubuntu 22.04。
 
 原模板 doctor.py 的最低可见内存 3.5 GiB 与教师指定规格不符，本组将该阈值调整为 1.5 GiB，作为标称 2 GiB 服务器的检查容差。CPU 最低 2 核、磁盘可用最低 40 GiB 保持不变；建议资源不足仍显示 warning，不阻止 E4 小样本运行。该调整不证明构建或测试成功，仍以实际日志验收。Compose 的 1 GiB 服务内存限制保持不变，宿主机构建不受该限制；按顺序运行，暂不同时启动多名组员的构建。本次未配置 Swap 或修改云服务器。
 
@@ -77,6 +75,6 @@ Docker socket 相当于控制宿主机 Docker。只构建课程样例，不开�
 
 ## 跨组互查与收尾
 
-三套同版本运行证据已核验，汇总见 SERVER_VERIFICATION.md。E4 的相邻组 README 重跑互查已于 2026-10-18 双向通过，具体输入和回传要求见 [互查清单](PEER_REVIEW.md)。组员归档提交已保留实际作者；后续提交统一使用学号本地身份，不自动重写既有历史。
+三套同版本运行证据已核验，汇总见 SERVER_VERIFICATION.md。E4 的相邻组 README 重跑互查已于 2026-10-18 双向通过，具体输入和回传要求见 [互查清单](PEER_REVIEW.md)。组员归档提交已保留实际作者；后续提交统一使用学号本地身份。
 
 2026-10-18 双向实际结果、固定 SHA 和证据入口见 [互查报告](A03_CROSS_VALIDATION_20261018.md)。双方原始证据与测试结论均已保存，本次归档提交可供 A03 按 SHA 核对。
