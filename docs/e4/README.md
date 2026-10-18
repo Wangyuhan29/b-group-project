@@ -66,3 +66,9 @@ Docker socket 相当于控制宿主机 Docker。只构建课程样例，不开�
 服务器首次构建停在 deb.debian.org 的 trixie Packages 下载，保留原日志后取消该次构建。已验证华为云 Debian 与 Debian Security 镜像 HTTPS 可达，服务 Dockerfile 通过 DEBIAN_MIRROR 改用该源，保留原 Debian 签名验证和固定镜像 digest；新增 apt 索引超时/重试参数。私有 GitHub 仓库在服务器无凭据，使用 SSH 传入 Git bundle 并核验完整 SHA，origin 仍记录真实 GitHub 地址；未传送 GitHub Token。
 
 第二次构建在 Python 包下载时报 pytest==8.4.2 不可用；本地同锁安装成功。已核对华为云 PyPI 镜像提供的 pytest 8.4.2 与 packaging 26.3 wheel 哈希均匹配锁文件，新增 PYPI_INDEX 参数使用该 HTTPS 源，保留全部版本及 --require-hashes。第二次失败日志单独保留。
+
+## 跨组互查与收尾
+
+三套同版本运行证据已核验，汇总见 SERVER_VERIFICATION.md。E4 的相邻组 README 重跑互查已于 2026-10-18 双向通过，具体输入和回传要求见 [互查清单](PEER_REVIEW.md)。组员归档提交已保留实际作者；后续提交统一使用学号本地身份，不自动重写既有历史。
+
+2026-10-18 双向实际结果、固定 SHA 和证据入口见 [互查报告](A03_CROSS_VALIDATION_20261018.md)。双方原始证据与测试结论均已保存，本次归档提交可供 A03 按 SHA 核对。

@@ -185,3 +185,5 @@ b-group-project/
 E2 文档已集中在 [E2 入口](docs/e2/README.md)，设计决策位于 docs/e2/adr/，历史说明性 JSON 位于 docs/e2/records/。团队、Backlog、AI 使用、贡献与跨阶段验证仍由 docs/ 下的公共文件统一维护。共享 contracts/ 和既有产物位置不变。
 
 旧 draft/minicalc.Dockerfile 保留为 C2 镜像兼容入口；E4 及后续服务实现以 services/draft/ 为准。
+
+E4 三名组员同版本归档已核验，证据与贡献汇总见 [服务器验证](docs/e4/SERVER_VERIFICATION.md)。[A03/B03 的 E4 README 重跑互查](docs/e4/PEER_REVIEW.md)已于 2026-10-18 双向通过，不与 E3 互查或 E12 联调混淆。
