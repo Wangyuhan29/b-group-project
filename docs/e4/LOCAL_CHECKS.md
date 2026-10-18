@@ -28,4 +28,4 @@ python3 scripts/secret_scan.py . --history
 STUDENT_ID=241250086 DOCKER_GID=0 docker compose --env-file .env.example config --no-env-resolution -q
 ```
 
-假 Key 测试使用一次性临时 Git 仓库，未向本组真实历史写入假 Key；已在 work/e4-local-checks-20261015/ 中保留测试副本，保持忽略。本机未生成 .env、未填写 API Key；已仅对本仓库设置 user.name=241250086 和提供的学号邮箱，未改变全局 Git 身份。服务器 clone 后仍须设置自己的学号身份并运行 make all，进行镜像扫描及两名真实组员的重跑对比。
+假 Key 测试使用一次性临时 Git 仓库，未向本组真实历史写入假 Key；已在 work/e4-local-checks-20261015/ 中保留测试副本，保持忽略。本机未生成 .env、未填写 API Key；未改变全局 Git 身份。服务器 clone 后仍须运行 make all，进行镜像扫描及两名真实组员的重跑对比。

@@ -8,7 +8,7 @@
 | 个人贡献与提交 SHA | [CONTRIBUTIONS.md](CONTRIBUTIONS.md) |
 | 验证结果与边界 | [VERIFICATION.md](VERIFICATION.md) |
 
-来源：E4实验包.zip 中 B-draft/ 模板与 E4 B 组全流程命令手册。已完成模板接入、本地准备及服务器全流程；241250017、241250075 目录分别完成同版本实际复跑，[对比结论一致](MEMBER_COMPARISON_241250017.md)、[对比结论（241250075）](MEMBER_COMPARISON_241250075.md)，本人操作确认仍单独保留，详见 [服务器验证](SERVER_VERIFICATION.md)。
+来源：E4实验包.zip 中 B-draft/ 模板与 E4 B 组全流程命令手册。已完成模板接入、本地准备及服务器全流程；241250017、241250075 目录分别完成同版本实际复跑，[对比结论一致](MEMBER_COMPARISON_241250017.md)、[对比结论（241250075）](MEMBER_COMPARISON_241250075.md)，详见 [服务器验证](SERVER_VERIFICATION.md)。
 
 ## 项目结构
 

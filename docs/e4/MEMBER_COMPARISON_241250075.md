@@ -37,4 +37,4 @@
 - 本次目录保留 7 个全流程证据文件、两次独立扫描记录、完整运行日志及扫描日志。原始文件内容不改写；没有上传 .env、GitHub Token 或服务器登录凭据。
 - 另一次复跑对照见 [MEMBER_COMPARISON_241250017.md](MEMBER_COMPARISON_241250017.md)；原运行证据见 server-20261015 归档。
 
-复跑时进入 `/root/241250075/draft`，核对 `git rev-parse HEAD` 为上述提交，再执行 `make all`。本次归档提交只增加文档与证据，不等于新源码已在服务器运行。
+复跑时进入 `/root/241250075/draft`，核对 `git rev-parse HEAD` 为上述提交，再执行 `make all`。

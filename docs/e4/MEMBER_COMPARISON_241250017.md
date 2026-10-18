@@ -36,6 +36,6 @@
 
 - 原运行：[服务器回执](../../artifacts/e4/server-20261015/e4-server-receipt.json)及[证据清单](../../artifacts/e4/server-20261015/manifest.json)。
 - 本次：[运行回执与机器对比结果](../../artifacts/e4/member-241250017-20261015/receipt.json)及[逐文件 SHA-256 清单](../../artifacts/e4/member-241250017-20261015/manifest.json)。SHA-256 是用于核对文件内容是否一致的指纹。
-- 本次目录保留 7 个全流程证据文件、两次独立扫描记录、完整运行日志及扫描日志。原始文件内容不改写；没有上传 .env 或服务器登录凭据。
+- 本次目录保留 7 个全流程证据文件、两次独立扫描记录、完整运行日志及扫描日志。原始文件内容未改写；没有上传 .env 或服务器登录凭据。
 
-复跑时进入 `/root/241250017/draft`，核对 `git rev-parse HEAD` 为上述提交，再执行 `make all`。本次归档提交只增加文档与证据，不等于新源码已在服务器运行。
+复跑时进入 `/root/241250017/draft`，核对 `git rev-parse HEAD` 为上述提交，再执行 `make all`。
