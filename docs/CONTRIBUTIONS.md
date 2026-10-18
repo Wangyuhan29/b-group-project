@@ -44,4 +44,4 @@
 
 ## E4 双向互查收尾（2026-10-18）
 
-王宇晗（241250086）：AI 辅助在本人学号目录复核 A03 固定 SHA 6abc4d815b4a4baae7cc9d72fc221653a7897e19，确认 make all、3 项单测、系统调用冒烟和扫描通过；复核 A03 对 B03 的固定 SHA 8701f70 原始日志及哈希，归档两方向证据并更新互查状态。材料见 docs/e4/A03_CROSS_VALIDATION_20261018.md。本次 B03 归档提交 SHA 随文档整理提交补录，与被测 A03 SHA 分开记录。
+王宇晗（241250086）：AI 辅助在本人学号目录复核 A03 固定 SHA 6abc4d815b4a4baae7cc9d72fc221653a7897e19，确认 make all、3 项单测、系统调用冒烟和扫描通过；复核 A03 对 B03 的固定 SHA 8701f70 原始日志及哈希，归档两方向证据并更新互查状态。材料见 docs/e4/A03_CROSS_VALIDATION_20261018.md。本次 B03 原始证据与报告归档提交：`36cf301e36c70a9ec2fe267347fc60544f550bbb`，作者 241250086，提交说明 docs: archive successful E4 bilateral cross-validation；未使用 Issue/PR，与被测 A03 SHA 分开记录。
