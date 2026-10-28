@@ -1,0 +1,43 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 597B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 57B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#4 resolve m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 54B done
+#5 DONE 0.0s
+
+#6 [4/5] RUN sed -i "s@http://deb.debian.org@https://mirrors.huaweicloud.com@g;s@https://deb.debian.org@https://mirrors.huaweicloud.com@g" /etc/apt/sources.list.d/debian.sources     && apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=60 -o Acquire::https::Timeout=60 update     && apt-get install -y --no-install-recommends build-essential     && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [2/5] WORKDIR /work
+#7 CACHED
+
+#8 [3/5] COPY main.c Makefile ./
+#8 CACHED
+
+#9 [5/5] RUN make
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 exporting manifest sha256:a970d1e29298f82f79a035efc08d1841e56634ff34b5b3c0e80464e7523e092e done
+#10 exporting config sha256:026c599c78d11660579a12915ff56af52a07969b7e7671e02c33e42632d12c9a done
+#10 exporting attestation manifest sha256:a1dcc345d1e56418f14f8e912ca68d18ac8447b036583fbd8fdb00453198d1ba 0.0s done
+#10 exporting manifest list sha256:594d5e0ba8dc2a820f8824bc86df70dd2afd34bfa9020e48e717e4e213130d2a 0.0s done
+#10 naming to docker.io/library/e6-draft-replay:bacbb07da4d640799b5cde5de5a62a22-2
+#10 naming to docker.io/library/e6-draft-replay:bacbb07da4d640799b5cde5de5a62a22-2 done
+#10 unpacking to docker.io/library/e6-draft-replay:bacbb07da4d640799b5cde5de5a62a22-2 done
+#10 DONE 0.1s

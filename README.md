@@ -1,5 +1,9 @@
 # B03 项目：DRAFT / MDFixer
 
+## 本周 E5—E7（2026-10-28）
+
+[E5 失败复现与候选](docs/e5/README.md)、[E6 两轮构建](docs/e6/README.md)、[E7 验证与 CI](docs/e7/README.md)分别独立归档。服务器实验使用 `python3 scripts/course.py`；E4 的 make all 和原 E2/E3 的 make check 保留。
+
 ## E4 可重复工程环境
 
 已接入课程 B-draft 模板，正式 Linux 服务器运行 `make all`。服务位于 `services/draft/`，运行参数在根目录 `compose.yaml`，依赖锁和 `.env.example` 均按课件放在根目录。王宇晗已在服务器完成全流程，241250017、241250075 目录也已按用户授权完成实际复跑，对比结论一致，执行方式和边界见 [复跑对比](docs/e4/MEMBER_COMPARISON_241250017.md)、[复跑对比（241250075）](docs/e4/MEMBER_COMPARISON_241250075.md)。完整步骤与当前验收状态见 [E4 文档](docs/e4/README.md)。原 E2/E3 验证继续使用 `make check`，原根目录单测改名为 `make regression-test`。
@@ -100,7 +104,28 @@ b-group-project/
 ├── services/draft/                   E4 及后续 DRAFT 服务
 │   ├── Dockerfile                    固定基础镜像与 Docker CLI digest
 │   ├── draft/                        version 与 smoke CLI
-│   ├── tests/                        服务单元测试
+│   │   ├── e5/
+│   │   ├── README.md
+│   │   ├── TEAM.md
+│   │   ├── BACKLOG.md
+│   │   ├── AI_USAGE.md
+│   │   ├── CONTRIBUTIONS.md
+│   │   └── VERIFICATION.md
+│   ├── e6/
+│   │   ├── README.md
+│   │   ├── TEAM.md
+│   │   ├── BACKLOG.md
+│   │   ├── AI_USAGE.md
+│   │   ├── CONTRIBUTIONS.md
+│   │   └── VERIFICATION.md
+│   └── e7/
+│       ├── README.md
+│       ├── TEAM.md
+│       ├── BACKLOG.md
+│       ├── AI_USAGE.md
+│       ├── CONTRIBUTIONS.md
+│       └── VERIFICATION.md
+├── tests/                        服务单元测试
 │   └── pytest.ini
 ├── setup/bootstrap_ubuntu.sh         课程服务器初始化脚本（按需）
 ├── draft/
@@ -181,19 +206,19 @@ b-group-project/
 │   │   ├── SUBMISSION.md
 │   │   ├── TEAM.md
 │   │   └── VERIFICATION.md
-│   └── e4/
-│       ├── README.md
-│       ├── A03_CROSS_VALIDATION_20261018.md
-│       ├── AI_USAGE.md
-│       ├── BACKLOG.md
-│       ├── CONTRIBUTIONS.md
-│       ├── LOCAL_CHECKS.md
-│       ├── MEMBER_COMPARISON_241250017.md
-│       ├── MEMBER_COMPARISON_241250075.md
-│       ├── PEER_REVIEW.md
-│       ├── SERVER_VERIFICATION.md
-│       ├── TEAM.md
-│       └── VERIFICATION.md
+│   ├── e4/
+│   │   ├── README.md
+│   │   ├── A03_CROSS_VALIDATION_20261018.md
+│   │   ├── AI_USAGE.md
+│   │   ├── BACKLOG.md
+│   │   ├── CONTRIBUTIONS.md
+│   │   ├── LOCAL_CHECKS.md
+│   │   ├── MEMBER_COMPARISON_241250017.md
+│   │   ├── MEMBER_COMPARISON_241250075.md
+│   │   ├── PEER_REVIEW.md
+│   │   ├── SERVER_VERIFICATION.md
+│   │   ├── TEAM.md
+│   │   └── VERIFICATION.md
 ├── tests/
 │   ├── test_contracts.py             公共契约测试
 │   └── test_minicalc.py              Minicalc 验证与修复测试
