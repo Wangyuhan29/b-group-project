@@ -1,0 +1,27 @@
+{
+  "source_archive": "DevOps_E4_E7_GitHub_20261028.zip",
+  "archive_sha256": "ebe10fddcea86dd93f59d0cc5e78ebaac09f36a7613a9d8577be412950c649f2",
+  "reference_files": {
+    "services/draft/draft/autobuild.py": "46afe8c9016f78f217372e6cdfef70ed495f9577677806ee87712e49160ff6fd",
+    "services/draft/draft/cli.py": "5d7389655c01143a8428ba0a093ca1f0ad206ba34ea72e6f870df72eb5f92308",
+    "services/draft/draft/__init__.py": "7c9b461c79148f28c89cc35ada2b7a07d1243fc16c1fe9d6809da3eac0449900",
+    "services/draft/tests/test_autobuild.py": "13741af248835c26b476a172281950dffb15d0bbf4c3135d12c8a41a891f826d",
+    "services/draft/tests/test_workflow_failures.py": "93f65cbc8191cd3b3c93e89b0ab490f25ede028f733c258d095685f32eb82714",
+    "scripts/lab_cloud.py": "7b18458810390a9ec267c071e99c117b806eb9d80d2c7f519f310ecc127fd4d1",
+    "scripts/prepare_e5_prompts.py": "21063add1f027c977b9208a36bfc505f5808b6fc40ea62314b0dac04bb8a3240",
+    "scripts/run_e7_b_gate.py": "fe30de327a63b33e22cffa4918cdfe9fd79b592ae819b4498f2e004b955b342d",
+    "scripts/verify_e6_b_evidence.py": "5d5fe31da29a6f19b8a457940729bd571882bb0ee702101af121ad4bc4751f4a",
+    ".github/workflows/e7-quality-gate.yml": "99c46811fd795191fba62f4ad4a79be6c43f73f6ffb1c2d24ba5d04ab6d69341"
+  },
+  "preserved": [
+    "Makefile",
+    "scripts/doctor.py",
+    "scripts/secret_scan.py",
+    "services/draft/Dockerfile",
+    "services/draft/draft/smoke.py",
+    "services/draft/tests/test_cli.py",
+    "compose.yaml",
+    "requirements-dev.lock"
+  ],
+  "notes": "Teaching reference integration; no previous-stage evidence modified. Added student boundary test with AI assistance; no claim of other students contribution."
+}
