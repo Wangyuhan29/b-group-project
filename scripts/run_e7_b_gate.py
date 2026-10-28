@@ -95,6 +95,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--image", default="e7-draft:ta1020001")
     parser.add_argument("--candidate", required=True)
+    parser.add_argument("--fixture", help="Explicit environment-adapted fixture; original inputs remain unchanged")
     parser.add_argument("--out", required=True)
     parser.add_argument("--build-timeout", type=int, default=300)
     parser.add_argument("--case", action="append", choices=("success", "wrong-output", "invalid-candidate", "build-failed", "runtime-timeout"), help="Run selected cases only; repeat flag for multiple cases")
@@ -106,7 +107,8 @@ def main():
     if os.name != "posix":
         parser.error("Run on the Ubuntu host using Docker CLI")
     root = Path(__file__).resolve().parents[1]
-    fixture, candidate, output = root / "fixtures/draft", Path(args.candidate).resolve(), Path(args.out).resolve()
+    fixture = Path(args.fixture).resolve() if args.fixture else root / "fixtures/draft"
+    candidate, output = Path(args.candidate).resolve(), Path(args.out).resolve()
     if not fixture.is_dir() or not candidate.is_file():
         parser.error("Fixture or recorded candidate missing")
     if output == fixture or fixture in output.parents or (output.exists() and any(output.iterdir())):

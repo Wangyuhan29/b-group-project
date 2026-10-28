@@ -95,7 +95,8 @@ b-group-project/
 ├── .github/
 │   ├── workflows/
 │   │   ├── check.yml                 项目持续集成检查
-│   │   └── minicalc-image.yml        C2 镜像构建、验证与发布
+│   │   ├── minicalc-image.yml        C2 镜像构建、验证与发布
+│   │   └── e7-quality-gate.yml       E7 真实六场景门禁与 artifact
 │   └── PULL_REQUEST_TEMPLATE.md      PR 说明模板
 ├── compose.yaml                      E4 运行限制与 Docker socket 挂载
 ├── requirements-dev.in               E4 直接测试依赖
@@ -103,29 +104,8 @@ b-group-project/
 ├── .env.example                      空密钥运行配置示例
 ├── services/draft/                   E4 及后续 DRAFT 服务
 │   ├── Dockerfile                    固定基础镜像与 Docker CLI digest
-│   ├── draft/                        version 与 smoke CLI
-│   │   ├── e5/
-│   │   ├── README.md
-│   │   ├── TEAM.md
-│   │   ├── BACKLOG.md
-│   │   ├── AI_USAGE.md
-│   │   ├── CONTRIBUTIONS.md
-│   │   └── VERIFICATION.md
-│   ├── e6/
-│   │   ├── README.md
-│   │   ├── TEAM.md
-│   │   ├── BACKLOG.md
-│   │   ├── AI_USAGE.md
-│   │   ├── CONTRIBUTIONS.md
-│   │   └── VERIFICATION.md
-│   └── e7/
-│       ├── README.md
-│       ├── TEAM.md
-│       ├── BACKLOG.md
-│       ├── AI_USAGE.md
-│       ├── CONTRIBUTIONS.md
-│       └── VERIFICATION.md
-├── tests/                        服务单元测试
+│   ├── draft/                        version、smoke、auto-build CLI
+│   ├── tests/                        服务单元测试
 │   └── pytest.ini
 ├── setup/bootstrap_ubuntu.sh         课程服务器初始化脚本（按需）
 ├── draft/
@@ -142,11 +122,13 @@ b-group-project/
 │   ├── examples/                     公共请求、响应和错误正反例
 │   ├── minicalc/                     C2 任务、固定报告及本地结果样例
 │   └── minicalc-history/             C0/C1/C2 历史任务样例
+├── course-support/                   教师 CI/报告模板与导入来源清单
 ├── fixtures/                         固定测试输入与人工参考答案
 │   ├── minicalc/                     共同目标项目
 │   │   ├── source/                   固定 C2 源码
 │   │   ├── history.bundle            C0/C1/C2 完整 Git 历史
 │   │   └── project.json              版本、配置及源码哈希
+│   ├── ci-candidates/                教师记录候选及 B03 适配与来源
 │   ├── draft/                        E4 模板固定 digest 的 Tiny Greeting
 │   ├── e3/
 │   │   ├── draft/                    Tiny Greeting 源码、Makefile、失败/参考 Dockerfile
@@ -163,6 +145,11 @@ b-group-project/
 │   ├── verify_minicalc.py            功能与版本断言
 │   ├── verify_history.py             三个固定提交的历史验证
 │   ├── verify_e3_baselines.py        E3 基线、补丁与拒绝恢复验证
+│   ├── course.py                     学号隔离的 E5—E7 入口
+│   ├── lab_cloud.py                  真实云端实验调度
+│   ├── prepare_e5_prompts.py         由真实失败日志生成两类提示
+│   ├── verify_e6_b_evidence.py       两轮构建证据一致性校验
+│   ├── run_e7_b_gate.py              六场景门禁
 │   └── demo.py                       旧教学演示
 ├── artifacts/                        实际运行产物与原始证据
 │   ├── index.json                    产物 URI 索引
@@ -179,6 +166,9 @@ b-group-project/
 │   │   ├── ubuntu-amd64-20261009/    Ubuntu 原生 amd64 原始日志和哈希清单
 │   │   ├── a03-cross-review-20261009/ A03 基线互查与跟踪异常记录
 │   │   └── a03-strace-retry-20261010/ A03 新增原始 trace 复核和本地重跑证据
+│   ├── e5/linux-amd64-20261028/       初始失败、提示、手工构建与运行
+│   ├── e6/linux-amd64-20261028/       两轮构建、30 项测试及镜像 ID
+│   ├── e7/linux-amd64-20261028/       六场景门禁、清理核验与原始证据
 │   └── demo/                         旧教学演示产物
 ├── docs/                             各阶段独立文档，不设公共文档入口
 │   ├── e2/
@@ -219,6 +209,27 @@ b-group-project/
 │   │   ├── SERVER_VERIFICATION.md
 │   │   ├── TEAM.md
 │   │   └── VERIFICATION.md
+│   ├── e5/
+│   │   ├── README.md
+│   │   ├── AI_USAGE.md
+│   │   ├── BACKLOG.md
+│   │   ├── CONTRIBUTIONS.md
+│   │   ├── TEAM.md
+│   │   └── VERIFICATION.md
+│   ├── e6/
+│   │   ├── README.md
+│   │   ├── AI_USAGE.md
+│   │   ├── BACKLOG.md
+│   │   ├── CONTRIBUTIONS.md
+│   │   ├── TEAM.md
+│   │   └── VERIFICATION.md
+│   └── e7/
+│       ├── README.md
+│       ├── AI_USAGE.md
+│       ├── BACKLOG.md
+│       ├── CONTRIBUTIONS.md
+│       ├── TEAM.md
+│       └── VERIFICATION.md
 ├── tests/
 │   ├── test_contracts.py             公共契约测试
 │   └── test_minicalc.py              Minicalc 验证与修复测试

@@ -47,7 +47,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          docker build --progress=plain -f services/draft/Dockerfile -t "$IMAGE" . 2>&1 | tee work/ci/build.log
+          docker build --progress=plain -f services/draft/Dockerfile -t "$IMAGE" \
+            --build-arg BASE_IMAGE=docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 \
+            --build-arg DOCKER_CLI_IMAGE=docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad \
+            --build-arg DEBIAN_MIRROR=https://deb.debian.org \
+            --build-arg PYPI_INDEX=https://pypi.org/simple . 2>&1 | tee work/ci/build.log
           docker image inspect "$IMAGE" > work/ci/service-image-inspect.json
 
       - name: Scan built image
@@ -60,11 +64,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python3 scripts/prepare_e7_ci_inputs.py --out work/ci/inputs
           args=()
           if [[ "$FAIL_DEMO" == "true" ]]; then
             args+=(--case success --inject-bad-oracle)
           fi
-          python3 scripts/run_e7_b_gate.py --image "$IMAGE" --candidate fixtures/ci-candidates/B03-E5.Dockerfile --out work/ci/gate "${args[@]}" 2>&1 | tee work/ci/gate-console.log
+          python3 scripts/run_e7_b_gate.py --image "$IMAGE" --fixture work/ci/inputs/fixture --candidate work/ci/inputs/candidate.Dockerfile --out work/ci/gate "${args[@]}" 2>&1 | tee work/ci/gate-console.log
 
       - name: Archive evidence even when checks fail
         if: always()
