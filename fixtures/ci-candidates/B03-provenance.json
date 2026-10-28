@@ -1,0 +1,10 @@
+{
+  "source": "DeepSeek-E5.Dockerfile",
+  "mode": "recorded teaching candidate with explicit B03 environment adaptations",
+  "fresh_model_call": false,
+  "changes": [
+    "Use the existing E4 fixture exact pinned mirror image digest f82c964... instead of teacher candidate 70729b...",
+    "Use Huawei Debian mirror with retries and timeouts; retain apt signature checks"
+  ],
+  "sha256": "4e3c2b003ad9b04a53be424ba0fc86c727613f00f0246e85f0195d3769ebea6d"
+}

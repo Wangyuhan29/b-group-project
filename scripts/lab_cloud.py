@@ -106,7 +106,11 @@ def main(argv=None):
         shutil.copytree(ROOT / 'fixtures/draft', project, ignore=shutil.ignore_patterns('Dockerfile.reference'))
         iteration = output / 'iter-01'
         iteration.mkdir()
-        first = (ROOT / 'fixtures/ci-candidates/DeepSeek-E5.Dockerfile').read_text(encoding='utf-8').splitlines()[0]
+        seed = (ROOT / args.candidate).resolve() if args.candidate else ROOT / 'fixtures/ci-candidates/DeepSeek-E5.Dockerfile'
+        first = seed.read_text(encoding='utf-8').splitlines()[0]
+        meta['candidate_sha256'] = hashlib.sha256(seed.read_bytes()).hexdigest()
+        meta['candidate_source'] = str(seed.relative_to(ROOT))
+        (output / 'invocation.json').write_text(json.dumps(meta, indent=2), encoding='utf-8')
         broken = (project / 'Dockerfile.broken').read_text(encoding='utf-8').splitlines()
         dockerfile = first + '\n' + '\n'.join(broken[1:]) + '\n'
         (iteration / 'Dockerfile').write_text(dockerfile, encoding='utf-8')
