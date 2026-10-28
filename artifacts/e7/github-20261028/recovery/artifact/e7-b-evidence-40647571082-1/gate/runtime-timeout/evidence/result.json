@@ -1,0 +1,50 @@
+{
+  "status": "TIMED_OUT",
+  "detector": "DRAFT_TEACHING_REPLAY",
+  "trace_id": "e6-b-ab9db1df493d4c2b9e42077b4716c4aa",
+  "candidate_source": "Manual model response replay; no model/API call in this command",
+  "candidate_sha256": "68e1e285b83da2b655fa1740e2110d0b36e085b59b4c8deeba4605f81df24193",
+  "attempts": [
+    {
+      "iteration": 1,
+      "tag": "e6-draft-replay:ab9db1df493d4c2b9e42077b4716c4aa-1",
+      "command": [
+        "docker",
+        "build",
+        "--progress=plain",
+        "-f",
+        "/evidence/iter-01/Dockerfile",
+        "-t",
+        "e6-draft-replay:ab9db1df493d4c2b9e42077b4716c4aa-1",
+        "/evidence/project"
+      ],
+      "build_exit_code": 1,
+      "failure_class": "MISSING_MAKE"
+    },
+    {
+      "iteration": 2,
+      "tag": "e6-draft-replay:ab9db1df493d4c2b9e42077b4716c4aa-2",
+      "command": [
+        "docker",
+        "build",
+        "--progress=plain",
+        "-f",
+        "/evidence/iter-02/Dockerfile",
+        "-t",
+        "e6-draft-replay:ab9db1df493d4c2b9e42077b4716c4aa-2",
+        "/evidence/project"
+      ],
+      "build_exit_code": 0,
+      "image_id": "sha256:7809866ff860af5848277fb59344c170a62cffde11d675203ebdc9e6f55cd493"
+    }
+  ],
+  "input_sha256": {
+    ".dockerignore": "4e2d01841cd05ae77ebcac6d7ed12f277fc7ab86506a5eb0186d2b7600e6487c",
+    "Dockerfile.broken": "5856a0cd3a44f941557847d58bf527bd0b4916935bf04060a3cad663220f1bf4",
+    "Makefile": "7ed3f5b85a10827cf4c177ee9fa9855b1c70166b5339e5da8e81f4decee74cc3",
+    "README.md": "706f5780103451757caa6327b11159989d0bbcd80688405a25e5f15eaa57c011",
+    "main.c": "05f3bcbf50c51513eb01dd78b3a9a4ae0a01115140fed7d1030cc47451807bc1"
+  },
+  "error": "Docker client command exceeded 1s",
+  "elapsed_ms": 1563
+}

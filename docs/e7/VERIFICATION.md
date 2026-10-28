@@ -13,4 +13,8 @@
 
 真实 gate 返回 0，passed=true。证据：[逐文件清单](../../artifacts/e7/linux-amd64-20261028/manifest.json)，完整门禁结果 e7-01/gate/gate-result.json、results.csv；超时清理证据 e7-01/gate/runtime-timeout/evidence/cleanup-check/。
 
-GitHub 的首次成功、故意失败 PR、main 保护与拒绝合并、同一 PR 恢复与合并记录将在真实执行后另行归档，当前不以服务器门禁替代远程门禁。
+GitHub 首次成功、故意失败 PR、main 保护与实际拒绝合并、同一 PR 恢复及合并均已完成，见 [CI 完整记录](CI_RECORD.md)。
+
+## 最终版本复验
+
+固定源码 `c4c4f76ff79a0cb73a77da962be76eefb054211b`，工作区干净，原生服务器服务测试 31 passed、完整六场景全部通过、密钥扫描通过。新增的一项为 CI 演示恢复后的正确 version 测试；首次 30 项记录保持原样。原始结果与校验清单见 [最终服务器证据](../../artifacts/e7/linux-amd64-final-20261028/manifest.json)。

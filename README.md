@@ -2,7 +2,7 @@
 
 ## 本周 E5—E7（2026-10-28）
 
-[E5 失败复现与候选](docs/e5/README.md)、[E6 两轮构建](docs/e6/README.md)、[E7 验证与 CI](docs/e7/README.md)分别独立归档。服务器实验使用 `python3 scripts/course.py`；E4 的 make all 和原 E2/E3 的 make check 保留。
+[E5 失败复现与候选](docs/e5/README.md)、[E6 两轮构建](docs/e6/README.md)、[E7 验证与 CI](docs/e7/README.md)分别独立归档。本人轨道的原生服务器实验和 GitHub 失败/恢复门禁已完成，详见各阶段实际记录。服务器实验使用 `python3 scripts/course.py`；E4 的 make all 和原 E2/E3 的 make check 保留。main 已启用必需检查，后续改动通过个人分支 PR 合并。
 
 ## E4 可重复工程环境
 
@@ -168,7 +168,7 @@ b-group-project/
 │   │   └── a03-strace-retry-20261010/ A03 新增原始 trace 复核和本地重跑证据
 │   ├── e5/linux-amd64-20261028/       初始失败、提示、手工构建与运行
 │   ├── e6/linux-amd64-20261028/       两轮构建、30 项测试及镜像 ID
-│   ├── e7/linux-amd64-20261028/       六场景门禁、清理核验与原始证据
+│   ├── e7/                           初次/最终服务器 gate、GitHub 原始 artifact 与门禁证据
 │   └── demo/                         旧教学演示产物
 ├── docs/                             各阶段独立文档，不设公共文档入口
 │   ├── e2/
@@ -211,6 +211,7 @@ b-group-project/
 │   │   └── VERIFICATION.md
 │   ├── e5/
 │   │   ├── README.md
+│   │   ├── ACCEPTANCE.csv
 │   │   ├── AI_USAGE.md
 │   │   ├── BACKLOG.md
 │   │   ├── CONTRIBUTIONS.md
@@ -218,6 +219,7 @@ b-group-project/
 │   │   └── VERIFICATION.md
 │   ├── e6/
 │   │   ├── README.md
+│   │   ├── ACCEPTANCE.csv
 │   │   ├── AI_USAGE.md
 │   │   ├── BACKLOG.md
 │   │   ├── CONTRIBUTIONS.md
@@ -225,8 +227,10 @@ b-group-project/
 │   │   └── VERIFICATION.md
 │   └── e7/
 │       ├── README.md
+│       ├── ACCEPTANCE.csv
 │       ├── AI_USAGE.md
 │       ├── BACKLOG.md
+│       ├── CI_RECORD.md
 │       ├── CONTRIBUTIONS.md
 │       ├── TEAM.md
 │       └── VERIFICATION.md
