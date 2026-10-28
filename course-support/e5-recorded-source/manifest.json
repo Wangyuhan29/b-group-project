@@ -1,0 +1,12 @@
+{
+  "prompt-context-driven.txt": "df8cba502f35a6729643f7cbf6828d8ec73ae52818aac837ffdb657dbe454703",
+  "prompt-error-driven.txt": "decbf76788f5bf8110298b3e362db70f0e7cb6f79d08e362c77e5bf29fe8b9a5",
+  "README.md": "5012ac12431eb03ec8d01fcf364c80f947f3332b3131cebe3f8cbc7a59fd8c9d",
+  "candidates/candidate-1.Dockerfile": "ede21b0fab394071641526e2fccefc41565efb00de6fb54d9d5b906aebeb535d",
+  "candidates/candidate-3.Dockerfile": "f4c86d4ee120d8a9114b1454d3eb23b5014eb326cc5b524cb291bc3f67e4eccd",
+  "candidates/candidate-1-provenance.json": "58b56940512730e5f4a21b5b0b6e5c89f65c8e573676d15eb857da7b2685d290",
+  "candidates/candidate-3-provenance.json": "e17acb07653784561de60911da749c0bda8ddf252b54f9e23547d06a7097195c",
+  "candidates/decision.json": "a7244ac09912dce8cb18b1be2aa04cd2c3306691681708a65e87034cf278e050",
+  "candidates/candidate-2.Dockerfile": "510dc459a9a3830aabdf35b32c15b0c22a3c3299982950e40378d4a3227b9788",
+  "candidates/candidate-2-provenance.json": "66aff57dcd84834a5d11f3d5c66d2fe5539f3e50c8fe0b0a086b9601debc18aa"
+}

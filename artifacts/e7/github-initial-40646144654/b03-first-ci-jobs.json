@@ -1,0 +1,113 @@
+{
+  "total_count": 1,
+  "jobs": [
+    {
+      "id": 122675300139,
+      "run_id": 40646144654,
+      "workflow_name": "E7 B quality gate",
+      "head_branch": "student/241250086/e5-e7",
+      "run_url": "https://api.github.com/repos/Wangyuhan29/b-group-project/actions/runs/40646144654",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUdS6uc8AAAAckASHKw",
+      "head_sha": "2e4a4ba9a169617a7eef20e6d3ea57086529b8d1",
+      "url": "https://api.github.com/repos/Wangyuhan29/b-group-project/actions/jobs/122675300139",
+      "html_url": "https://github.com/Wangyuhan29/b-group-project/actions/runs/40646144654/job/122675300139",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-28T06:48:50Z",
+      "started_at": "2026-10-28T06:48:52Z",
+      "completed_at": "2026-10-28T06:49:16Z",
+      "name": "e7-b-quality-gate",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-28T06:48:53Z",
+          "completed_at": "2026-10-28T06:48:54Z"
+        },
+        {
+          "name": "Check out the exact triggering revision",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-28T06:48:54Z",
+          "completed_at": "2026-10-28T06:48:55Z"
+        },
+        {
+          "name": "Prepare evidence and check Python syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-28T06:48:55Z",
+          "completed_at": "2026-10-28T06:48:55Z"
+        },
+        {
+          "name": "Scan tracked sources and Git history",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-28T06:48:55Z",
+          "completed_at": "2026-10-28T06:48:56Z"
+        },
+        {
+          "name": "Build the service image",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 5,
+          "started_at": "2026-10-28T06:48:56Z",
+          "completed_at": "2026-10-28T06:49:13Z"
+        },
+        {
+          "name": "Scan built image",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6,
+          "started_at": "2026-10-28T06:49:13Z",
+          "completed_at": "2026-10-28T06:49:13Z"
+        },
+        {
+          "name": "Run the real component and fault gate",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-10-28T06:49:13Z",
+          "completed_at": "2026-10-28T06:49:13Z"
+        },
+        {
+          "name": "Archive evidence even when checks fail",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-28T06:49:13Z",
+          "completed_at": "2026-10-28T06:49:14Z"
+        },
+        {
+          "name": "Post Check out the exact triggering revision",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-28T06:49:14Z",
+          "completed_at": "2026-10-28T06:49:14Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-28T06:49:14Z",
+          "completed_at": "2026-10-28T06:49:14Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Wangyuhan29/b-group-project/check-runs/122675300139",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000000050,
+      "runner_name": "GitHub Actions 1000000050",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

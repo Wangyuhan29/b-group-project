@@ -1,0 +1,14 @@
+[
+  {
+    "path": ".github",
+    "blob_href": "https://github.com/Wangyuhan29/b-group-project/blob/2e4a4ba9a169617a7eef20e6d3ea57086529b8d1/.github",
+    "start_line": 39,
+    "start_column": null,
+    "end_line": 39,
+    "end_column": null,
+    "annotation_level": "failure",
+    "title": "",
+    "message": "Process completed with exit code 1.",
+    "raw_details": ""
+  }
+]

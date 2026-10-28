@@ -1,0 +1,39 @@
+e7-b-quality-gate	Build the service image	﻿2026-10-28T06:48:56.6130662Z ##[group]Run set -euo pipefail
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:56.6131031Z [36;1mset -euo pipefail[0m
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:56.6131534Z [36;1mdocker build --progress=plain -f services/draft/Dockerfile -t "$IMAGE" . 2>&1 | tee work/ci/build.log[0m
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:56.6132180Z [36;1mdocker image inspect "$IMAGE" > work/ci/service-image-inspect.json[0m
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:56.6198789Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:56.6199181Z env:
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:56.6199386Z   IMAGE: e7-draft:ci
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:56.6199626Z   FAIL_DEMO: 
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:56.6199867Z ##[endgroup]
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:57.1885454Z #0 building with "default" instance using docker driver
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:57.1886107Z 
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:57.1886387Z #1 [internal] load build definition from Dockerfile
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:57.1887365Z #1 transferring dockerfile: 2.59kB 0.0s done
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:57.1888400Z #1 DONE 0.0s
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:57.1888700Z 
+e7-b-quality-gate	Build the service image	2026-10-28T06:48:57.1889639Z #2 [internal] load metadata for m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:07.0882004Z #2 ...
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:07.0882298Z 
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:07.0883007Z #3 [internal] load metadata for m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7169625Z #3 ...
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7170451Z 
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7171616Z #2 [internal] load metadata for m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7174288Z #2 ERROR: unexpected media type application/octet-stream for sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74: not found
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7392017Z 
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7393211Z #3 [internal] load metadata for m.daocloud.io/docker.io/library/docker@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7393940Z #3 CANCELED
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7394281Z ------
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7394944Z  > [internal] load metadata for m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74:
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7396033Z ------
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7403778Z Dockerfile:12
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7404118Z --------------------
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7404395Z   10 |     FROM ${DOCKER_CLI_IMAGE} AS docker-cli
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7404702Z   11 |     
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7404917Z   12 | >>> FROM ${BASE_IMAGE}
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7405195Z   13 |     
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7405409Z   14 |     ENV LC_ALL=C.UTF-8 \
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7405684Z --------------------
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7407380Z ERROR: failed to build: failed to solve: m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74: failed to resolve source metadata for m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74: unexpected media type application/octet-stream for sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74: not found
+e7-b-quality-gate	Build the service image	2026-10-28T06:49:13.7464015Z ##[error]Process completed with exit code 1.

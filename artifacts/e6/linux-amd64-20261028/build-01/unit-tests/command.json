@@ -1,0 +1,9 @@
+[
+  "docker",
+  "run",
+  "--rm",
+  "--network",
+  "none",
+  "course1027-draft:241250086",
+  "pytest"
+]
