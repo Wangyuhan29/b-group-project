@@ -1,0 +1,81 @@
+[
+    {
+        "Id": "sha256:bca6189682a68b4f884ffa2bd487aabd3a3ceb051f78a293fd80b9fa4586b66a",
+        "RepoTags": [
+            "e7-draft:ci"
+        ],
+        "RepoDigests": [],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-28T06:59:08.216712186Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "app",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.13.14",
+                "PYTHON_SHA256=639e43243c620a308f968213df9e00f2f8f62332f7adbaa7a7eeb9783057c690",
+                "LC_ALL=C.UTF-8",
+                "TZ=UTC",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1"
+            ],
+            "Cmd": [
+                "python3",
+                "-m",
+                "draft",
+                "--help"
+            ],
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 348332467,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/fp45ynqmzwhvf24h4gzqwux8b/diff:/var/lib/docker/overlay2/o5e731bxwgxt876dk9q40s3dm/diff:/var/lib/docker/overlay2/l30j9fojmdhssp0uxvarpmajz/diff:/var/lib/docker/overlay2/glvhapn05ikp0w0d2rvjfinqe/diff:/var/lib/docker/overlay2/n7bmjcfnryxqjxdh2phy8dlnx/diff:/var/lib/docker/overlay2/cio9pt9bbrbb9qpzs9uq3toij/diff:/var/lib/docker/overlay2/a9ec11xzmk1q0q6ifueun6w72/diff:/var/lib/docker/overlay2/241zabarubknp6am3oaowm1oz/diff:/var/lib/docker/overlay2/1b2f898d46a2fd977090a3493edc9d74d3efe46efb1b02a60bdcab86f8415094/diff:/var/lib/docker/overlay2/c7787f1686085898867c1f65adc846ad28268ce01f18e30bdfc3c9e5fc1dbc78/diff:/var/lib/docker/overlay2/b2baad8bd9aaa9814d6ec4022fe1f6ea07443f5da73e94ddc510ce72507a56f5/diff:/var/lib/docker/overlay2/88fe2a7d2392e016f78ec1a6cbcf26f8551606684be77560e3d5657869d3b486/diff",
+                "MergedDir": "/var/lib/docker/overlay2/kixzsqo3s32rtdh6c6ba2b660/merged",
+                "UpperDir": "/var/lib/docker/overlay2/kixzsqo3s32rtdh6c6ba2b660/diff",
+                "WorkDir": "/var/lib/docker/overlay2/kixzsqo3s32rtdh6c6ba2b660/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:f4f8b983b714f130e2cff99176baa26352db6a55d3622e10ada40f2b4720a4eb",
+                "sha256:7ef9ddba6965cfcb2dcd5bf24e61737a0031c2d9be2b3377339111ab1ad3f0f2",
+                "sha256:ef9f8c7c1d6b6b918d5e93cba9a7de4c837e3047ca733296bd396d9a413ae64f",
+                "sha256:fde42b5dd2510411f5cd411982dd5fa72f546553ccba3e5260f33a3da21bbf8f",
+                "sha256:ca8ee408a7dbaee7b5f03142f93c18ac65177b54be4eb2d032ede0574159a29a",
+                "sha256:09b32b7be693bae51d6938351ffe2150716543b1071d766c22011df8ce6a90c9",
+                "sha256:ad38e566890ca31b54d9ed94a3d05fb0cc81424220e5c239a057833ffbacc35b",
+                "sha256:fe6f590de6a0dca2de0b4ca0103c7e5dc697493769f83e12c3e5badd1de4a6f4",
+                "sha256:890a362e6f00cd09513adbe3542852aed15311dc3a0c0d21df3a1ea25a53087c",
+                "sha256:4130f94b3b234169a400bc9e0a4ab6d164dbf5858d91aec891f9fea666a5e9a5",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:8658d884c2af12c1ceeadf674129b9204288264defbfaed1c5908dada9770126",
+                "sha256:aea11da9eef941fb8540ddc9481b31f2adebee411114f727767d6a8e8e54936b"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-28T06:59:09.640123215Z"
+        }
+    }
+]

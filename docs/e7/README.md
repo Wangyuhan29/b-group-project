@@ -6,12 +6,12 @@
 | 任务与完成状态 | [BACKLOG.md](BACKLOG.md) |
 | AI 使用与来源 | [AI_USAGE.md](AI_USAGE.md) |
 | 个人贡献 | [CONTRIBUTIONS.md](CONTRIBUTIONS.md) |
-| 验证与证据 | [VERIFICATION.md](VERIFICATION.md) |
+| 验证与证据 | [VERIFICATION.md](VERIFICATION.md)、[验收表](ACCEPTANCE.csv) |
 
 
 ## 本人新增边界测试
 
-`services/draft/tests/test_student_boundary.py`：候选遗漏 Makefile 时在构建前拒绝；已有固定 digest 可直接使用；更换既有 digest 必须拒绝。后两项对应真实兼容修正，覆盖原包未固定输入的局限。新增测试 3 项通过，服务总数 30 项。
+`services/draft/tests/test_student_boundary.py`：候选遗漏 Makefile 时在构建前拒绝；已有固定 digest 可直接使用；更换既有 digest 必须拒绝。后两项对应真实兼容修正，覆盖原包未固定输入的局限。新增边界测试 3 项通过；接入后服务总数 30 项。CI 演示再增加一项正确版本退出码测试，最终总数 31 项。
 
 ## 服务器完整门禁
 
@@ -23,4 +23,4 @@ python3 scripts/course.py gate --candidate fixtures/ci-candidates/B03-E5.Dockerf
 
 ## GitHub CI
 
-工作流 `.github/workflows/e7-quality-gate.yml`，检查名 `e7-b-quality-gate`，执行语法检查、源码/镜像扫描、镜像构建、完整门禁并保留 14 天 artifact。当前远程 CI、main 保护、故意失败 PR、拒绝合并及同 PR 恢复证据仍在采集中，详见 [任务状态](BACKLOG.md)；未完成时不计为本阶段全部完成。
+工作流 `.github/workflows/e7-quality-gate.yml`，检查名 `e7-b-quality-gate`，执行语法检查、源码/镜像扫描、镜像构建、完整门禁并保留 14 天 artifact。远程首次成功、main 保护、故意失败 PR、实际拒绝合并、同 PR 恢复和正常合并均已实测完成，详见 [CI 完整记录](CI_RECORD.md)。最终主线在本人服务器目录复验 31 项测试和六场景均通过。其他成员个人执行与提交仍按各自实际工作记录。

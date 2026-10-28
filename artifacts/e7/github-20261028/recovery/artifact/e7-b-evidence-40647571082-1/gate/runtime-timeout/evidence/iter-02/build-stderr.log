@@ -1,0 +1,37 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 592B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 57B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 54B done
+#5 DONE 0.0s
+
+#6 [2/5] WORKDIR /work
+#6 CACHED
+
+#7 [3/5] COPY main.c Makefile ./
+#7 CACHED
+
+#8 [4/5] RUN sed -i "s@http://deb.debian.org@https://deb.debian.org@g;s@https://deb.debian.org@https://deb.debian.org@g" /etc/apt/sources.list.d/debian.sources     && apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=60 -o Acquire::https::Timeout=60 update     && apt-get install -y --no-install-recommends build-essential     && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [5/5] RUN make
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 writing image sha256:7809866ff860af5848277fb59344c170a62cffde11d675203ebdc9e6f55cd493 done
+#10 naming to docker.io/library/e6-draft-replay:ab9db1df493d4c2b9e42077b4716c4aa-2 done
+#10 DONE 0.0s

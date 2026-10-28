@@ -1,0 +1,19 @@
+{
+  "scope": "CI-only copied inputs; use official registry and Debian download source, same pinned digest and build/runtime commands",
+  "files": [
+    {
+      "source": "fixtures/draft/Dockerfile.broken",
+      "output": "fixture/Dockerfile.broken",
+      "source_sha256": "e3a8a0b8cd3f526f49af8c54b954f5d1ee7f8da508362949fcdc185e81d4a03d",
+      "adapted_sha256": "032c7fcf41b48c42f9beca3eab0df491f6fdc5cc6d19293693d24f9d15cf0376",
+      "from_digest": "sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74"
+    },
+    {
+      "source": "fixtures/ci-candidates/B03-E5.Dockerfile",
+      "output": "candidate.Dockerfile",
+      "source_sha256": "4e3c2b003ad9b04a53be424ba0fc86c727613f00f0246e85f0195d3769ebea6d",
+      "adapted_sha256": "efe7e84d4ef35e84adb854b31012bf6f1c6aba595e1d5c89fa9ecb72c11b10cd",
+      "from_digest": "sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 | 任务与完成状态 | [BACKLOG.md](BACKLOG.md) |
 | AI 使用与来源 | [AI_USAGE.md](AI_USAGE.md) |
 | 个人贡献 | [CONTRIBUTIONS.md](CONTRIBUTIONS.md) |
-| 验证与证据 | [VERIFICATION.md](VERIFICATION.md) |
+| 验证与证据 | [VERIFICATION.md](VERIFICATION.md)、[验收表](ACCEPTANCE.csv) |
 
 
 本次选择手册允许的“包内已保存 DeepSeek 候选”路线，完成失败采集、两类提示生成、候选比较与环境适配、手工构建及程序验证。没有新发起网页/API 模型对话，不将记录候选写成本次模型生成。

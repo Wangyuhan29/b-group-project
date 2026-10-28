@@ -1,0 +1,11 @@
+[
+  "docker",
+  "run",
+  "--rm",
+  "--network",
+  "none",
+  "--cidfile",
+  "/home/runner/work/b-group-project/b-group-project/work/ci/gate/unit-tests/service-container-id.txt",
+  "e7-draft:ci",
+  "pytest"
+]

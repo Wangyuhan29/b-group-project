@@ -1,0 +1,3 @@
+编号,轨道,阶段,项目,状态,证据路径或URL,说明
+C03,B,E6,输入哈希报告日志,PASS,../../artifacts/e6/linux-amd64-20261028/manifest.json,两轮真实 Docker 构建
+B02,B,E6,同一镜像运行验证,PASS,VERIFICATION.md,第二轮构建镜像 ID 与验证命令一致
