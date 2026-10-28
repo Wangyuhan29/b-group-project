@@ -1,177 +1,120 @@
-# B03 项目：DRAFT / MDFixer
+# B03 · DRAFT / MDFixer
 
-## 本周 E5—E7（2026-10-28）
+南京大学 DevOps 课程 B03 小组项目，对应 A03，鼓楼校区。成员：王宇晗（241250086）、朱玄（241250017）、靳滨硕（241250075）。
 
-[E5 失败复现与候选](docs/e5/README.md)、[E6 两轮构建](docs/e6/README.md)、[E7 验证与 CI](docs/e7/README.md)分别独立归档。本人轨道的原生服务器实验和 GitHub 失败/恢复门禁已完成，详见各阶段实际记录。服务器实验使用 `python3 scripts/course.py`；E4 的 make all 和原 E2/E3 的 make check 保留。main 已启用必需检查，后续改动通过个人分支 PR 合并。
+B03 负责 DRAFT 构建环境与 MDFixer 缺失依赖修复，A03 负责 BuildChecker / EChecker。服务代码统一维护，文档与运行证据按实验阶段归档。
 
-## E4 可重复工程环境
+## 阶段概览
 
-已接入课程 B-draft 模板，正式 Linux 服务器运行 `make all`。服务位于 `services/draft/`，运行参数在根目录 `compose.yaml`，依赖锁和 `.env.example` 均按课件放在根目录。王宇晗已在服务器完成全流程，241250017、241250075 目录也已按用户授权完成实际复跑，对比结论一致，执行方式和边界见 [复跑对比](docs/e4/MEMBER_COMPARISON_241250017.md)、[复跑对比（241250075）](docs/e4/MEMBER_COMPARISON_241250075.md)。完整步骤与当前验收状态见 [E4 文档](docs/e4/README.md)。原 E2/E3 验证继续使用 `make check`，原根目录单测改名为 `make regression-test`。
+| 阶段 | 主要内容 | 当前进展与详细记录 |
+|---|---|---|
+| E2 · 需求与接口契约 | 统一任务模型、请求/响应、错误与产物格式，完成配对评审和 Minicalc 镜像交接。 | 契约、样例和交接材料已归档；[E2 文档](docs/e2/README.md)。 |
+| E3 · 并行测试基线 | 准备 DRAFT 成功/失败输入，以及四种 Makefile 风格的 MDFixer 参考补丁。 | 基线、原生 amd64 Docker 复验与互查记录已归档；[E3 文档](docs/e3/README.md)。 |
+| E4 · 可重复工程环境 | 固定服务镜像与依赖，执行环境自检、构建、测试、冒烟和密钥扫描。 | 三个学号目录运行对照及 A03/B03 双向互查已完成；[E4 文档](docs/e4/README.md)。 |
+| E5 · DRAFT 方法复现 | 从真实缺 make 失败生成提示，选择候选并手工构建、运行验证。 | 已按教师允许的记录候选回放路线实测，保留来源及环境适配；[E5 文档](docs/e5/README.md)。 |
+| E6 · 核心工作流 | 自动执行初始失败、候选构建，再以构建所得镜像 ID 验证程序。 | 两轮构建和证据一致性校验通过；[E6 文档](docs/e6/README.md)。 |
+| E7 · 验证与 CI | 新增边界测试，覆盖成功和故障场景，验证 CI 拦截与恢复。 | 最终 31 项服务测试、六场景门禁及同 PR 失败/恢复验证通过；[E7 文档](docs/e7/README.md)、[CI 记录](docs/e7/CI_RECORD.md)。 |
 
+E5—E7 现有证据对应王宇晗的个人轨道与小组共享 CI。其他成员须各自新增测试、保存运行记录并提交个人 PR；实际贡献见各阶段的 CONTRIBUTIONS.md。
 
-## E3 并行测试基线（2026-09-30）
+## 常用命令
 
-B03 的 DRAFT 失败与参考成功样本、固定 MD 报告、四种 Makefile 风格补丁、重跑命令和实际日志见 [docs/e3/README.md](docs/e3/README.md)。E3 本地基线执行命令：`python3 scripts/verify_e3_baselines.py`。Tiny Greeting 的两次 Docker 构建及容器验证已在本机完成，证据见 `artifacts/e3/docker-20260930/`；原有 C2 镜像证据另见 `docs/e2/IMAGE_HANDOFF.md`。
+以下命令均在仓库根目录执行。E4—E7 正式实验使用 Linux 服务器与 Docker；每名成员使用自己的学号目录、本仓库 Git 身份和镜像标签。
 
-本仓库负责 DRAFT 环境生成和 MDFixer 缺失依赖修复；A 组负责 BuildChecker / EChecker。共同测试目标已切换为 A 组提供的 minicalc。这里仍是 B 组工具仓库，目标源码放在 fixtures/minicalc/source。
+### E5—E7
 
-## 现在运行什么
+组员统一从已验证基线 `2dc97ff3b9dd8d00a9c49dddf1efdab0ee75bdf7` 建立个人分支 `student/学号/e5-e7`。阶段文档记录各次实际测试 SHA，新增测试后重新构建并运行门禁。
 
-原 E2/E3 回归需要 Python 3.10+、Git、GNU Make 和支持 -MM 的 gcc，不需要第三方 Python 包。E4 服务测试另使用 requirements-dev.lock，正式环境由 Docker 构建。
-
-```bash
-make check
+```sh
+python3 scripts/course.py doctor
+python3 scripts/course.py build --out work/build-01 --build-timeout 1200
+python3 scripts/course.py e5 --candidate fixtures/ci-candidates/B03-E5.Dockerfile --out work/e5-01 --build-timeout 1200
+python3 scripts/course.py e6 --candidate fixtures/ci-candidates/B03-E5.Dockerfile --out work/e6-01 --build-timeout 1200
+python3 scripts/course.py gate --candidate fixtures/ci-candidates/B03-E5.Dockerfile --out work/e7-01 --build-timeout 1200
 ```
 
-它校验原有公共契约和新增 minicalc 样例，运行测试，再在临时副本上完成 C2 构建、四条 MD 检测、补丁生成/应用、构建与结果断言、本地依赖重检和增量重建检查。真实输出在 work/minicalc-run，不修改固定源码。
+每一步成功后再执行下一步；输出目录必须全新，复跑时递增编号，保留原日志。E5 的候选手工构建与同镜像运行步骤见 [E5 说明](docs/e5/README.md)，E6 证据核验见 [E6 说明](docs/e6/README.md)。
 
+### 前序实验与回归
 
-## 当前材料与验证边界
-
-- 目标仓库：https://github.com/hardtosleep/Minicalc-DevOps-Test.git
-- 当前源码为收到的 main.zip，ZIP comment 记录 C2：e103bcb3726a3fd7253deb0d791ac74fac77cafe。源码文件逐一固定 SHA-256。
-- 已通过本机 SSH 成功 clone 并独立核验 c0/c1/c2；C2 ZIP 的全部源码文件与 Git C2 完全一致。
-- 三个真实版本已构建和扫描，C0/C1/C2 分别为 3/1、4/1、4/0（MD/RD）；完整历史保存在 fixtures/minicalc/history.bundle。
-- 本地 C2 实测 4 MD / 0 RD；补齐 4 条依赖后，本机编译器依赖对照为 0 MD / 0 RD。
-- C2 镜像已在 GitHub Actions 构建、通过容器断言并发布至私有 GHCR，见 [镜像交接](docs/e2/IMAGE_HANDOFF.md)。A 组真实 Checker 联调仍待完成。
-
-## 优先阅读与使用
-
-| 文件/目录 | 作用 |
+| 命令 | 用途 |
 |---|---|
-| fixtures/minicalc/project.json | C0/C1/C2 SHA、来源可信范围、C2 文件哈希、配置与镜像状态 |
-| contracts/minicalc/ | DRAFT/FULL_CHECK/REPAIR 的 C2 请求、本地结果映射和固定 MD 报告 |
-| artifacts/minicalc/c2/ | 真实本地日志、图、证据、MD 报告、Patch 及重检报告 |
-| scripts/minicalc.py | 明确限定为 minicalc 显式规则的构建、扫描、修复和验证演示 |
-| scripts/verify_minicalc.py | 三个算术结果与版本的自动断言，弥补上游 make test 只打印结果 |
-| draft/minicalc.Dockerfile | 已在 GitHub Actions 验证的 C2 环境 |
-| contracts/graph.schema.json | 已与 A 组文件核对并加入共享锁 |
-| contracts/finding-id-v1.json | finding_id 算法与测试向量；已加入共享锁 |
-| docs/e2/REPLY_TO_A.md | 可以发给 A 组的具体答复 |
-| docs/e2/MINICALC_HANDOFF.md | 读取方法、环境边界、三个版本的核验与边界 |
-
-原 contracts/examples、artifacts/demo、fixtures/draft-project 及 scripts/demo.py 保留为旧教学样本与兼容性回归，**不是 minicalc 正式输入**。make demo 已改为 minicalc；make legacy-demo 可重放旧演示。公共 task.schema.json/OpenAPI/validate.py 没有改字段，不要求 A 组立刻升级公共模型。
-
-contracts/minicalc 中的 *-response-local.json 是本机结果向公共模型的映射，不是 Docker/API 执行记录。当前 full-request / repair-request 已使用真实 C2 digest；旧本地响应保留当时的 NOT-BUILT 状态。共享 33 个文件的核对结果见 [SHARED_SYNC](docs/e2/SHARED_SYNC.md)。
-
-## 本地重新构建镜像
-
-在本仓库根目录执行：
-
-```bash
-docker build -f draft/minicalc.Dockerfile -t minicalc-devops:c2 .
-docker run --rm minicalc-devops:c2
-```
-
-已发布镜像的固定 digest 和拉取命令见 [IMAGE_HANDOFF](docs/e2/IMAGE_HANDOFF.md)。重新构建可能产生不同 digest。此 Dockerfile 仅复制 C2 源码，C0/C1 的准确源码已在 history.bundle 中，Dockerfile 仍需按版本固定环境输入。
-
-## 下一步
-
-先与 A 组统一报告中的 `include/*.h` 路径、问题编号和产物读取位置，再进行真实 Checker 联调。
-
-TEAM、贡献表及 B03 三人本轮审阅记录已填写；ADR-001～003 的双方确认仍需补齐。历史提交已同步 GitHub，本次本地修订的验证结果见 [VERIFICATION](docs/e2/VERIFICATION.md)。
-
-## Git 历史重放
-
-已配置的 SSH 地址为 `git@github.com:hardtosleep/Minicalc-DevOps-Test.git`。接口 repository.url 仍保留原 HTTPS 标识以稳定 finding ID，clone_url 单独记录 SSH 传输地址。
-
-`make history` 在临时目录离线 clone history.bundle，逐版本构建并比较发现，输出 work/minicalc-history。保存的真实扫描产物在 artifacts/minicalc-history，6 份任务样例在 contracts/minicalc-history。这里仍为逐版本全量扫描后比较，不声称实现 EChecker 增量算法；历史样例保留原占位值；本次发布仅覆盖 C2，不能直接用于 C0/C1 源码检测。
-
-## E3 进展（2026-10-09）
-
-已完成 A03 基线的构建与行为互查，并在原生 Ubuntu x86_64 完成 B03 DRAFT Docker 失败/参考成功验证。详见 [E3 文档](docs/e3/README.md)。Ubuntu 成功构建使用 Debian 镜像源变体，原始日志已取回并校验归档；A03 strace 动态关系尚未独立验证，四服务联调未完成。
+| `make all` | E4 环境自检、服务构建、测试、冒烟与扫描；默认 make 也执行此流程。 |
+| `make check` | E2/E3 共享契约校验、Minicalc 测试、修复演示及三版本历史验证。 |
+| `python3 scripts/verify_e3_baselines.py` | E3 DRAFT / MDFixer 独立测试基线。 |
+| `make regression-test` | 原根目录 tests/ 回归；`make test` 执行服务镜像内的测试。 |
 
 ## 项目结构
 
-以下展示维护中的主要目录和文件。原始日志按运行目录归档，不逐一展开；本地缓存和 IDE 文件不列入项目结构。
+维护中的主要目录如下。原始日志保留在各阶段的运行目录中，目录树只展开到用途清晰的层级。
 
 ```text
 b-group-project/
-├── README.md                         项目入口、运行方法与当前进展
-├── Makefile                          E4 all/test/smoke/scan；旧 check/regression-test
-├── validate.py                       公共契约与产物引用校验
-├── CHANGELOG.md                      契约与项目变更记录
-├── .gitignore                        本地缓存、密钥和临时输出忽略规则
+├── README.md                         项目说明、阶段概览与常用命令
+├── Makefile                          E4 全流程及前序回归入口
+├── compose.yaml                      服务资源限制与 Docker socket 配置
+├── requirements-dev.in               直接测试依赖
+├── requirements-dev.lock             带哈希的依赖锁
+├── .env.example                      本地配置示例
+├── validate.py                       接口契约与产物引用校验
+├── CHANGELOG.md                      项目变更记录
 ├── .github/
 │   ├── workflows/
-│   │   ├── check.yml                 项目持续集成检查
-│   │   ├── minicalc-image.yml        C2 镜像构建、验证与发布
-│   │   └── e7-quality-gate.yml       E7 真实六场景门禁与 artifact
-│   └── PULL_REQUEST_TEMPLATE.md      PR 说明模板
-├── compose.yaml                      E4 运行限制与 Docker socket 挂载
-├── requirements-dev.in               E4 直接测试依赖
-├── requirements-dev.lock             E4 带哈希依赖锁
-├── .env.example                      空密钥运行配置示例
-├── services/draft/                   E4 及后续 DRAFT 服务
-│   ├── Dockerfile                    固定基础镜像与 Docker CLI digest
-│   ├── draft/                        version、smoke、auto-build CLI
-│   ├── tests/                        服务单元测试
+│   │   ├── check.yml                 契约与 Minicalc 回归
+│   │   ├── minicalc-image.yml        C2 镜像构建与发布
+│   │   └── e7-quality-gate.yml       E7 构建、扫描、六场景门禁与证据上传
+│   └── PULL_REQUEST_TEMPLATE.md
+├── services/draft/
+│   ├── Dockerfile                    服务镜像与工具链
+│   ├── draft/
+│   │   ├── cli.py                    version / smoke / auto-build 入口
+│   │   ├── smoke.py                  冒烟验证
+│   │   └── autobuild.py              两轮构建与程序验证
+│   ├── tests/                        服务测试与个人边界测试
 │   └── pytest.ini
-├── setup/bootstrap_ubuntu.sh         课程服务器初始化脚本（按需）
-├── draft/
-│   ├── README.md                     DRAFT 说明
-│   └── minicalc.Dockerfile           Minicalc C2 构建环境
-├── mdfixer/
-│   └── README.md                     MDFixer 说明与实现范围
-├── contracts/                        A/B 共享接口契约，路径保持稳定
-│   ├── task.schema.json              公共任务模型
-│   ├── graph.schema.json             依赖图结构
-│   ├── finding-id-v1.json            稳定发现 ID 算法与测试向量
-│   ├── openapi.json                  API 定义
-│   ├── shared-lock.json              共享文件 SHA-256 锁
-│   ├── examples/                     公共请求、响应和错误正反例
-│   ├── minicalc/                     C2 任务、固定报告及本地结果样例
-│   └── minicalc-history/             C0/C1/C2 历史任务样例
-├── course-support/                   教师 CI/报告模板与导入来源清单
-├── fixtures/                         固定测试输入与人工参考答案
-│   ├── minicalc/                     共同目标项目
-│   │   ├── source/                   固定 C2 源码
-│   │   ├── history.bundle            C0/C1/C2 完整 Git 历史
-│   │   └── project.json              版本、配置及源码哈希
-│   ├── ci-candidates/                教师记录候选及 B03 适配与来源
-│   ├── draft/                        E4 模板固定 digest 的 Tiny Greeting
-│   ├── e3/
-│   │   ├── draft/                    Tiny Greeting 源码、Makefile、失败/参考 Dockerfile
-│   │   └── mdfixer/                  固定 MD、四种声明风格与参考 Patch
-│   ├── draft-project/                旧教学项目，保留兼容回归
-│   ├── md-report.json                旧教学固定报告
-│   ├── source.json                   旧教学源码描述
-│   └── source.bundle                 旧教学源码历史
 ├── scripts/
-│   ├── doctor.py                     E4 环境与提交身份自检
-│   ├── secret_scan.py                工作区、历史和镜像密钥扫描
-│   ├── check_shared_lock.py          校验共享文件锁
-│   ├── minicalc.py                   Minicalc 构建、依赖扫描与修复演示
-│   ├── verify_minicalc.py            功能与版本断言
-│   ├── verify_history.py             三个固定提交的历史验证
-│   ├── verify_e3_baselines.py        E3 基线、补丁与拒绝恢复验证
 │   ├── course.py                     学号隔离的 E5—E7 入口
-│   ├── lab_cloud.py                  真实云端实验调度
-│   ├── prepare_e5_prompts.py         由真实失败日志生成两类提示
-│   ├── verify_e6_b_evidence.py       两轮构建证据一致性校验
-│   ├── run_e7_b_gate.py              六场景门禁
+│   ├── lab_cloud.py                  云端实验调度
+│   ├── prepare_e5_prompts.py         从实际失败日志生成两类提示
+│   ├── verify_e6_b_evidence.py       构建与运行证据一致性校验
+│   ├── run_e7_b_gate.py              完整六场景门禁
+│   ├── prepare_e7_ci_inputs.py       CI 下载源适配与输入哈希记录
+│   ├── doctor.py                     环境与 Git 身份检查
+│   ├── secret_scan.py                源码、历史与镜像密钥扫描
+│   ├── check_shared_lock.py          共享契约锁校验
+│   ├── minicalc.py                   Minicalc 扫描与修复演示
+│   ├── verify_minicalc.py            功能断言
+│   ├── verify_history.py             C0/C1/C2 历史验证
+│   ├── verify_e3_baselines.py        E3 基线验证
 │   └── demo.py                       旧教学演示
-├── artifacts/                        实际运行产物与原始证据
-│   ├── index.json                    产物 URI 索引
-│   ├── minicalc/c2/                  C2 图、报告、Patch、构建与重检日志
-│   ├── minicalc-history/             三版本扫描与比较记录
-│   ├── e4/
-│   │   ├── local-20261015/            E4 本地准备记录
-│   │   ├── server-20261015/           三人服务器成功、失败日志及验收回执
-│   │   ├── a03-cross-validation-6abc4d8-20261018/  B03 复核 A03 原始证据
-│   │   └── a03-reviewed-b03-8701f70-20261018/      A03 复核 B03 原始证据
+├── contracts/                        与 A03 共享的接口契约
+│   ├── task.schema.json              公共 Job 模型
+│   ├── graph.schema.json             依赖图格式
+│   ├── finding-id-v1.json            稳定发现 ID 规则
+│   ├── openapi.json                  API 定义
+│   ├── shared-lock.json              共享文件哈希锁
+│   ├── examples/                     请求、响应与错误样例
+│   ├── minicalc/                     C2 任务与固定报告
+│   └── minicalc-history/             C0/C1/C2 任务样例
+├── fixtures/                         固定实验输入与参考答案
+│   ├── draft/                        E4—E7 Tiny Greeting 项目
+│   ├── ci-candidates/                教师候选、B03 适配与来源
 │   ├── e3/
-│   │   ├── <UTC运行时间>/            E3 基线 summary.json 与逐命令日志
-│   │   ├── docker-20260930/          Mac arm64 Docker 构建与运行证据
-│   │   ├── ubuntu-amd64-20261009/    Ubuntu 原生 amd64 原始日志和哈希清单
-│   │   ├── a03-cross-review-20261009/ A03 基线互查与跟踪异常记录
-│   │   └── a03-strace-retry-20261010/ A03 新增原始 trace 复核和本地重跑证据
-│   ├── e5/linux-amd64-20261028/       初始失败、提示、手工构建与运行
-│   ├── e6/linux-amd64-20261028/       两轮构建、30 项测试及镜像 ID
-│   ├── e7/                           初次/最终服务器 gate、GitHub 原始 artifact 与门禁证据
-│   └── demo/                         旧教学演示产物
-├── docs/                             各阶段独立文档，不设公共文档入口
-│   ├── e2/
+│   │   ├── draft/                    E3 DRAFT 成功/失败样本
+│   │   └── mdfixer/                  四种 Makefile 风格与参考补丁
+│   ├── minicalc/
+│   │   ├── source/                   固定 C2 源码
+│   │   ├── history.bundle            C0/C1/C2 离线 Git 历史
+│   │   └── project.json              版本、配置与源码哈希
+│   ├── draft-project/                旧教学项目
+│   └── md-report.json / source.*     旧教学输入
+├── course-support/
+│   ├── import-receipt.json           教师参考文件导入记录
+│   ├── e5-recorded-source/           原始记录候选、提示和选择过程
+│   ├── ci/                           门禁配置及失败/恢复演示模板
+│   └── templates/                    教师报告与验收模板
+├── docs/                             各阶段独立文档
+│   ├── e2/                           接口、评审、ADR 与交接
 │   │   ├── README.md
 │   │   ├── AI_USAGE.md
 │   │   ├── BACKLOG.md
@@ -188,7 +131,7 @@ b-group-project/
 │   │   ├── VERIFICATION.md
 │   │   ├── adr/
 │   │   └── records/
-│   ├── e3/
+│   ├── e3/                           测试基线与提交核对
 │   │   ├── README.md
 │   │   ├── AI_USAGE.md
 │   │   ├── BACKLOG.md
@@ -196,7 +139,7 @@ b-group-project/
 │   │   ├── SUBMISSION.md
 │   │   ├── TEAM.md
 │   │   └── VERIFICATION.md
-│   ├── e4/
+│   ├── e4/                           服务器、成员对照与跨组互查
 │   │   ├── README.md
 │   │   ├── A03_CROSS_VALIDATION_20261018.md
 │   │   ├── AI_USAGE.md
@@ -209,7 +152,7 @@ b-group-project/
 │   │   ├── SERVER_VERIFICATION.md
 │   │   ├── TEAM.md
 │   │   └── VERIFICATION.md
-│   ├── e5/
+│   ├── e5/                           失败复现、候选与手工验证
 │   │   ├── README.md
 │   │   ├── ACCEPTANCE.csv
 │   │   ├── AI_USAGE.md
@@ -217,7 +160,7 @@ b-group-project/
 │   │   ├── CONTRIBUTIONS.md
 │   │   ├── TEAM.md
 │   │   └── VERIFICATION.md
-│   ├── e6/
+│   ├── e6/                           两轮工作流与证据核验
 │   │   ├── README.md
 │   │   ├── ACCEPTANCE.csv
 │   │   ├── AI_USAGE.md
@@ -225,7 +168,7 @@ b-group-project/
 │   │   ├── CONTRIBUTIONS.md
 │   │   ├── TEAM.md
 │   │   └── VERIFICATION.md
-│   └── e7/
+│   └── e7/                           故障门禁、CI 拦截与恢复
 │       ├── README.md
 │       ├── ACCEPTANCE.csv
 │       ├── AI_USAGE.md
@@ -234,15 +177,23 @@ b-group-project/
 │       ├── CONTRIBUTIONS.md
 │       ├── TEAM.md
 │       └── VERIFICATION.md
-├── tests/
-│   ├── test_contracts.py             公共契约测试
-│   └── test_minicalc.py              Minicalc 验证与修复测试
-└── work/                             本地临时输出，不提交 Git
+├── artifacts/                        已归档的运行产物与原始证据
+│   ├── e3/                           基线、平台复验与 A03 互查
+│   ├── e4/                           本地准备、三人运行与双向互查
+│   ├── e5/                           初始失败、提示及候选手工验证
+│   ├── e6/                           两轮构建、报告与镜像信息
+│   ├── e7/                           初次/最终服务器门禁与 GitHub 全流程证据
+│   ├── minicalc/                     C2 图、报告、Patch 与重检日志
+│   ├── minicalc-history/             三版本扫描与比较
+│   ├── demo/                         旧教学演示产物
+│   └── index.json                    产物 URI 索引
+├── tests/                            原契约与 Minicalc 回归测试
+├── draft/minicalc.Dockerfile          E2 Minicalc C2 镜像
+├── mdfixer/README.md                  MDFixer 说明
+├── setup/bootstrap_ubuntu.sh          服务器初始化脚本
+└── work/                             本地运行输出，不提交 Git
 ```
 
+各阶段分别保存 TEAM、BACKLOG、AI_USAGE、CONTRIBUTIONS、VERIFICATION；新增阶段沿用相同组织方式。运行结果以对应原始日志、源码 SHA 和哈希清单为准。
 
-E2 文档已集中在 [E2 入口](docs/e2/README.md)，设计决策位于 docs/e2/adr/，历史说明性 JSON 位于 docs/e2/records/。小组、Backlog、AI 使用、贡献和验证记录分别保存在对应阶段目录，不保留公共文档入口。后续阶段沿用同样的文件命名；代码、契约和原始证据按实际用途维护，不为文档归档而复制。共享 contracts/ 和既有产物位置不变。
-
-旧 draft/minicalc.Dockerfile 保留为 C2 镜像兼容入口；E4 及后续服务实现以 services/draft/ 为准。
-
-E4 三名组员同版本归档已核验，证据与贡献汇总见 [服务器验证](docs/e4/SERVER_VERIFICATION.md)。[A03/B03 的 E4 README 重跑互查](docs/e4/PEER_REVIEW.md)已于 2026-10-18 双向通过，不与 E3 互查或 E12 联调混淆。
+`main` 已启用 `e7-b-quality-gate` 必需检查，后续修改通过个人分支发 PR。已有产物保留原始内容；本地配置 `.env`、密钥和临时 work/ 不提交。
