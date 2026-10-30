@@ -10,3 +10,7 @@
 - 源码与镜像密钥扫描通过。构建使用已有缓存；不声明从零下载或性能提升。
 
 原始记录：[本阶段证据清单](../../artifacts/e6/linux-amd64-20261028/manifest.json)，关键路径 e6-01/evidence/result.json、e6-01/verification.json、build-02/unit-tests/stdout.log。build-01 是首次参考接入试运行，之后已修正提交身份与兼容代码；正式结论以 build-02 和 `7a5a01622da340e59a15090a2b5167ae832b8398` 为准。
+
+## 2026-10-30 新材料核对
+
+本日按单独 E6 包核对验收项，沿用上述本人实测原件。新版报告、四项实现解释和指定列验收表见 [REPORT.md](REPORT.md) 与 [ACCEPTANCE.csv](ACCEPTANCE.csv)，候选来源见 [CANDIDATE_SOURCE.json](CANDIDATE_SOURCE.json)。本日仅离线重算证据哈希、核验报告一致性与源码对应关系，不记作新的 Docker 运行。
