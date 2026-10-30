@@ -165,7 +165,9 @@ b-group-project/
 │   │   ├── ACCEPTANCE.csv
 │   │   ├── AI_USAGE.md
 │   │   ├── BACKLOG.md
+│   │   ├── CANDIDATE_SOURCE.json
 │   │   ├── CONTRIBUTIONS.md
+│   │   ├── REPORT.md
 │   │   ├── TEAM.md
 │   │   └── VERIFICATION.md
 │   └── e7/                           故障门禁、CI 拦截与恢复
