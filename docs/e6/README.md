@@ -2,12 +2,15 @@
 
 | 本阶段记录 | 文件 |
 |---|---|
+| 新版提交材料 | [实验报告](REPORT.md)、[验收表](ACCEPTANCE.csv)、[候选来源](CANDIDATE_SOURCE.json) |
 | 小组与分工 | [TEAM.md](TEAM.md) |
 | 任务与完成状态 | [BACKLOG.md](BACKLOG.md) |
 | AI 使用与来源 | [AI_USAGE.md](AI_USAGE.md) |
 | 个人贡献 | [CONTRIBUTIONS.md](CONTRIBUTIONS.md) |
 | 验证与证据 | [VERIFICATION.md](VERIFICATION.md)、[验收表](ACCEPTANCE.csv) |
 
+
+2026-10-30 已按单独发布的 DevOps_E6_Student_Cloud.zip 对齐提交材料，实际运行日期保留为 2026-10-28。报告逐项解释四项代码阅读任务，记录新增测试、重建及重新运行；详细内容见 [实验报告](REPORT.md)。
 
 已接入教师 `services/draft/draft/autobuild.py`、CLI 和云端入口。第一轮必须真实复现缺 make，第二轮构建已保存候选，随后按第二轮镜像 ID 启动禁网程序并比较输出。报告、CLI 退出码与验证日志分别保存，不把候选回放称作自动模型生成。
 
