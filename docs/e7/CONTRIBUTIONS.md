@@ -16,3 +16,7 @@
 - 源码里程碑 `c4c4f76ff79a0cb73a77da962be76eefb054211b`：本人服务器目录最终复验，原始日志、CI artifact、保护规则及 PR 状态按阶段归档。
 
 [PR #1](https://github.com/Wangyuhan29/b-group-project/pull/1)、[PR #2](https://github.com/Wangyuhan29/b-group-project/pull/2)。此记录不新增其他成员的提交、亲手操作或审阅声明。
+
+## 241250017 个人复跑（2026-11-01）
+
+已从固定基线建立个人分支，新增 3 项输入/输出边界测试，重新构建后 34 项测试通过，E5、E6 和完整 gate 六场景通过。实际源码 SHA、贡献和原始证据见 [个人记录](STUDENT_241250017.md)。本次按用户授权由 Codex 执行。
