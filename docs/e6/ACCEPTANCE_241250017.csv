@@ -1,0 +1,5 @@
+轨道,检查项,预期结果,实际结果,证据路径,通过
+B,初始构建,MISSING_MAKE,build_exit_code=1；MISSING_MAKE,../../artifacts/e5-e7/241250017-20261101/final-e6/evidence/result.json,是
+B,候选构建,build_exit_code=0,第二轮 build_exit_code=0,../../artifacts/e5-e7/241250017-20261101/final-e6/evidence/iter-02/image-inspect.json,是
+B,运行验证,同一image_id且exit=0及hello E3,镜像ID三处一致；exit=0；hello E3；output_matches=true,../../artifacts/e5-e7/241250017-20261101/final-e6/evidence/result.json,是
+共同,新增测试,测试通过且镜像已重建,新增3项；重建后34 passed；重新运行E6和gate通过,../../artifacts/e5-e7/241250017-20261101/final-build/unit-tests/stdout.log,是
