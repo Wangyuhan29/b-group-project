@@ -1,0 +1,12 @@
+[
+  "/usr/bin/python3",
+  "scripts/run_e7_b_gate.py",
+  "--image",
+  "course1027-draft:241250017",
+  "--out",
+  "/root/241250017/draft/work/241250017-e5-e7/baseline-gate/gate",
+  "--candidate",
+  "/root/241250017/draft/fixtures/ci-candidates/B03-E5.Dockerfile",
+  "--build-timeout",
+  "1200"
+]

@@ -1,0 +1,39 @@
+STUDENT_ID=241250017
+SERVICE_IMAGE=course1027-draft:241250017
+EVIDENCE_DIR=/root/241250017/draft/work/241250017-e5-e7/final-gate
+      "trace_id": "e6-b-be0d9527ad6d4e168e2f4ad6fe12ca91"
+    },
+    {
+      "case": "invalid-candidate",
+      "passed": true,
+      "exit_code": 1,
+      "workflow_status": "FAILED",
+      "trace_id": ""
+    },
+    {
+      "case": "build-failed",
+      "passed": true,
+      "exit_code": 1,
+      "workflow_status": "FAILED",
+      "trace_id": "e6-b-adcc44f2291a46b1b792ddf63e951659"
+    },
+    {
+      "case": "runtime-timeout",
+      "passed": true,
+      "exit_code": 1,
+      "workflow_status": "TIMED_OUT",
+      "trace_id": "e6-b-bcab8488a58441a7883f2d4bc1e508af"
+    }
+  ],
+  "intentional_failure": false,
+  "selected_cases": [
+    "success",
+    "wrong-output",
+    "invalid-candidate",
+    "build-failed",
+    "runtime-timeout"
+  ],
+  "build_timeout_seconds": 1200,
+  "scope": "Recorded candidate replay for selected real workflow cases; not model generation or a three-project benchmark"
+}
+

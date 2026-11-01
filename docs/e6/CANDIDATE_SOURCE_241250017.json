@@ -1,0 +1,27 @@
+{
+  "provider": "DeepSeek（教师包内记录候选回放，B03 环境适配）",
+  "model_version": "未记录",
+  "date": "2026-11-01",
+  "prompt_path": "artifacts/e5-e7/241250017-20261101/final-e5/iter-01/prompt-error-driven.txt",
+  "raw_response_path": null,
+  "candidate_path": "fixtures/ci-candidates/B03-E5.Dockerfile",
+  "candidate_sha256": "4e3c2b003ad9b04a53be424ba0fc86c727613f00f0246e85f0195d3769ebea6d",
+  "manual_changes": [
+    "FROM 从教师候选 python:3.13-slim@sha256:70729b46c69b4f1e97c4822c1af3df53a1476cf5ddc6c087c0c10bc3a5678c2f 适配为既有 E4 输入 m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74；初始轮与候选使用完全相同的固定 FROM。",
+    "apt 改用华为 Debian 镜像源并增加超时/重试，保留签名验证；保留 WORKDIR、COPY main.c Makefile ./、RUN make 和 CMD [\"./hello\"]。"
+  ],
+  "selection_reason": "按本周统一基线采用 B03 已保存候选回放；build-essential 对应真实 MISSING_MAKE，保留工程与运行指令。本人未新增模型调用或修改候选，个人两轮构建和同镜像输出验证通过。",
+  "is_recorded_replay": true,
+  "record_updated": "2026-11-01",
+  "path_base": "repository root",
+  "original_candidate_path": "fixtures/ci-candidates/DeepSeek-E5.Dockerfile",
+  "original_candidate_sha256": "ede21b0fab394071641526e2fccefc41565efb00de6fb54d9d5b906aebeb535d",
+  "original_provenance_path": "fixtures/ci-candidates/provenance.json",
+  "original_selection_path": "course-support/e5-recorded-source/candidates/decision.json",
+  "raw_response_note": "教师资料保留候选 Dockerfile 和来源摘要，未提供完整原始对话文本。本次没有新生成模型回复；按回放路线不附虚构原始回复。",
+  "invocation_note": "实际命令使用 --candidate 指向本组适配文件，因此原始 invocation.json 的 replay=false 仅表示未使用默认 --replay 开关；来源仍是教师记录候选回放，原始 invocation 不改写。",
+  "run_dir": "artifacts/e5-e7/241250017-20261101/final-e6",
+  "source_commit": "c220521c078a2b32f28fa70def896197f986c8a7",
+  "student_id": "241250017",
+  "personal_candidate_changes": []
+}
