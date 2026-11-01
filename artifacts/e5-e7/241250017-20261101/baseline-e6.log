@@ -1,0 +1,39 @@
+STUDENT_ID=241250017
+SERVICE_IMAGE=course1027-draft:241250017
+EVIDENCE_DIR=/root/241250017/draft/work/241250017-e5-e7/baseline-e6
+      "build_exit_code": 0,
+      "image_id": "sha256:d1f261d114291bd1c370068a3acceef4ae1d46e2fcd92eaa13eab3172bd4bcdc"
+    }
+  ],
+  "input_sha256": {
+    ".dockerignore": "4e2d01841cd05ae77ebcac6d7ed12f277fc7ab86506a5eb0186d2b7600e6487c",
+    "Dockerfile.broken": "e3a8a0b8cd3f526f49af8c54b954f5d1ee7f8da508362949fcdc185e81d4a03d",
+    "Makefile": "7ed3f5b85a10827cf4c177ee9fa9855b1c70166b5339e5da8e81f4decee74cc3",
+    "README.md": "706f5780103451757caa6327b11159989d0bbcd80688405a25e5f15eaa57c011",
+    "main.c": "05f3bcbf50c51513eb01dd78b3a9a4ae0a01115140fed7d1030cc47451807bc1"
+  },
+  "verification": {
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--cpus",
+      "1",
+      "--memory",
+      "128m",
+      "--pids-limit",
+      "64",
+      "--cidfile",
+      "/evidence/verify-container-id.txt",
+      "sha256:d1f261d114291bd1c370068a3acceef4ae1d46e2fcd92eaa13eab3172bd4bcdc"
+    ],
+    "exit_code": 0,
+    "expected_output": "hello E3",
+    "actual_output": "hello E3\n",
+    "output_matches": true
+  },
+  "elapsed_ms": 945
+}
+

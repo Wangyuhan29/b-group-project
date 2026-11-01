@@ -13,3 +13,7 @@
 | 按同一 ID 验证 | 输出 hello E3，退出 0，禁网运行 | e5-02/candidate-image-id.txt、verify.log、verify-exit-code.txt |
 
 手工候选镜像 ID：`sha256:5daf7cc34a0ef35cc4ecddd6dbe56c1825a3edc3e33ea21373aa4d1c87240844`。本地 image ID 不等于已发布仓库的 registry digest。
+
+## 241250017 个人复跑（2026-11-01）
+
+已从固定基线建立个人分支，新增 3 项输入/输出边界测试，重新构建后 34 项测试通过，E5、E6 和完整 gate 六场景通过。实际源码 SHA、贡献和原始证据见 [个人记录](STUDENT_241250017.md)。本次按用户授权由 Codex 执行。

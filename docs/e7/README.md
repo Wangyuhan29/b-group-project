@@ -24,3 +24,7 @@ python3 scripts/course.py gate --candidate fixtures/ci-candidates/B03-E5.Dockerf
 ## GitHub CI
 
 工作流 `.github/workflows/e7-quality-gate.yml`，检查名 `e7-b-quality-gate`，执行语法检查、源码/镜像扫描、镜像构建、完整门禁并保留 14 天 artifact。远程首次成功、main 保护、故意失败 PR、实际拒绝合并、同 PR 恢复和正常合并均已实测完成，详见 [CI 完整记录](CI_RECORD.md)。最终主线在本人服务器目录复验 31 项测试和六场景均通过。其他成员个人执行与提交仍按各自实际工作记录。
+
+## 241250017 个人复跑（2026-11-01）
+
+已从固定基线建立个人分支，新增 3 项输入/输出边界测试，重新构建后 34 项测试通过，E5、E6 和完整 gate 六场景通过。实际源码 SHA、贡献和原始证据见 [个人记录](STUDENT_241250017.md)。本次按用户授权由 Codex 执行。
