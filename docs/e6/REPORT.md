@@ -88,4 +88,4 @@
 | 证据一致性结果 / 定向测试 | artifacts/e6/linux-amd64-20261028/e6-01/verification.json、student-boundary-test.log |
 | 完整性清单 | [原始证据 manifest](../../artifacts/e6/linux-amd64-20261028/manifest.json) |
 
-全部证据来自本人服务器目录，不使用新包 reference_results 冒充个人运行。原始 work/ 继续忽略，需保留的输出已按运行目录原样归档到 artifacts/e6/；按用户要求本次不另行打包。本人实测已覆盖新版 B 验收项；其他成员仍须提交其本人新增测试、运行结果及贡献。
+全部证据来自本人服务器目录，不使用新包 reference_results 冒充个人运行。原始 work/ 继续忽略，需保留的输出已按运行目录原样归档到 artifacts/e6/；按用户要求本次不另行打包。本人实测已覆盖新版 B 验收项；朱玄、靳滨硕的新增测试、运行结果、个人来源表及验收表已随 PR #6、#7 合并，分别见 [朱玄个人记录](STUDENT_241250017.md)、[靳滨硕个人记录](STUDENT_241250075.md)。本报告中本人运行数据保持原样，汇总复核见 [验证记录](VERIFICATION.md)。
