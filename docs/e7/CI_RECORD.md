@@ -1,6 +1,6 @@
 # E7 GitHub CI 与实际合并门禁记录
 
-日期：2026-10-28；执行人：王宇晗（241250086），Codex 辅助。仓库：[Wangyuhan29/b-group-project](https://github.com/Wangyuhan29/b-group-project)。按用户确认公开仓库后完成门禁；公开前源码、Git 历史扫描未发现密钥，用户亲自完成 GitHub 身份验证。
+日期：2026-10-28；执行人：王宇晗（241250086）。仓库：[Wangyuhan29/b-group-project](https://github.com/Wangyuhan29/b-group-project)。按用户确认公开仓库后完成门禁；公开前源码、Git 历史扫描未发现密钥，用户亲自完成 GitHub 身份验证。
 
 ## 首次正常 CI
 
