@@ -7,6 +7,7 @@
 | 任务与完成状态 | [BACKLOG.md](BACKLOG.md) |
 | AI 使用与来源 | [AI_USAGE.md](AI_USAGE.md) |
 | 个人贡献 | [CONTRIBUTIONS.md](CONTRIBUTIONS.md) |
+| 新版实验报告 | [REPORT.md](REPORT.md) |
 | 验证与证据 | [VERIFICATION.md](VERIFICATION.md)、[验收表](ACCEPTANCE.csv) |
 
 
