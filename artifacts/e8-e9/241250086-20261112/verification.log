@@ -1,0 +1,5 @@
+direct: apply check passed; source clean
+macro: apply check passed; source clean
+mixed: apply check passed; source clean
+DEPS = main.c unused.h config.h
+E8 stale rejection and clean source: PASS
