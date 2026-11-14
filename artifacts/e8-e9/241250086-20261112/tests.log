@@ -1,0 +1,14 @@
+test_include_added_invalidates_cache (test_profile.ProfileTests.test_include_added_invalidates_cache) ... ok
+test_independent_known_edges (test_profile.ProfileTests.test_independent_known_edges) ... ok
+test_old_report_rejected (test_profile.ProfileTests.test_old_report_rejected) ... ok
+test_patch_preserves_redundant_dependency (test_profile.ProfileTests.test_patch_preserves_redundant_dependency) ... ok
+test_unchanged_reuses_both_targets (test_profile.ProfileTests.test_unchanged_reuses_both_targets) ... ok
+test_unsafe_dependency_rejected (test_profile.ProfileTests.test_unsafe_dependency_rejected) ... ok
+test_unsupported_configuration_rejected (test_profile.ProfileTests.test_unsupported_configuration_rejected) ... ok
+test_duplicate_missing_dependency_is_added_once (test_profile.StudentTests.test_duplicate_missing_dependency_is_added_once) ... ok
+test_rd_only_produces_no_patch (test_profile.StudentTests.test_rd_only_produces_no_patch) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.366s
+
+OK
