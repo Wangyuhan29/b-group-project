@@ -1,0 +1,20 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.241250017
+#1 transferring dockerfile:
+#1 transferring dockerfile: 443B done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/course1027-draft@sha256:a4561aac37820ffaaceb6ac5124a236a0541fa40a8fd25539204b91b8ca17f03
+#2 ERROR: failed to do request: Head "https://registry-1.docker.io/v2/library/course1027-draft/manifests/sha256:a4561aac37820ffaaceb6ac5124a236a0541fa40a8fd25539204b91b8ca17f03": dial tcp 157.240.20.8:443: i/o timeout
+------
+ > [internal] load metadata for docker.io/library/course1027-draft@sha256:a4561aac37820ffaaceb6ac5124a236a0541fa40a8fd25539204b91b8ca17f03:
+------
+Dockerfile.241250017:2
+--------------------
+   1 |     # Personal extension of the existing course DRAFT container; keep base content pinned.
+   2 | >>> FROM course1027-draft@sha256:a4561aac37820ffaaceb6ac5124a236a0541fa40a8fd25539204b91b8ca17f03
+   3 |     USER root
+   4 |     RUN apt-get -o Acquire::Retries=2 -o Acquire::https::Timeout=60 update \
+--------------------
+ERROR: failed to build: failed to solve: DeadlineExceeded: course1027-draft@sha256:a4561aac37820ffaaceb6ac5124a236a0541fa40a8fd25539204b91b8ca17f03: failed to resolve source metadata for docker.io/library/course1027-draft@sha256:a4561aac37820ffaaceb6ac5124a236a0541fa40a8fd25539204b91b8ca17f03: failed to do request: Head "https://registry-1.docker.io/v2/library/course1027-draft/manifests/sha256:a4561aac37820ffaaceb6ac5124a236a0541fa40a8fd25539204b91b8ca17f03": dial tcp 157.240.20.8:443: i/o timeout
