@@ -1,0 +1,5 @@
+cd /root/241250017/e8-e10-20261114
+DOCKER_BUILDKIT=0 docker build -f labs/e8e10/Dockerfile.241250017 -t course-e8e9:241250017 .
+IMAGE_ID=$(docker image inspect course-e8e9:241250017 --format '{{.Id}}')
+docker run --rm --network none --cpus 1 --memory 512m --pids-limit 256 -v "$PWD:/workspace" -w /workspace/labs/e8e10 "$IMAGE_ID" python3 -m unittest test_profile test_241250017 -v
+docker run --rm --network none --cpus 1 --memory 512m --pids-limit 256 -v "$PWD:/workspace" -w /workspace/labs/e8e10 "$IMAGE_ID" python3 verify_241250017.py --out /workspace/work/241250017-e8-e9/run

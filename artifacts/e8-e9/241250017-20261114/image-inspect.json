@@ -1,0 +1,65 @@
+[
+    {
+        "Architecture": "amd64",
+        "Config": {
+            "ArgsEscaped": true,
+            "Cmd": [
+                "python3",
+                "-m",
+                "draft",
+                "--help"
+            ],
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.13.14",
+                "PYTHON_SHA256=639e43243c620a308f968213df9e00f2f8f62332f7adbaa7a7eeb9783057c690",
+                "LC_ALL=C.UTF-8",
+                "TZ=UTC",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1"
+            ],
+            "User": "root",
+            "WorkingDir": "/workspace/labs/e8e10"
+        },
+        "Created": "2026-11-14T17:10:12.920171044+08:00",
+        "Descriptor": {
+            "digest": "sha256:a0a4a4cc1188e69b1bdccfec65bfd0c8f50a6905c4503ae32297a78c7aa52642",
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "size": 3563
+        },
+        "Id": "sha256:a0a4a4cc1188e69b1bdccfec65bfd0c8f50a6905c4503ae32297a78c7aa52642",
+        "Metadata": {
+            "LastTagTime": "2026-11-14T09:10:12.991185041Z"
+        },
+        "Os": "linux",
+        "Parent": "sha256:8d8896ffeed761ed4b8266aabfb434a9fbf00e8d5b2515bacbdf7dd28b7cd3d5",
+        "RepoDigests": [
+            "course-e8e9@sha256:a0a4a4cc1188e69b1bdccfec65bfd0c8f50a6905c4503ae32297a78c7aa52642"
+        ],
+        "RepoTags": [
+            "course-e8e9:241250017"
+        ],
+        "RootFS": {
+            "Layers": [
+                "sha256:f4f8b983b714f130e2cff99176baa26352db6a55d3622e10ada40f2b4720a4eb",
+                "sha256:7ef9ddba6965cfcb2dcd5bf24e61737a0031c2d9be2b3377339111ab1ad3f0f2",
+                "sha256:ef9f8c7c1d6b6b918d5e93cba9a7de4c837e3047ca733296bd396d9a413ae64f",
+                "sha256:fde42b5dd2510411f5cd411982dd5fa72f546553ccba3e5260f33a3da21bbf8f",
+                "sha256:2c29d4c2ddc83a7f29939aab7a8e339ae36262f5a15e3ebbc911ad3dd016d54f",
+                "sha256:363392516004ec71fd80d9a47941fd54669b262af90ede8f2354827f934239eb",
+                "sha256:216584d270f665bf4e5448fd84e6f4ac4ce837df225c13c1539f9caea18af5bf",
+                "sha256:8c268f808ee4455b88a94e823381cc9be77117ce0bbd776c457e363b6e130604",
+                "sha256:d18d5fb5e5c9a21de35a2053067362bafed2020d8af757a3b1c9b00ec4a9bb12",
+                "sha256:a04431dafb8dff1d55fbf4158a9bb7f0e6975fb13bd0f458355b0a71f994e870",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:954bbfabf1c43e69e285405a5a7c506f31b0370723d8bb155552c59302734789",
+                "sha256:5119bb9293214c44cba22c89209410ab8fcc88e2d921cfee5af31a9cad880351",
+                "sha256:96a7a9bfc0488d4512c674dd6126c11da28a8d09b19b6bca481cda29cf77de3e",
+                "sha256:2e2ccfaa58b4d7b3aafa3eed8a96c4fcc28af885b0c8177c4d3c9f8181444a27"
+            ],
+            "Type": "layers"
+        },
+        "Size": 206723780
+    }
+]
