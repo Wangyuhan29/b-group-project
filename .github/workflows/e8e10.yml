@@ -1,0 +1,35 @@
+name: E8/E9
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  e8e10-quality-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Run E8/E9 B-track tests and verification
+        shell: bash
+        run: |
+          out="$RUNNER_TEMP/e89-evidence"
+          mkdir -p "$out"
+          git rev-parse HEAD > "$out/commit.txt"
+          python3 --version > "$out/tools.txt"
+          gcc --version >> "$out/tools.txt"
+          make --version >> "$out/tools.txt"
+          cd labs/e8e10
+          python3 -m unittest discover -p 'test*.py' -v 2>&1 | tee "$out/tests.log"
+          python3 verify_241250075.py --out "$out/run" 2>&1 | tee "$out/verification.log"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: e89-b-evidence
+          path: |
+            ${{ runner.temp }}/e89-evidence/
+            !${{ runner.temp }}/e89-evidence/**/app
+            !${{ runner.temp }}/e89-evidence/**/*.o
+          retention-days: 14
