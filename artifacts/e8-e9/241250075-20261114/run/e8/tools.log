@@ -1,0 +1,8 @@
+$ gcc --version
+gcc (Debian 14.2.0-19) 14.2.0
+$ make --version
+GNU Make 4.4.1
+$ git --version
+git version 2.47.3
+$ python3 --version
+Python 3.13.14

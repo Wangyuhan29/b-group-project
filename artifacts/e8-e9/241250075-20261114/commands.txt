@@ -1,0 +1,30 @@
+# 241250075 E8/E9 commands executed on ecs-833a (2026-11-15)
+# Full pipeline (hashes, fingerprints, manifest, tarball) ran via the prepared
+# script run-e8e9-241250075.sh; its output is /root/241250075/run.log on the server.
+# Source entered the server as a git bundle; no GitHub credentials were sent.
+
+cd /root/241250075/e8-e10-20261114
+git clone -q /root/241250075/b03-e8e9-75.bundle repo
+(cd repo && git remote set-url origin https://github.com/Wangyuhan29/b-group-project.git)
+cd repo
+git config user.name 241250075
+git config user.email 241250075@smail.nju.edu.cn
+git checkout -q --detach f38da418e014b69e536bfef3c248a45aa527d441
+git cat-file blob HEAD:labs/e8e10/lab.py | sha256sum        # ee8ab1eb56633a3e052e3e4719912bf15b23e8a4f0f79af8755a4cc82974113a
+git cat-file blob HEAD:labs/e8e10/test_profile.py | sha256sum  # 05d93813be89eb3457696a20c1d48a2a21e04d62b61c9a8d861213265f8b02fa
+git cat-file blob HEAD:labs/e8e10/test_241250075.py | sha256sum  # 88f3f9299b93a0797af972060fbd4ae0d8c4dd5fb9177b60ebed43cd050fb3b0
+git cat-file blob HEAD:labs/e8e10/verify_241250075.py | sha256sum  # a03248e2cc32d12b3f7dc93767a624d2c39b52d042d634f9382f0f5e2217071e
+
+DOCKER_BUILDKIT=0 docker build -f labs/e8e10/Dockerfile.241250075 -t course-e8e9:241250075 .
+IMAGE_ID=$(docker image inspect course-e8e9:241250075 --format '{{.Id}}')  # sha256:bfbf6908dd0b758b24a61abd677b6eb3a7afbee9a3de39ebb43bbe1a14509a8c
+
+docker run --rm --network none --cpus 1 --memory 512m --pids-limit 256 \
+  -v "$PWD:/workspace" -w /workspace/labs/e8e10 "$IMAGE_ID" \
+  python3 -m unittest test_profile test_241250075 -v
+
+docker run --rm --network none --cpus 1 --memory 512m --pids-limit 256 \
+  -v "$PWD:/workspace" -v "$EV:/evidence" -w /workspace/labs/e8e10 "$IMAGE_ID" \
+  python3 verify_241250075.py --out /evidence/run
+
+# statuses: build=0 tests=0 verify=0; ALL_DONE 2026-11-15T08:48:39Z
+# git status --porcelain captured before and after: both empty (0 bytes)
