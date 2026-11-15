@@ -1,0 +1,7 @@
+# Personal extension of the existing course DRAFT container; keep base content pinned.
+FROM course1027-draft@sha256:daf543caef44e14ef3604ef6c48abbb0a4686ec7b5480f02a751475582859b99
+USER root
+RUN apt-get -o Acquire::Retries=2 -o Acquire::https::Timeout=60 update \
+ && apt-get install -y --no-install-recommends gcc make libc6-dev \
+ && rm -rf /var/lib/apt/lists/*
+WORKDIR /workspace/labs/e8e10
