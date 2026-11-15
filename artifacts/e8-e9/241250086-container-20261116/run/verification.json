@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "e8_stale_rejected": true,
+  "e8_source_unchanged": true,
+  "e9": [
+    {
+      "style": "direct",
+      "patch_applies": true,
+      "original_unchanged": true,
+      "copy_no_missing": true,
+      "copy_output": "1"
+    },
+    {
+      "style": "macro",
+      "patch_applies": true,
+      "original_unchanged": true,
+      "copy_no_missing": true,
+      "copy_output": "1"
+    },
+    {
+      "style": "mixed",
+      "patch_applies": true,
+      "original_unchanged": true,
+      "copy_no_missing": true,
+      "copy_output": "1"
+    }
+  ]
+}
