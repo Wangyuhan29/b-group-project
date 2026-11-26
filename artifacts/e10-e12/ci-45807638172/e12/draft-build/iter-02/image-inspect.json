@@ -1,0 +1,58 @@
+[
+    {
+        "Id": "sha256:e24a8805d5712966c1b7159329c45e0a2b46e13f9acc73eea6cebc2f2611fd54",
+        "RepoTags": [
+            "e6-draft-replay:9408d25e8844417f89e4b627da9b241d-2"
+        ],
+        "RepoDigests": [
+            "e6-draft-replay@sha256:e24a8805d5712966c1b7159329c45e0a2b46e13f9acc73eea6cebc2f2611fd54"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-26T11:07:46.80292513Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.13.14",
+                "PYTHON_SHA256=639e43243c620a308f968213df9e00f2f8f62332f7adbaa7a7eeb9783057c690"
+            ],
+            "Cmd": [
+                "./app"
+            ],
+            "WorkingDir": "/work",
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 157829129,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:f4f8b983b714f130e2cff99176baa26352db6a55d3622e10ada40f2b4720a4eb",
+                "sha256:7ef9ddba6965cfcb2dcd5bf24e61737a0031c2d9be2b3377339111ab1ad3f0f2",
+                "sha256:ef9f8c7c1d6b6b918d5e93cba9a7de4c837e3047ca733296bd396d9a413ae64f",
+                "sha256:fde42b5dd2510411f5cd411982dd5fa72f546553ccba3e5260f33a3da21bbf8f",
+                "sha256:db129503143cfb0451c26b0000f55119f7825e3765f90f1a1b40f548722a057b",
+                "sha256:19854d9c185b6b8c6a1d5f4227950a15efe2e6ab50b4ee4a8a1d9b7707f1da2a",
+                "sha256:3f8bb37c192730232627571bd90530469800a452a109ce17a78307e33d57b185",
+                "sha256:a3a1148efd2b0444599478034803b1e13d26ada0672a2f9ce35db1dc206ec29d"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-26T11:08:03.881690635Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:e24a8805d5712966c1b7159329c45e0a2b46e13f9acc73eea6cebc2f2611fd54",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "nb5pfzv2j15xgelsij06dcda0",
+                    "CreatedAt": "2026-11-26T11:08:03.889975501Z"
+                }
+            ]
+        }
+    }
+]

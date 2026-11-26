@@ -1,0 +1,10 @@
+{
+  "mode": "e12",
+  "repo": "/home/runner/work/b-group-project/b-group-project/data/integration-sample/repo",
+  "base": "b849e7121af92f1f27455dfe6329d4d270b5ffe0",
+  "target": "9f356b79a2afd230e047d5887459d78611bb8423",
+  "candidate": "/home/runner/work/b-group-project/b-group-project/data/integration-sample/candidate.Dockerfile",
+  "fixed_report": "/home/runner/work/b-group-project/b-group-project/data/integration-sample/fixed-md.json",
+  "expected_output": "1",
+  "build_timeout": 600
+}
