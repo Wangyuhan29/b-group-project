@@ -18,3 +18,10 @@ fixtures/draft-project/*.o
 
 # E11/E12 local datasets
 data/
+
+# Explicitly archived experiment evidence is versioned even when it contains
+# original runtime folder names; live root work/data remain ignored.
+!artifacts/e10-e12/**/work/
+!artifacts/e10-e12/**/work/**
+!artifacts/e10-e12/**/data/
+!artifacts/e10-e12/**/data/**

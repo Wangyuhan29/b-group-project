@@ -1,0 +1,119 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-64f4b9123af64ec390adb2d70834308e",
+  "trace_id": "trace-55d4b4498fa34e42947e66f5eabc8ded",
+  "kind": "full-check",
+  "commit": "023a72d13f7bb439ff7248759090de98c6abdebd",
+  "status": "SUCCEEDED",
+  "data": {
+    "status": "SUCCEEDED",
+    "detector": "BUILDCHECKER_TEACHING",
+    "detector_version": "0.2.0-teaching",
+    "trace_id": "e6-e58c5c2e68e840e886a2082a44606184",
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "config.h",
+        "evidence": [
+          {
+            "source": "system_call",
+            "trace_file": "t.109",
+            "line": 579,
+            "pid": 109,
+            "operation": "openat"
+          },
+          {
+            "source": "system_call",
+            "trace_file": "t.110",
+            "line": 23,
+            "pid": 110,
+            "operation": "openat"
+          }
+        ],
+        "declared_dependencies": [
+          "main.c",
+          "unused.h"
+        ]
+      },
+      {
+        "type": "REDUNDANT",
+        "target": "main.o",
+        "dependency": "unused.h",
+        "evidence": [
+          {
+            "source": "make_database",
+            "artifact": "make-db.txt",
+            "line": 1044,
+            "declaration": "main.o: main.c unused.h"
+          }
+        ],
+        "scope": "Not observed in this recipe job under this build configuration"
+      }
+    ],
+    "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+    "build_command": [
+      "make",
+      "app"
+    ],
+    "clean_command": [
+      "make",
+      "clean"
+    ],
+    "input_sha256": {
+      ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "Dockerfile.broken": "4f1fa7c08569a860ec7d12a8dfe2a8069e23416524be4dc02c87a364a901e0b9",
+      "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+      "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+      "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "main.c": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+      "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+    },
+    "clean_exit_code": 0,
+    "trace_command": [
+      "strace",
+      "-ff",
+      "-s",
+      "4096",
+      "-o",
+      "/course/work/e12-final/baseline-full/trace/t",
+      "-e",
+      "trace=%file,%process",
+      "make",
+      "-p",
+      "app"
+    ],
+    "build_exit_code": 0,
+    "observed_targets": [
+      "app",
+      "helper.o",
+      "main.o"
+    ],
+    "artifacts": {
+      "actual_graph": "actual-graph.json",
+      "declared_graph": "declared-graph.json",
+      "processes": "processes.json",
+      "make_database": "make-db.txt",
+      "trace_directory": "trace"
+    },
+    "elapsed_ms": 232
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-64f4b9123af64ec390adb2d70834308e/baseline-full/actual-graph.json",
+      "sha256": "7e083d0fe81451bb4fa7d735ec2fb1cbad85036a5e83a2acea25a9fdb0d16f96",
+      "bytes": 1211
+    },
+    {
+      "uri": "artifact://job-64f4b9123af64ec390adb2d70834308e/baseline-full/findings.json",
+      "sha256": "baa1d135222d304b51da68e1a6a230f117ec49433849442479f7ae206d68d9d0",
+      "bytes": 2546
+    },
+    {
+      "uri": "artifact://job-64f4b9123af64ec390adb2d70834308e/baseline-cache.json",
+      "sha256": "8f5ebab61972f54867e8884a1936a5a6ace9402c28549c1dad71cbdd87913b94",
+      "bytes": 1395
+    }
+  ]
+}

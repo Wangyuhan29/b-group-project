@@ -1,0 +1,10 @@
+{
+  "mode": "e11-b",
+  "repo": "/course/data/macro-sample/repo",
+  "base": "0c5eef23024e6785a2e5f45dae309339ff39b4a7",
+  "target": "0c5eef23024e6785a2e5f45dae309339ff39b4a7",
+  "candidate": "/course/data/macro-sample/candidate.Dockerfile",
+  "fixed_report": "/course/data/macro-sample/fixed-md.json",
+  "expected_output": "1",
+  "build_timeout": 600
+}
