@@ -1,0 +1,12 @@
+[
+  {
+    "target": "main.o",
+    "dependency": "config.h",
+    "style": "macro"
+  },
+  {
+    "target": "main.o",
+    "dependency": "extra.h",
+    "style": "macro"
+  }
+]

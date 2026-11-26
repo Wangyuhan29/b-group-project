@@ -1,0 +1,89 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-4cdc08b94b45425781f092b053c8d917",
+  "trace_id": "trace-45e7c365f8724610a3a3a129af5a03bd",
+  "kind": "draft",
+  "commit": "9f356b79a2afd230e047d5887459d78611bb8423",
+  "status": "SUCCEEDED",
+  "data": {
+    "status": "SUCCEEDED",
+    "detector": "DRAFT_TEACHING_REPLAY",
+    "trace_id": "e6-b-2a8ea6788a554b03bd9bfbc51ffca610",
+    "candidate_source": "Manual model response replay; no model/API call in this command",
+    "candidate_sha256": "800335bae519ca105b8939077bed24e0db3a1b0394803abd6893aa68fb665f4b",
+    "attempts": [
+      {
+        "iteration": 1,
+        "tag": "e6-draft-replay:2a8ea6788a554b03bd9bfbc51ffca610-1",
+        "command": [
+          "docker",
+          "build",
+          "--progress=plain",
+          "-f",
+          "/home/runner/work/b-group-project/b-group-project/work/ci-integration/e11-b/draft-build/iter-01/Dockerfile",
+          "-t",
+          "e6-draft-replay:2a8ea6788a554b03bd9bfbc51ffca610-1",
+          "/home/runner/work/b-group-project/b-group-project/work/ci-integration/e11-b/draft-build/project"
+        ],
+        "build_exit_code": 1,
+        "failure_class": "MISSING_MAKE"
+      },
+      {
+        "iteration": 2,
+        "tag": "e6-draft-replay:2a8ea6788a554b03bd9bfbc51ffca610-2",
+        "command": [
+          "docker",
+          "build",
+          "--progress=plain",
+          "-f",
+          "/home/runner/work/b-group-project/b-group-project/work/ci-integration/e11-b/draft-build/iter-02/Dockerfile",
+          "-t",
+          "e6-draft-replay:2a8ea6788a554b03bd9bfbc51ffca610-2",
+          "/home/runner/work/b-group-project/b-group-project/work/ci-integration/e11-b/draft-build/project"
+        ],
+        "build_exit_code": 0,
+        "image_id": "sha256:a06600cf03e96c679c41650d2c3eade47e3f79c380967ab4dafb76c7caf28ddb"
+      }
+    ],
+    "input_sha256": {
+      ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "Dockerfile.broken": "493f94f95181dd9f4cfb8f47beeed4bfd86e3395ab354742d1d201c409a3e745",
+      "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+      "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+      "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "main.c": "1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312",
+      "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+    },
+    "verification": {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "1",
+        "--memory",
+        "128m",
+        "--pids-limit",
+        "64",
+        "--cidfile",
+        "/home/runner/work/b-group-project/b-group-project/work/ci-integration/e11-b/draft-build/verify-container-id.txt",
+        "sha256:a06600cf03e96c679c41650d2c3eade47e3f79c380967ab4dafb76c7caf28ddb"
+      ],
+      "exit_code": 0,
+      "expected_output": "1",
+      "actual_output": "1\n",
+      "output_matches": true
+    },
+    "elapsed_ms": 30409
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-4cdc08b94b45425781f092b053c8d917/draft-build/result.json",
+      "sha256": "5aef49f86d361f3cff1284c95d960a79f6b2daeb8a93044197757781a2eadd49",
+      "bytes": 2789
+    }
+  ]
+}

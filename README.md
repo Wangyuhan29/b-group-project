@@ -16,6 +16,9 @@ B03 负责 DRAFT 构建环境与 MDFixer 缺失依赖修复，A03 负责 BuildCh
 | E7 · 验证与 CI | 新增边界测试，覆盖成功和故障场景，验证 CI 拦截与恢复。 | 共享基线 31 项服务测试、六场景门禁及同 PR 失败/恢复验证通过；成员测试合入后本地 37 项通过；[E7 文档](docs/e7/README.md)、[CI 记录](docs/e7/CI_RECORD.md)。 |
 | E8 · 固定报告与补丁 | 生成候选补丁并拒绝过期报告。 | [E8 文档](docs/e8/README.md)。 |
 | E9 · 声明风格 | 验证 direct、macro、mixed 三类补丁。 | [E9 文档](docs/e9/README.md)。 |
+| E10 | 候选验证与失败回滚 | [E10 文档](docs/e10/README.md)。 |
+| E11 | DRAFT→固定 MD→MDFixer | [E11 文档](docs/e11/README.md)。 |
+| E12 | 实际报告、API 与 Minicalc 真实项目 | [E12 文档](docs/e12/README.md)。 |
 
 E5—E7 三位成员的实际记录已归档：王宇晗的个人轨道与共享 CI，以及朱玄、靳滨硕的个人测试和运行证据（PR #6、#7 已合并）。PR #8 已修复两份证据 CSV 的换行格式，414 项文件哈希一致；实际源码 SHA、个人贡献与归档复核见各阶段的 CONTRIBUTIONS.md 和 VERIFICATION.md。
 

@@ -1,0 +1,52 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-d4afe1fa57bd450d8db6a4023d4c8f08",
+  "trace_id": "trace-3ea08bcf4a42452ca0c384ad08a070dc",
+  "kind": "recheck",
+  "commit": "f863c2deff1bd95e56f1578b872ae6aa26e3bfc8",
+  "status": "SUCCEEDED",
+  "data": {
+    "validation": {
+      "accepted": true,
+      "checks": {
+        "patch_applies": true,
+        "build": true,
+        "test": true,
+        "header_change": true,
+        "no_missing": true
+      },
+      "error": null,
+      "source_unchanged": false,
+      "rollback": false
+    },
+    "findings": [
+      {
+        "type": "REDUNDANT",
+        "target": "util.o",
+        "dependency": "include/legacy.h",
+        "evidence": [
+          {
+            "source": "make_database",
+            "artifact": "make-db.txt",
+            "line": 857,
+            "declaration": "util.o: src/util.c include/util.h include/legacy.h"
+          }
+        ],
+        "scope": "Not observed in this recipe job under this build configuration"
+      }
+    ],
+    "patched_makefile_sha256": "f4ec789c14c48b2c2c7d596137b6041078af0e3d1e68bd160344dc0a3495652f"
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-d4afe1fa57bd450d8db6a4023d4c8f08/validation/validation.json",
+      "sha256": "0aedd844e45d87669ff3c7ad42fcb15414453a14882df2fa6335997367390c37",
+      "bytes": 223
+    },
+    {
+      "uri": "artifact://job-d4afe1fa57bd450d8db6a4023d4c8f08/final-full/findings.json",
+      "sha256": "9e6378878d7f6f4cb3f94e550664fcff6804f1c77c057916502d99c551c19b84",
+      "bytes": 2533
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 233B 0.0s done
+#1 DONE 0.0s
+
+#2 [auth] library/python:pull token for registry-1.docker.io
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#3 DONE 0.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 653B done
+#5 DONE 0.0s
+
+#6 [1/4] FROM docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#6 resolve docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 0.0s done
+#6 sha256:cf5110b4fa79118f46753653b48979bacfb64a8c795489a129cf6da712e6603e 249B / 249B 0.0s done
+#6 sha256:9970f4c20ff16c00981dddbf196b2a36b5b3c1a0e30e106f4f422379bbfed24c 1.29MB / 1.29MB 0.0s done
+#6 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 11.89MB / 11.89MB 0.1s done
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 29.79MB / 29.79MB 0.1s done
+#6 extracting sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97
+#6 extracting sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 0.7s done
+#6 DONE 0.9s
+
+#6 [1/4] FROM docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#6 extracting sha256:9970f4c20ff16c00981dddbf196b2a36b5b3c1a0e30e106f4f422379bbfed24c 0.1s done
+#6 extracting sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b
+#6 extracting sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 0.3s done
+#6 DONE 1.3s
+
+#6 [1/4] FROM docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#6 extracting sha256:cf5110b4fa79118f46753653b48979bacfb64a8c795489a129cf6da712e6603e 0.0s done
+#6 DONE 1.3s
+
+#7 [2/4] WORKDIR /work
+#7 DONE 0.4s
+
+#8 [3/4] COPY main.c helper.c config.h extra.h unused.h Makefile ./
+#8 DONE 0.0s
+
+#9 [4/4] RUN make app
+#9 0.171 /bin/sh: 1: make: not found
+#9 ERROR: process "/bin/sh -c make app" did not complete successfully: exit code: 127
+------
+ > [4/4] RUN make app:
+0.171 /bin/sh: 1: make: not found
+------
+Dockerfile:4
+--------------------
+   2 |     WORKDIR /work
+   3 |     COPY main.c helper.c config.h extra.h unused.h Makefile ./
+   4 | >>> RUN make app
+   5 |     CMD ["./app"]
+   6 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c make app" did not complete successfully: exit code: 127

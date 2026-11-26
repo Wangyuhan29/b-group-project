@@ -1,0 +1,10 @@
+IMAGE=course-e11e12:241250086
+172.17.0.1 - - [26/Nov/2026 11:08:22] "GET /health HTTP/1.1" 200 -
+172.17.0.1 - - [26/Nov/2026 11:08:22] "POST /v1/jobs HTTP/1.1" 202 -
+172.17.0.1 - - [26/Nov/2026 11:08:22] "POST /v1/jobs HTTP/1.1" 202 -
+172.17.0.1 - - [26/Nov/2026 11:08:22] "POST /v1/jobs HTTP/1.1" 409 -
+172.17.0.1 - - [26/Nov/2026 11:08:22] "GET /v1/jobs/job-6de65ba95e694707b791ea26018285f0 HTTP/1.1" 200 -
+172.17.0.1 - - [26/Nov/2026 11:08:24] "GET /v1/jobs/job-6de65ba95e694707b791ea26018285f0 HTTP/1.1" 200 -
+172.17.0.1 - - [26/Nov/2026 11:08:26] "GET /v1/jobs/job-6de65ba95e694707b791ea26018285f0 HTTP/1.1" 200 -
+172.17.0.1 - - [26/Nov/2026 11:08:26] "GET /v1/jobs/job-6de65ba95e694707b791ea26018285f0/artifacts HTTP/1.1" 200 -
+172.17.0.1 - - [26/Nov/2026 11:08:26] "GET /v1/jobs/job-6de65ba95e694707b791ea26018285f0/files/candidate.patch HTTP/1.1" 200 -

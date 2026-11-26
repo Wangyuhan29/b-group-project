@@ -1,0 +1,4 @@
+检查项,预期,结果,证据
+e12-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250086-final-20261126/work/e12-final
+e12-real-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250086-final-20261126/work/e12-real-final
+api-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250086-final-20261126/work/api-final

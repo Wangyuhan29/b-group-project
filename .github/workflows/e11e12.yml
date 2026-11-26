@@ -1,0 +1,41 @@
+name: E10-E12 integration
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  e11e12-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      PYTHONPATH: ${{ github.workspace }}/labs/e8e10:${{ github.workspace }}/labs/e11e12:${{ github.workspace }}/labs/e11e12/vendor:${{ github.workspace }}/labs/e11e12/environment/services/buildchecker
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install dynamic tracing tool
+        run: sudo apt-get update && sudo apt-get install -y strace
+      - name: Test contracts and generate sample
+        run: |
+          mkdir -p work/ci-integration
+          git rev-parse HEAD > work/ci-integration/tested-sha.txt
+          python3 -m unittest discover -s labs/e11e12 -p 'test*.py' -v 2>&1 | tee work/ci-integration/contracts.log
+          python3 -m unittest discover -s labs/e8e10 -p 'test_e10*.py' -v 2>&1 | tee work/ci-integration/e10-tests.log
+          python3 labs/e11e12/prepare.py
+      - name: Validate E10 and E11-B and E12
+        run: |
+          python3 labs/e8e10/lab.py e10 --track B --out work/ci-integration/e10
+          python3 labs/e11e12/pipeline.py --request data/integration-sample/e11-a.json --out work/ci-integration/e11-a > work/ci-integration/e11-a-console.log
+          python3 labs/e11e12/pipeline.py --request data/integration-sample/e11-b.json --out work/ci-integration/e11-b > work/ci-integration/e11-console.log
+          python3 labs/e11e12/pipeline.py --request data/integration-sample/e12.json --out work/ci-integration/e12 > work/ci-integration/e12-console.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: e10-e12-evidence
+          path: |
+            work/ci-integration/
+            !work/ci-integration/**/.git/
+            !work/ci-integration/**/*.o
+            !work/ci-integration/**/app
+          retention-days: 14
