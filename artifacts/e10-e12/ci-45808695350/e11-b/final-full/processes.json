@@ -1,0 +1,82 @@
+[
+  {
+    "pid": 4089,
+    "parent": null,
+    "executables": [
+      "/usr/bin/make"
+    ],
+    "job_pid": null
+  },
+  {
+    "pid": 4090,
+    "parent": 4089,
+    "executables": [
+      "/usr/bin/gcc"
+    ],
+    "job_pid": 4090
+  },
+  {
+    "pid": 4091,
+    "parent": 4090,
+    "executables": [
+      "/usr/libexec/gcc/x86_64-linux-gnu/15/cc1"
+    ],
+    "job_pid": 4090
+  },
+  {
+    "pid": 4092,
+    "parent": 4090,
+    "executables": [
+      "/usr/bin/x86_64-linux-gnu-as"
+    ],
+    "job_pid": 4090
+  },
+  {
+    "pid": 4093,
+    "parent": 4089,
+    "executables": [
+      "/usr/bin/gcc"
+    ],
+    "job_pid": 4093
+  },
+  {
+    "pid": 4094,
+    "parent": 4093,
+    "executables": [
+      "/usr/libexec/gcc/x86_64-linux-gnu/15/cc1"
+    ],
+    "job_pid": 4093
+  },
+  {
+    "pid": 4095,
+    "parent": 4093,
+    "executables": [
+      "/usr/bin/x86_64-linux-gnu-as"
+    ],
+    "job_pid": 4093
+  },
+  {
+    "pid": 4096,
+    "parent": 4089,
+    "executables": [
+      "/usr/bin/gcc"
+    ],
+    "job_pid": 4096
+  },
+  {
+    "pid": 4097,
+    "parent": 4096,
+    "executables": [
+      "/usr/libexec/gcc/x86_64-linux-gnu/15/collect2"
+    ],
+    "job_pid": 4096
+  },
+  {
+    "pid": 4098,
+    "parent": 4097,
+    "executables": [
+      "/usr/bin/ld"
+    ],
+    "job_pid": 4096
+  }
+]

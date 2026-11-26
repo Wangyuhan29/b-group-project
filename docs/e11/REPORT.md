@@ -22,4 +22,4 @@ macro 扩展使用独立 repo 和提交，修改 DEPS 而保留目标宏引用�
 
 ## CI
 
-[专项 CI](https://github.com/Wangyuhan29/b-group-project/actions/runs/45807638172)已通过；原始 artifact 见 [CI 归档](../../artifacts/e10-e12/ci-45807638172)。此轮 CI 在源码 27148bdc052bb8c66be92c7aaf2a18dc1301608f 上运行 E10、E11-B 和 E12；后续新增 E11-A 回归将在新提交重新运行。
+[专项 CI](https://github.com/Wangyuhan29/b-group-project/actions/runs/45807638172)已通过；原始 artifact 见 [CI 归档](../../artifacts/e10-e12/ci-45807638172)。此轮 CI 在源码 27148bdc052bb8c66be92c7aaf2a18dc1301608f 上运行 E10、E11-B 和 E12；E11-A 参考适配器回归也已通过，见 [CI_RECORD.md](CI_RECORD.md)。
