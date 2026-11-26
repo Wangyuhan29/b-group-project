@@ -15,3 +15,6 @@ fixtures/draft-project/*.o
 *.pem
 *.key
 .pytest_cache/
+
+# E11/E12 local datasets
+data/
