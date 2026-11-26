@@ -66,7 +66,7 @@ def snapshot(repo, revision, dest, logs, profile=None):
 
 def full(project, folder):
     from buildchecker.fullcheck import full_check
-    report = full_check(project, folder)
+    report = full_check(project, folder, build_command="make" if (project/"src/main.c").is_file() else "make app")
     if report.get('status') != 'SUCCEEDED':
         raise Failure('FULL_CHECK_FAILED', str(report.get('error', report.get('error_code'))))
     return report
