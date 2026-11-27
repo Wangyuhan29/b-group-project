@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "e10_remaining_md_rejected": true,
+  "e11_direct": {
+    "passed": true,
+    "job_id": "job-45d96e06b96f4f4c95b3751eda9e0c12",
+    "trace_id": "trace-4dbd737906834e60a7f255e8d8bff10a",
+    "target_commit": "a08a8abb8eab7fd41bff2fb9ee65cf6cfb3c66ab",
+    "base_commit": "d2bcdfd0c8d44a798efac8aec21ec9f9ca965ed2",
+    "stages": [
+      "draft",
+      "fixed-md",
+      "repair",
+      "recheck"
+    ],
+    "verified_hash_entries": 107
+  },
+  "e11_macro": {
+    "passed": true,
+    "job_id": "job-9c10a529399e4fbeaf8fe5c82dba9633",
+    "trace_id": "trace-b773cc620d844b7697b46af5622888b0",
+    "target_commit": "dd00df8a3ce24ef35b4212ef39522297cc8e98ad",
+    "base_commit": "d2bcdfd0c8d44a798efac8aec21ec9f9ca965ed2",
+    "stages": [
+      "draft",
+      "fixed-md",
+      "repair",
+      "recheck"
+    ],
+    "verified_hash_entries": 107
+  },
+  "e11_stale_rejected": true,
+  "e12": {
+    "passed": true,
+    "job_id": "job-f125b3236c26412d9152f831979ad54e",
+    "trace_id": "trace-51841837c1eb47369271ce69e5a27349",
+    "target_commit": "a08a8abb8eab7fd41bff2fb9ee65cf6cfb3c66ab",
+    "base_commit": "d2bcdfd0c8d44a798efac8aec21ec9f9ca965ed2",
+    "stages": [
+      "draft",
+      "full-check",
+      "incremental-check",
+      "repair",
+      "recheck"
+    ],
+    "verified_hash_entries": 172
+  }
+}

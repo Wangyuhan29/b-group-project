@@ -1,0 +1,82 @@
+[
+  {
+    "pid": 662,
+    "parent": null,
+    "executables": [
+      "/usr/bin/make"
+    ],
+    "job_pid": null
+  },
+  {
+    "pid": 663,
+    "parent": 662,
+    "executables": [
+      "/usr/bin/gcc"
+    ],
+    "job_pid": 663
+  },
+  {
+    "pid": 664,
+    "parent": 663,
+    "executables": [
+      "/usr/libexec/gcc/x86_64-linux-gnu/14/cc1"
+    ],
+    "job_pid": 663
+  },
+  {
+    "pid": 665,
+    "parent": 663,
+    "executables": [
+      "/usr/bin/as"
+    ],
+    "job_pid": 663
+  },
+  {
+    "pid": 666,
+    "parent": 662,
+    "executables": [
+      "/usr/bin/gcc"
+    ],
+    "job_pid": 666
+  },
+  {
+    "pid": 667,
+    "parent": 666,
+    "executables": [
+      "/usr/libexec/gcc/x86_64-linux-gnu/14/cc1"
+    ],
+    "job_pid": 666
+  },
+  {
+    "pid": 668,
+    "parent": 666,
+    "executables": [
+      "/usr/bin/as"
+    ],
+    "job_pid": 666
+  },
+  {
+    "pid": 669,
+    "parent": 662,
+    "executables": [
+      "/usr/bin/gcc"
+    ],
+    "job_pid": 669
+  },
+  {
+    "pid": 670,
+    "parent": 669,
+    "executables": [
+      "/usr/libexec/gcc/x86_64-linux-gnu/14/collect2"
+    ],
+    "job_pid": 669
+  },
+  {
+    "pid": 671,
+    "parent": 670,
+    "executables": [
+      "/usr/bin/ld"
+    ],
+    "job_pid": 669
+  }
+]

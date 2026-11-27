@@ -1,0 +1,105 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-9c10a529399e4fbeaf8fe5c82dba9633",
+  "trace_id": "trace-b773cc620d844b7697b46af5622888b0",
+  "kind": "fixed-md",
+  "commit": "dd00df8a3ce24ef35b4212ef39522297cc8e98ad",
+  "status": "SUCCEEDED",
+  "data": {
+    "schema_version": "e8e10-1",
+    "profile": "GCC_LOCAL_HEADERS_EXPLICIT_MAKE",
+    "commit": "dd00df8a3ce24ef35b4212ef39522297cc8e98ad",
+    "key": {
+      "directives": {
+        "config.h": [
+          "#define VALUE 1"
+        ],
+        "extra.h": [
+          "#define EXTRA 0"
+        ],
+        "helper.c": [],
+        "main.c": [
+          "#include \"extra.h\"",
+          "#include <stdio.h>",
+          "#include \"config.h\""
+        ],
+        "unused.h": []
+      },
+      "recipes": [
+        "\tgcc main.o helper.o -o app",
+        "\tgcc $(CFLAGS) -c main.c -o main.o",
+        "\tgcc $(CFLAGS) -c helper.c -o helper.o",
+        "\trm -f main.o helper.o app"
+      ],
+      "flags": "-O0",
+      "compiler": "gcc (Debian 14.2.0-19) 14.2.0"
+    },
+    "actual": {
+      "main.o": [
+        "config.h",
+        "extra.h",
+        "main.c"
+      ],
+      "helper.o": [
+        "helper.c"
+      ]
+    },
+    "declared": {
+      "main.o": [
+        "main.c",
+        "unused.h"
+      ],
+      "helper.o": [
+        "helper.c"
+      ]
+    },
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "config.h"
+      },
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "extra.h"
+      },
+      {
+        "type": "REDUNDANT",
+        "target": "main.o",
+        "dependency": "unused.h"
+      }
+    ],
+    "added": [
+      [
+        "MISSING",
+        "main.o",
+        "config.h"
+      ],
+      [
+        "MISSING",
+        "main.o",
+        "extra.h"
+      ],
+      [
+        "REDUNDANT",
+        "main.o",
+        "unused.h"
+      ]
+    ],
+    "resolved": [],
+    "refreshed": [
+      "main.o",
+      "helper.o"
+    ],
+    "reused": [],
+    "elapsed_s": 0.015272672288119793
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-9c10a529399e4fbeaf8fe5c82dba9633/fixed-md-input.json",
+      "sha256": "fa6303d7d9aa264567e88759eefed7ac49e8503eee0e37c60a21686041c4b337",
+      "bytes": 1927
+    }
+  ]
+}
