@@ -1,0 +1,74 @@
+{
+  "status": "SUCCEEDED",
+  "detector": "DRAFT_TEACHING_REPLAY",
+  "trace_id": "e6-b-35273797bbfe478db7e3f30384fc5011",
+  "candidate_source": "Manual model response replay; no model/API call in this command",
+  "candidate_sha256": "77a2593e927035eb8f1c266b01f78474fc729a8eb7d5e30e45b264d173ab999b",
+  "attempts": [
+    {
+      "iteration": 1,
+      "tag": "e6-draft-replay:35273797bbfe478db7e3f30384fc5011-1",
+      "command": [
+        "docker",
+        "build",
+        "--progress=plain",
+        "-f",
+        "/course/work/241250017-e10-e12/integration/e11-stale/draft-build/iter-01/Dockerfile",
+        "-t",
+        "e6-draft-replay:35273797bbfe478db7e3f30384fc5011-1",
+        "/course/work/241250017-e10-e12/integration/e11-stale/draft-build/project"
+      ],
+      "build_exit_code": 1,
+      "failure_class": "MISSING_MAKE"
+    },
+    {
+      "iteration": 2,
+      "tag": "e6-draft-replay:35273797bbfe478db7e3f30384fc5011-2",
+      "command": [
+        "docker",
+        "build",
+        "--progress=plain",
+        "-f",
+        "/course/work/241250017-e10-e12/integration/e11-stale/draft-build/iter-02/Dockerfile",
+        "-t",
+        "e6-draft-replay:35273797bbfe478db7e3f30384fc5011-2",
+        "/course/work/241250017-e10-e12/integration/e11-stale/draft-build/project"
+      ],
+      "build_exit_code": 0,
+      "image_id": "sha256:a95d141d0735bbfa057c55f2d1074b51c9c7a1861374ae80ac5c92be1ce1b396"
+    }
+  ],
+  "input_sha256": {
+    ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+    "Dockerfile.broken": "836de75382b90fffd88f115a5ab9511c50d8258f1cdaee5c9d20549ba0c0e208",
+    "Makefile": "0b0b85c9097b87d7d75e6f5893d4882b4f6de6125f4d72db44f7ef0c08e1623d",
+    "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+    "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+    "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+    "main.c": "1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312",
+    "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+  },
+  "verification": {
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--cpus",
+      "1",
+      "--memory",
+      "128m",
+      "--pids-limit",
+      "64",
+      "--cidfile",
+      "/course/work/241250017-e10-e12/integration/e11-stale/draft-build/verify-container-id.txt",
+      "sha256:a95d141d0735bbfa057c55f2d1074b51c9c7a1861374ae80ac5c92be1ce1b396"
+    ],
+    "exit_code": 0,
+    "expected_output": "1",
+    "actual_output": "1\n",
+    "output_matches": true
+  },
+  "elapsed_ms": 945
+}

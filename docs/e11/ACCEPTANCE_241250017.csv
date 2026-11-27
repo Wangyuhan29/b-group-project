@@ -1,0 +1,3 @@
+学号,阶段,检查项,实际结果,证据路径,通过
+241250017,E11-B,直接与macro完整修复,两场景成功；macro补丁位于DEPS,../../artifacts/e10-e12/241250017-20261127/integration/verification.json,是
+241250017,E11-B,旧报告拒绝,FAILED/STALE_REPORT；无repair阶段,../../artifacts/e10-e12/241250017-20261127/integration/e11-stale/result.json,是

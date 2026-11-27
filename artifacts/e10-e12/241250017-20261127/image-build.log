@@ -1,0 +1,57 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            BuildKit is currently disabled; enable it by removing the DOCKER_BUILDKIT=0
+            environment-variable.
+
+Sending build context to Docker daemon  217.1kB
+Step 1/6 : FROM course-e8e9@sha256:a0a4a4cc1188e69b1bdccfec65bfd0c8f50a6905c4503ae32297a78c7aa52642
+ ---> a0a4a4cc1188
+Step 2/6 : USER root
+ ---> Running in 0bd4da171c77
+ ---> Removed intermediate container 0bd4da171c77
+ ---> 447cbf229b76
+Step 3/6 : RUN apt-get -o Acquire::Retries=2 -o Acquire::https::Timeout=60 update  && apt-get install -y --no-install-recommends strace  && rm -rf /var/lib/apt/lists/*
+ ---> Running in 29b9aa78d0dc
+Get:1 https://mirrors.huaweicloud.com/debian trixie InRelease [140 kB]
+Get:2 https://mirrors.huaweicloud.com/debian trixie-updates InRelease [47.3 kB]
+Get:3 https://mirrors.huaweicloud.com/debian-security trixie-security InRelease [43.4 kB]
+Get:4 https://mirrors.huaweicloud.com/debian trixie/main amd64 Packages [9679 kB]
+Get:5 https://mirrors.huaweicloud.com/debian trixie-updates/main amd64 Packages [1108 B]
+Get:6 https://mirrors.huaweicloud.com/debian-security trixie-security/main amd64 Packages [311 kB]
+Fetched 10.2 MB in 1s (8115 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libunwind8
+The following NEW packages will be installed:
+  libunwind8 strace
+0 upgraded, 2 newly installed, 0 to remove and 41 not upgraded.
+Need to get 1479 kB of archives.
+After this operation, 3367 kB of additional disk space will be used.
+Get:1 https://mirrors.huaweicloud.com/debian trixie/main amd64 libunwind8 amd64 1.8.1-0.1 [56.3 kB]
+Get:2 https://mirrors.huaweicloud.com/debian trixie/main amd64 strace amd64 6.13+ds-1 [1423 kB]
+[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0m[91mdebconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+[0mFetched 1479 kB in 0s (4033 kB/s)
+Selecting previously unselected package libunwind8:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 13284 files and directories currently installed.)
+Preparing to unpack .../libunwind8_1.8.1-0.1_amd64.deb ...
+Unpacking libunwind8:amd64 (1.8.1-0.1) ...
+Selecting previously unselected package strace.
+Preparing to unpack .../strace_6.13+ds-1_amd64.deb ...
+Unpacking strace (6.13+ds-1) ...
+Setting up libunwind8:amd64 (1.8.1-0.1) ...
+Setting up strace (6.13+ds-1) ...
+Processing triggers for libc-bin (2.41-12+deb13u4) ...
+ ---> Removed intermediate container 29b9aa78d0dc
+ ---> 67b9fda6342f
+Step 4/6 : COPY labs/e11e12/environment/services/buildchecker/ /app/
+COPY failed: file not found in build context or excluded by .dockerignore: stat labs/e11e12/environment/services/buildchecker/: file does not exist

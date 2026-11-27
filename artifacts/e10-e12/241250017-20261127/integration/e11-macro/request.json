@@ -1,0 +1,10 @@
+{
+  "mode": "e11-b",
+  "repo": "/course/data/241250017-macro",
+  "base": "d2bcdfd0c8d44a798efac8aec21ec9f9ca965ed2",
+  "target": "dd00df8a3ce24ef35b4212ef39522297cc8e98ad",
+  "candidate": "/course/data/integration-sample/candidate.Dockerfile",
+  "fixed_report": "/course/data/integration-sample/241250017-macro-fixed.json",
+  "expected_output": "1",
+  "build_timeout": 600
+}
