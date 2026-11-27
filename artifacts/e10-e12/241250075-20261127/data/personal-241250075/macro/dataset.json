@@ -1,0 +1,10 @@
+{
+  "source": "course-generated controlled C/Make project, macro declaration style",
+  "base_commit": "483cc3a87f54c49295b0b4c85f31afa1e06b1b42",
+  "target_commit": "e3f8c761e874fb6195fa001b79a766c498056e08",
+  "fixed_md_dependencies": [
+    "config.h",
+    "extra.h"
+  ],
+  "expected_output": "1"
+}

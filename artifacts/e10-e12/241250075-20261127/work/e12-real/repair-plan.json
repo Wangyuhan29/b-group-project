@@ -1,0 +1,22 @@
+[
+  {
+    "target": "main.o",
+    "dependency": "include/token.h",
+    "style": "direct"
+  },
+  {
+    "target": "main.o",
+    "dependency": "include/util.h",
+    "style": "direct"
+  },
+  {
+    "target": "parser.o",
+    "dependency": "include/config.h",
+    "style": "direct"
+  },
+  {
+    "target": "parser.o",
+    "dependency": "include/token.h",
+    "style": "direct"
+  }
+]

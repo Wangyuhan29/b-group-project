@@ -1,0 +1,10 @@
+{
+  "repo": "/course/data/personal-241250075/mixed/repo",
+  "base": "1ddd41b710645937a6b9fdb3d936ae62e1fca652",
+  "target": "857ba5a731300f787d1776be5a74d00be439f458",
+  "candidate": "/course/data/personal-241250075/mixed/candidate.Dockerfile",
+  "expected_output": "1",
+  "build_timeout": 600,
+  "mode": "e11-b",
+  "fixed_report": "/course/data/personal-241250075/mixed/stale-inner.json"
+}

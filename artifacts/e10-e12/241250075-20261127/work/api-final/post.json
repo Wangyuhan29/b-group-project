@@ -1,0 +1,14 @@
+{
+  "idempotency_key": "241250075-e12-real-20261127T020618Z",
+  "input": {
+    "mode": "e12",
+    "profile": "minicalc",
+    "repo": "/course/data/personal-241250075/real-minicalc",
+    "base": "e3a1eda0965e545d96467d275bccaf78c890fcac",
+    "target": "f863c2deff1bd95e56f1578b872ae6aa26e3bfc8",
+    "candidate": "/course/data/personal-241250075/real-config/candidate.Dockerfile",
+    "broken_dockerfile": "/course/data/personal-241250075/real-config/Dockerfile.broken",
+    "expected_output": "7",
+    "build_timeout": 600
+  }
+}

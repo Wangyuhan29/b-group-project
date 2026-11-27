@@ -1,0 +1,46 @@
+{
+  "rows": {
+    "test-rejection": "True",
+    "accepted": "True",
+    "patch-rejection": "True"
+  },
+  "test-rejection": {
+    "accepted": false,
+    "rollback": true,
+    "source_unchanged": true,
+    "checks": {
+      "patch_applies": true,
+      "build": true,
+      "test": false,
+      "header_change": true,
+      "no_missing": true
+    }
+  },
+  "patch-rejection": {
+    "accepted": false,
+    "rollback": true,
+    "source_unchanged": true,
+    "error": "COMMAND_FAILED ['git', 'apply', '--check', '/course/work/e10-personal/reference/broken.patch']\nerror: No valid patches in input (allow with \"--allow-empty\")\n"
+  },
+  "accepted": {
+    "accepted": true,
+    "rollback": false,
+    "checks": {
+      "patch_applies": true,
+      "build": true,
+      "test": true,
+      "header_change": true,
+      "no_missing": true
+    }
+  },
+  "buildchecker": {
+    "status": "SUCCEEDED",
+    "MISSING": 0,
+    "REDUNDANT": [
+      [
+        "main.o",
+        "unused.h"
+      ]
+    ]
+  }
+}

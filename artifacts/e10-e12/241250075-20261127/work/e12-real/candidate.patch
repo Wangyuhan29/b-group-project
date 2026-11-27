@@ -1,0 +1,16 @@
+--- a/Makefile
++++ b/Makefile
+@@ -27,11 +27,11 @@
+ all: $(EXE)
+ 
+ # 刻意缺陷：main.c 实际还 #include "util.h"，并经 parser.h 间接包含 "token.h"，但规则均未声明 -> MISSING ×2
+-main.o: src/main.c include/config.h include/parser.h
++main.o: src/main.c include/config.h include/parser.h include/token.h include/util.h
+ 	$(CC) $(CFLAGS) -c $< -o $@
+ 
+ # 刻意缺陷：parser.c 实际经 parser.h 传递包含 "token.h"，但规则未声明 -> MISSING
+-parser.o: src/parser.c include/parser.h
++parser.o: src/parser.c include/parser.h include/config.h include/token.h
+ 	$(CC) $(CFLAGS) -c $< -o $@
+ 
+ token.o: src/token.c include/token.h

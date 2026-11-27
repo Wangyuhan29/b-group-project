@@ -1,0 +1,130 @@
+[
+  {
+    "pid": 148,
+    "parent": null,
+    "executables": [
+      "/usr/bin/make"
+    ],
+    "job_pid": null
+  },
+  {
+    "pid": 149,
+    "parent": 148,
+    "executables": [
+      "/usr/bin/gcc"
+    ],
+    "job_pid": 149
+  },
+  {
+    "pid": 150,
+    "parent": 149,
+    "executables": [
+      "/usr/libexec/gcc/x86_64-linux-gnu/14/cc1"
+    ],
+    "job_pid": 149
+  },
+  {
+    "pid": 151,
+    "parent": 149,
+    "executables": [
+      "/usr/bin/as"
+    ],
+    "job_pid": 149
+  },
+  {
+    "pid": 152,
+    "parent": 148,
+    "executables": [
+      "/usr/bin/gcc"
+    ],
+    "job_pid": 152
+  },
+  {
+    "pid": 153,
+    "parent": 152,
+    "executables": [
+      "/usr/libexec/gcc/x86_64-linux-gnu/14/cc1"
+    ],
+    "job_pid": 152
+  },
+  {
+    "pid": 154,
+    "parent": 152,
+    "executables": [
+      "/usr/bin/as"
+    ],
+    "job_pid": 152
+  },
+  {
+    "pid": 155,
+    "parent": 148,
+    "executables": [
+      "/usr/bin/gcc"
+    ],
+    "job_pid": 155
+  },
+  {
+    "pid": 156,
+    "parent": 155,
+    "executables": [
+      "/usr/libexec/gcc/x86_64-linux-gnu/14/cc1"
+    ],
+    "job_pid": 155
+  },
+  {
+    "pid": 157,
+    "parent": 155,
+    "executables": [
+      "/usr/bin/as"
+    ],
+    "job_pid": 155
+  },
+  {
+    "pid": 158,
+    "parent": 148,
+    "executables": [
+      "/usr/bin/gcc"
+    ],
+    "job_pid": 158
+  },
+  {
+    "pid": 159,
+    "parent": 158,
+    "executables": [
+      "/usr/libexec/gcc/x86_64-linux-gnu/14/cc1"
+    ],
+    "job_pid": 158
+  },
+  {
+    "pid": 160,
+    "parent": 158,
+    "executables": [
+      "/usr/bin/as"
+    ],
+    "job_pid": 158
+  },
+  {
+    "pid": 161,
+    "parent": 148,
+    "executables": [
+      "/usr/bin/gcc"
+    ],
+    "job_pid": 161
+  },
+  {
+    "pid": 162,
+    "parent": 161,
+    "executables": [
+      "/usr/libexec/gcc/x86_64-linux-gnu/14/collect2"
+    ],
+    "job_pid": 161
+  },
+  {
+    "pid": 163,
+    "parent": 162,
+    "executables": [
+      "/usr/bin/ld"
+    ],
+    "job_pid": 161
+  }
+]
