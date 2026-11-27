@@ -1,0 +1,19 @@
+{
+  "samples": [
+    {
+      "sample": "macro",
+      "base_commit": "483cc3a87f54c49295b0b4c85f31afa1e06b1b42",
+      "target_commit": "e3f8c761e874fb6195fa001b79a766c498056e08"
+    },
+    {
+      "sample": "mixed",
+      "base_commit": "1ddd41b710645937a6b9fdb3d936ae62e1fca652",
+      "target_commit": "857ba5a731300f787d1776be5a74d00be439f458"
+    }
+  ],
+  "minicalc": {
+    "base": "e3a1eda0965e545d96467d275bccaf78c890fcac",
+    "target": "f863c2deff1bd95e56f1578b872ae6aa26e3bfc8",
+    "source": "upstream history.bundle, tags c0 and c1"
+  }
+}

@@ -1,0 +1,11 @@
+health=200
+submit=202
+status=200
+artifacts=200
+replay=202
+conflict=409
+download=200
+health=200
+restart-status=200
+restart-replay=202
+restart-conflict=409

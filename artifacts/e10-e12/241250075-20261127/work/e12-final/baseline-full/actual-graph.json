@@ -1,0 +1,62 @@
+[
+  {
+    "target": "app",
+    "dependency": "helper.o",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.114",
+      "line": 87,
+      "pid": 114,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "app",
+    "dependency": "main.o",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.114",
+      "line": 84,
+      "pid": 114,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "helper.o",
+    "dependency": "helper.c",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.110",
+      "line": 67,
+      "pid": 110,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "main.o",
+    "dependency": "config.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.107",
+      "line": 579,
+      "pid": 107,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "main.o",
+    "dependency": "main.c",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.107",
+      "line": 67,
+      "pid": 107,
+      "operation": "openat"
+    }
+  }
+]

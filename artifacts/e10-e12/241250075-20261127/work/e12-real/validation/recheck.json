@@ -1,0 +1,89 @@
+{
+  "schema_version": "e8e10-1",
+  "profile": "MINICALC_C0_C1_EXPLICIT",
+  "commit": "5695911f18c3abde52b1493b0eff9030fa4a6bd8",
+  "actual": {
+    "main.o": [
+      "include/config.h",
+      "include/parser.h",
+      "include/token.h",
+      "include/util.h",
+      "src/main.c"
+    ],
+    "parser.o": [
+      "include/config.h",
+      "include/parser.h",
+      "include/token.h",
+      "src/parser.c"
+    ],
+    "token.o": [
+      "include/token.h",
+      "src/token.c"
+    ],
+    "util.o": [
+      "include/util.h",
+      "src/util.c"
+    ]
+  },
+  "declared": {
+    "main.o": [
+      "include/config.h",
+      "include/parser.h",
+      "include/token.h",
+      "include/util.h",
+      "src/main.c"
+    ],
+    "parser.o": [
+      "include/config.h",
+      "include/parser.h",
+      "include/token.h",
+      "src/parser.c"
+    ],
+    "token.o": [
+      "include/token.h",
+      "src/token.c"
+    ],
+    "util.o": [
+      "include/legacy.h",
+      "include/util.h",
+      "src/util.c"
+    ]
+  },
+  "key": {
+    "files": {
+      "include/config.h": "da347e886cf9f581a07db708887347317ce93a47ae4dcbe66963292b5ef86317",
+      "include/legacy.h": "abc70d1611099557a3f635de597c4d27be7c3a51ba72234ec4ba7e2c814b06fb",
+      "include/parser.h": "eeeb7d0f2bf196b14d43f9ed3965f5db1a24fe1935e0b240d50a88d9e89886a5",
+      "include/token.h": "49be729b6f384a6002b80213f21f3d333a99d50be646b22267b592a3361e1132",
+      "include/util.h": "bb1a4a58e2eaf7adf38f95644ed3a624df7ccf9d94532e84c7626be437b68df7",
+      "src/main.c": "1e7f2dc9aadbf0fa6429b964ba3fcc2b365e6ab5fd8574ba14b0c8edd0ac3915",
+      "src/parser.c": "5fea25c42580caa2d8da97d450913f98e2a80c18f8ac25207c6a29c3f154d81b",
+      "src/token.c": "2ab5e875190fe6ee930ff6c07e3b5b224c0c52ce2de51c83bdb9d07cd17ba61e",
+      "src/util.c": "d0266bc68964cd0a9582abf1b5504ef19e2808a8ceb8c145ba07c8404fe65877"
+    },
+    "makefile": "f4ec789c14c48b2c2c7d596137b6041078af0e3d1e68bd160344dc0a3495652f",
+    "compiler": "gcc (Debian 14.2.0-19) 14.2.0"
+  },
+  "findings": [
+    {
+      "type": "REDUNDANT",
+      "target": "util.o",
+      "dependency": "include/legacy.h"
+    }
+  ],
+  "reused": [],
+  "refreshed": [
+    "main.o",
+    "parser.o",
+    "token.o",
+    "util.o"
+  ],
+  "added": [
+    [
+      "REDUNDANT",
+      "util.o",
+      "include/legacy.h"
+    ]
+  ],
+  "resolved": []
+}

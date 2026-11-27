@@ -1,0 +1,206 @@
+[
+  {
+    "target": "main.o",
+    "dependency": "include/config.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.157",
+      "line": 614,
+      "pid": 157,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "main.o",
+    "dependency": "include/parser.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.157",
+      "line": 616,
+      "pid": 157,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "main.o",
+    "dependency": "include/token.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.157",
+      "line": 617,
+      "pid": 157,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "main.o",
+    "dependency": "include/util.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.157",
+      "line": 619,
+      "pid": 157,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "main.o",
+    "dependency": "src/main.c",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.157",
+      "line": 68,
+      "pid": 157,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "minicalc",
+    "dependency": "main.o",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.170",
+      "line": 88,
+      "pid": 170,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "minicalc",
+    "dependency": "parser.o",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.170",
+      "line": 91,
+      "pid": 170,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "minicalc",
+    "dependency": "token.o",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.170",
+      "line": 94,
+      "pid": 170,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "minicalc",
+    "dependency": "util.o",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.170",
+      "line": 97,
+      "pid": 170,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "parser.o",
+    "dependency": "include/config.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.160",
+      "line": 110,
+      "pid": 160,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "parser.o",
+    "dependency": "include/parser.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.160",
+      "line": 107,
+      "pid": 160,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "parser.o",
+    "dependency": "include/token.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.160",
+      "line": 108,
+      "pid": 160,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "parser.o",
+    "dependency": "src/parser.c",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.160",
+      "line": 68,
+      "pid": 160,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "token.o",
+    "dependency": "include/token.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.163",
+      "line": 107,
+      "pid": 163,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "token.o",
+    "dependency": "src/token.c",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.163",
+      "line": 68,
+      "pid": 163,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "util.o",
+    "dependency": "include/util.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.166",
+      "line": 107,
+      "pid": 166,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "util.o",
+    "dependency": "src/util.c",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.166",
+      "line": 68,
+      "pid": 166,
+      "operation": "openat"
+    }
+  }
+]

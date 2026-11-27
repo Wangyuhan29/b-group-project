@@ -2,3 +2,9 @@
 e11-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250086-final-20261126/work/e11-final
 e11-macro-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250086-final-20261126/work/e11-macro-final
 e11-stale-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250086-final-20261126/work/e11-stale-final
+241250075-e11-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250075-20261127/work/e11-final
+241250075-e11-macro,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250075-20261127/work/e11-macro
+241250075-e11-mixed,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250075-20261127/work/e11-mixed
+241250075-e11-stale-zero,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250075-20261127/work/e11-stale-zero
+241250075-e11-stale-old,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250075-20261127/work/e11-stale-old
+241250075-e11-stale-inner,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250075-20261127/work/e11-stale-inner

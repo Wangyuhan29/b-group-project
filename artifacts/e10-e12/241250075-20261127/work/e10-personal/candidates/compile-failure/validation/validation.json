@@ -1,0 +1,9 @@
+{
+  "accepted": false,
+  "checks": {
+    "patch_applies": true
+  },
+  "error": "COMMAND_FAILED ['make', 'app']\ngcc -O0 -nostdinc -c main.c -o main.o\nmain.c:2:19: error: no include path in which to search for stdio.h\n    2 | #include <stdio.h>\n      |                   ^\nmain.c: In function ‘main’:\nmain.c:5:16: error: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]\n    5 | int main(void){printf(\"%d\\n\",VALUE+helper());return 0;}\n      |                ^~~~~~\nmain.c:4:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’\n    3 | #include \"config.h\"\n  +++ |+#include <stdio.h>\n    4 | int helper(void);\nmain.c:5:16: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]\n    5 | int main(void){printf(\"%d\\n\",VALUE+helper());return 0;}\n      |                ^~~~~~\nmain.c:5:16: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’\nmake: *** [Makefile:5: main.o] Error 1\n",
+  "source_unchanged": true,
+  "rollback": true
+}

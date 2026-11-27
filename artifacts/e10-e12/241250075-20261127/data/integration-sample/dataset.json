@@ -1,0 +1,8 @@
+{
+  "source": "course-generated controlled C/Make project",
+  "base_commit": "8039ddec2785393d4102b37db3ad212eadc6117c",
+  "target_commit": "1944b0d9907c2a84f1540bfcfaaf4442cf830521",
+  "candidate_source": "recorded dependency-install pattern adapted to the two-source-file project",
+  "expected_output": "1",
+  "purpose": "classroom baseline; replace request paths with your own project for real-data integration"
+}

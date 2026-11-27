@@ -1,0 +1,22 @@
+test_e8_nonexistent_input_rejected_without_writes (test_241250017.PersonalTests.test_e8_nonexistent_input_rejected_without_writes) ... ok
+test_e9_macro_patch_preserves_rule_and_recipes (test_241250017.PersonalTests.test_e9_macro_patch_preserves_rule_and_recipes) ... ok
+test_e8_missing_macro_definition_rejected_without_writes (test_241250075.PersonalTests.test_e8_missing_macro_definition_rejected_without_writes) ... ok
+test_e8_patch_reaches_fixed_point_after_apply (test_241250075.PersonalTests.test_e8_patch_reaches_fixed_point_after_apply) ... ok
+test_e9_mixed_patch_adds_only_target_dependency (test_241250075.PersonalTests.test_e9_mixed_patch_adds_only_target_dependency) ... ok
+test_e10_candidate_failing_to_compile_is_rolled_back (test_e10_241250075.PersonalTests.test_e10_candidate_failing_to_compile_is_rolled_back) ... ok
+test_e10_partial_repair_keeps_md_and_is_rolled_back (test_e10_241250075.PersonalTests.test_e10_partial_repair_keeps_md_and_is_rolled_back) ... ok
+test_compilation_failure_never_changes_source (test_e10_241250086.E10Personal.test_compilation_failure_never_changes_source) ... ok
+test_include_added_invalidates_cache (test_profile.ProfileTests.test_include_added_invalidates_cache) ... ok
+test_independent_known_edges (test_profile.ProfileTests.test_independent_known_edges) ... ok
+test_old_report_rejected (test_profile.ProfileTests.test_old_report_rejected) ... ok
+test_patch_preserves_redundant_dependency (test_profile.ProfileTests.test_patch_preserves_redundant_dependency) ... ok
+test_unchanged_reuses_both_targets (test_profile.ProfileTests.test_unchanged_reuses_both_targets) ... ok
+test_unsafe_dependency_rejected (test_profile.ProfileTests.test_unsafe_dependency_rejected) ... ok
+test_unsupported_configuration_rejected (test_profile.ProfileTests.test_unsupported_configuration_rejected) ... ok
+test_duplicate_missing_dependency_is_added_once (test_profile.StudentTests.test_duplicate_missing_dependency_is_added_once) ... ok
+test_rd_only_produces_no_patch (test_profile.StudentTests.test_rd_only_produces_no_patch) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 2.959s
+
+OK

@@ -1,0 +1,9 @@
+gcc (Debian 14.2.0-19) 14.2.0
+GNU Make 4.4.1
+git version 2.47.3
+Python 3.13.14
+strace -- version 6.13
+Docker version 28.5.1, build e180ab8
+x86_64
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+uid=0(root) gid=0(root) groups=0(root)

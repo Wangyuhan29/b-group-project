@@ -2,3 +2,6 @@
 e12-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250086-final-20261126/work/e12-final
 e12-real-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250086-final-20261126/work/e12-real-final
 api-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250086-final-20261126/work/api-final
+241250075-e12-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250075-20261127/work/e12-final
+241250075-e12-real,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250075-20261127/work/e12-real
+241250075-api-final,预期成功或明确拒绝，保留原始证据,PASS,../../artifacts/e10-e12/241250075-20261127/work/api-final

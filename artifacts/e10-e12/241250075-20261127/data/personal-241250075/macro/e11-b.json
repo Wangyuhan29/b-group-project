@@ -1,0 +1,10 @@
+{
+  "repo": "/course/data/personal-241250075/macro/repo",
+  "base": "483cc3a87f54c49295b0b4c85f31afa1e06b1b42",
+  "target": "e3f8c761e874fb6195fa001b79a766c498056e08",
+  "candidate": "/course/data/personal-241250075/macro/candidate.Dockerfile",
+  "expected_output": "1",
+  "build_timeout": 600,
+  "mode": "e11-b",
+  "fixed_report": "/course/data/personal-241250075/macro/fixed-md.json"
+}

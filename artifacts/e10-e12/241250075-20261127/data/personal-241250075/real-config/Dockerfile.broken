@@ -1,0 +1,7 @@
+FROM m.daocloud.io/docker.io/library/python:3.13-slim
+WORKDIR /work
+COPY src ./src
+COPY include ./include
+COPY Makefile ./
+RUN make
+CMD ["./minicalc", "1+2*3"]

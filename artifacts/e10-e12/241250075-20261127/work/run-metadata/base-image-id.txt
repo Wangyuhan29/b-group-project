@@ -1,0 +1,1 @@
+sha256:bfbf6908dd0b758b24a61abd677b6eb3a7afbee9a3de39ebb43bbe1a14509a8c ["course-e8e9@sha256:bfbf6908dd0b758b24a61abd677b6eb3a7afbee9a3de39ebb43bbe1a14509a8c"]

@@ -1,0 +1,175 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-9d1a5b82b88a453aa9ad4753e2a0febf",
+  "trace_id": "trace-068a655955c2422a870b0c4f14bdc063",
+  "kind": "full-check",
+  "commit": "e3a1eda0965e545d96467d275bccaf78c890fcac",
+  "status": "SUCCEEDED",
+  "data": {
+    "status": "SUCCEEDED",
+    "detector": "BUILDCHECKER_TEACHING",
+    "detector_version": "0.2.0-teaching",
+    "trace_id": "e6-5adbe963ea0f44bf84640b1f2ca4b4d4",
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "include/token.h",
+        "evidence": [
+          {
+            "source": "system_call",
+            "trace_file": "t.114",
+            "line": 617,
+            "pid": 114,
+            "operation": "openat"
+          },
+          {
+            "source": "system_call",
+            "trace_file": "t.115",
+            "line": 23,
+            "pid": 115,
+            "operation": "openat"
+          }
+        ],
+        "declared_dependencies": [
+          "include/config.h",
+          "include/parser.h",
+          "src/main.c"
+        ]
+      },
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "include/util.h",
+        "evidence": [
+          {
+            "source": "system_call",
+            "trace_file": "t.114",
+            "line": 619,
+            "pid": 114,
+            "operation": "openat"
+          },
+          {
+            "source": "system_call",
+            "trace_file": "t.115",
+            "line": 23,
+            "pid": 115,
+            "operation": "openat"
+          }
+        ],
+        "declared_dependencies": [
+          "include/config.h",
+          "include/parser.h",
+          "src/main.c"
+        ]
+      },
+      {
+        "type": "MISSING",
+        "target": "parser.o",
+        "dependency": "include/token.h",
+        "evidence": [
+          {
+            "source": "system_call",
+            "trace_file": "t.117",
+            "line": 108,
+            "pid": 117,
+            "operation": "openat"
+          },
+          {
+            "source": "system_call",
+            "trace_file": "t.118",
+            "line": 23,
+            "pid": 118,
+            "operation": "openat"
+          }
+        ],
+        "declared_dependencies": [
+          "include/parser.h",
+          "src/parser.c"
+        ]
+      },
+      {
+        "type": "REDUNDANT",
+        "target": "util.o",
+        "dependency": "include/legacy.h",
+        "evidence": [
+          {
+            "source": "make_database",
+            "artifact": "make-db.txt",
+            "line": 857,
+            "declaration": "util.o: src/util.c include/util.h include/legacy.h"
+          }
+        ],
+        "scope": "Not observed in this recipe job under this build configuration"
+      }
+    ],
+    "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+    "build_command": [
+      "make"
+    ],
+    "clean_command": [
+      "make",
+      "clean"
+    ],
+    "input_sha256": {
+      ".gitignore": "c7d55468c3645d0d1afad30cb3f606c7abc7f869642e5526b73d053546706b20",
+      "Makefile": "d5b33606708b140b918053ccccfa56719628619a4208be9a88b9ff19c6ce697c",
+      "README.md": "78e3228189f9e8c54a82e5149099675468d7eb731d2e64c989ab49f06db8e1c9",
+      "include/config.h": "2bbb8badfda8c52a7e9c859ef49bff839dd86190a186cd6206109b66bdbb54ec",
+      "include/legacy.h": "abc70d1611099557a3f635de597c4d27be7c3a51ba72234ec4ba7e2c814b06fb",
+      "include/parser.h": "eeeb7d0f2bf196b14d43f9ed3965f5db1a24fe1935e0b240d50a88d9e89886a5",
+      "include/token.h": "49be729b6f384a6002b80213f21f3d333a99d50be646b22267b592a3361e1132",
+      "include/util.h": "bb1a4a58e2eaf7adf38f95644ed3a624df7ccf9d94532e84c7626be437b68df7",
+      "src/main.c": "1e7f2dc9aadbf0fa6429b964ba3fcc2b365e6ab5fd8574ba14b0c8edd0ac3915",
+      "src/parser.c": "f5ef53b9baf5f50b7e4800348f74d1d73e684e587f746ae1ab01d09ca1c2dc13",
+      "src/token.c": "2ab5e875190fe6ee930ff6c07e3b5b224c0c52ce2de51c83bdb9d07cd17ba61e",
+      "src/util.c": "d0266bc68964cd0a9582abf1b5504ef19e2808a8ceb8c145ba07c8404fe65877"
+    },
+    "clean_exit_code": 0,
+    "trace_command": [
+      "strace",
+      "-ff",
+      "-s",
+      "4096",
+      "-o",
+      "/course/work/api-jobs/job-9d1a5b82b88a453aa9ad4753e2a0febf/evidence/baseline-full/trace/t",
+      "-e",
+      "trace=%file,%process",
+      "make",
+      "-p"
+    ],
+    "build_exit_code": 0,
+    "observed_targets": [
+      "main.o",
+      "minicalc",
+      "parser.o",
+      "token.o",
+      "util.o"
+    ],
+    "artifacts": {
+      "actual_graph": "actual-graph.json",
+      "declared_graph": "declared-graph.json",
+      "processes": "processes.json",
+      "make_database": "make-db.txt",
+      "trace_directory": "trace"
+    },
+    "elapsed_ms": 450
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-9d1a5b82b88a453aa9ad4753e2a0febf/baseline-full/actual-graph.json",
+      "sha256": "34ec324df81e8047a141f7b02c32d5b8855a0a5b0b0e9daaf38f967ca993ac94",
+      "bytes": 3978
+    },
+    {
+      "uri": "artifact://job-9d1a5b82b88a453aa9ad4753e2a0febf/baseline-full/findings.json",
+      "sha256": "34ccee4b45178e29e0ab45e5644e283150f11226e1d1ed3c33671de5e0bbea5f",
+      "bytes": 4198
+    },
+    {
+      "uri": "artifact://job-9d1a5b82b88a453aa9ad4753e2a0febf/baseline-cache.json",
+      "sha256": "c723063746e45715c5d6915eb8eeab91cb78039a719e6295343cd790eeaff94a",
+      "bytes": 2708
+    }
+  ]
+}

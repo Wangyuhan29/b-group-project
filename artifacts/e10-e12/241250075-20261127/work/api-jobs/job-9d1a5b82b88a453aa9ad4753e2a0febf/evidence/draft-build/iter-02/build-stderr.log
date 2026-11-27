@@ -1,0 +1,49 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 477B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for m.daocloud.io/docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM m.daocloud.io/docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#4 resolve m.daocloud.io/docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 380B done
+#5 DONE 0.0s
+
+#6 [2/7] WORKDIR /work
+#6 CACHED
+
+#7 [4/7] COPY include ./include
+#7 CACHED
+
+#8 [6/7] RUN sed -i "s/deb.debian.org/mirrors.huaweicloud.com/g" /etc/apt/sources.list.d/debian.sources && apt-get update && apt-get install -y --no-install-recommends build-essential && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [3/7] COPY src ./src
+#9 CACHED
+
+#10 [5/7] COPY Makefile ./
+#10 CACHED
+
+#11 [7/7] RUN make
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:f689ca4983767ccb8ad59d78e05bb70698c84e979be7b844711d2541c31725a4 done
+#12 exporting config sha256:9ffcf357acd5d406b0fbd528d451db587ca8675148a6c7b01dc4d471d1aef289 done
+#12 exporting attestation manifest sha256:e002092b73ae32237bab99e0096897f996de0490623d71f111f3f1e78f070674 0.0s done
+#12 exporting manifest list sha256:3c809777b459e052b9a420b1425022f8d3b86aa6df62719b86e1286fe0cf5a46 0.0s done
+#12 naming to docker.io/library/e6-draft-replay:4b7a31a9885d45ad90da3367e413cd4f-2
+#12 naming to docker.io/library/e6-draft-replay:4b7a31a9885d45ad90da3367e413cd4f-2 done
+#12 unpacking to docker.io/library/e6-draft-replay:4b7a31a9885d45ad90da3367e413cd4f-2 done
+#12 DONE 0.1s
