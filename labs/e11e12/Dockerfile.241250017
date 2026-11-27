@@ -1,0 +1,8 @@
+FROM course-e8e9@sha256:a0a4a4cc1188e69b1bdccfec65bfd0c8f50a6905c4503ae32297a78c7aa52642
+USER root
+RUN apt-get -o Acquire::Retries=2 -o Acquire::https::Timeout=60 update \
+ && apt-get install -y --no-install-recommends strace \
+ && rm -rf /var/lib/apt/lists/*
+COPY labs/e11e12/environment/services/buildchecker/ /app/
+ENV PYTHONPATH=/app
+WORKDIR /course
