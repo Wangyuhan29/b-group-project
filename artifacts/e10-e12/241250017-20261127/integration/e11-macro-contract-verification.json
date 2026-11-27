@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "job_id": "job-9c10a529399e4fbeaf8fe5c82dba9633",
+  "trace_id": "trace-b773cc620d844b7697b46af5622888b0",
+  "target_commit": "dd00df8a3ce24ef35b4212ef39522297cc8e98ad",
+  "base_commit": "d2bcdfd0c8d44a798efac8aec21ec9f9ca965ed2",
+  "stages": [
+    "draft",
+    "fixed-md",
+    "repair",
+    "recheck"
+  ],
+  "verified_hash_entries": 107
+}
